@@ -8,7 +8,7 @@ Welcome to CNN AV1 intra encoder's documentation!
 
 .. toctree::
    :maxdepth: 2
-   
+   :glob:
 
 
 
