@@ -1,1 +1,1 @@
-# Detailed description of integration Convolutional Neural Network with AV1
+# Integration Convolutional Neural Network with AV1
