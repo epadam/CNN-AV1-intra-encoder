@@ -10,7 +10,7 @@ Welcome to CNN AV1 intra encoder's documentation!
    :maxdepth: 2
    :glob:
 
-   
+   chapters/*
 
 
 Indices and tables
