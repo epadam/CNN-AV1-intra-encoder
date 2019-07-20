@@ -10,7 +10,10 @@ CNN AV1 intra encoder
    :maxdepth: 2
    :glob:
 
-   chapters/*
+   Background_Related_Work.rst
+   Instruction.rst
+   
+   
 
 
 Indices and tables
@@ -19,3 +22,5 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
