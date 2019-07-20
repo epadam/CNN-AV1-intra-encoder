@@ -10,8 +10,9 @@ CNN AV1 intra encoder
    :maxdepth: 2
    :glob:
 
-   Background_Related_Work.rst
-   Instruction.rst
+
+   chapters/*
+   
    
    
 
