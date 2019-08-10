@@ -1,0 +1,1 @@
+In this section method to extract the partition decision from the encoder is presented.
