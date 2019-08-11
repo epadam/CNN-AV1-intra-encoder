@@ -11,8 +11,8 @@ CNN AV1 intra encoder
    :glob:
 
 
-   Motivation
-   Evolution_of_video_codec
+   motivation
+   evolution_of_video_codec
    
    
    
