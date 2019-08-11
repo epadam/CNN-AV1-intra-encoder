@@ -11,7 +11,7 @@ CNN AV1 intra encoder
    :glob:
 
 
-   chapters/*
+   c01_01
    
    
    
