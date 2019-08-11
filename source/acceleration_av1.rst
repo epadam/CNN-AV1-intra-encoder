@@ -1,1 +1,1 @@
-Review on Accelerating functions in AV1
+Review on Accelerating Functions in AV1
