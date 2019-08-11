@@ -1,2 +1,2 @@
-2.1 Evolution of video codec
+Evolution of video codec
 ================================
