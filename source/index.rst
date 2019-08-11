@@ -13,6 +13,18 @@ CNN AV1 intra encoder
 
    motivation
    evolution_of_video_codec
+   encoding_decoding_process
+   av1_encoding_tool
+   acceleration_encoding
+   acceleration_av1
+   partition_av1
+   cnn_theory
+   cnn_partition_intra
+   encoder_modification
+   data_extraction
+   metrics
+   performance
+   
    
    
    
