@@ -1,6 +1,7 @@
 Background and Related Work
 ===========================
 
+In this chapter, the history of video codec is first presented
 
 
 
