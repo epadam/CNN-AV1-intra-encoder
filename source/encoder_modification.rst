@@ -14,19 +14,7 @@ In **aom_codec.h**, add the pointer of **filename** to aom_codec_ctx. Ths struct
 
  typedef struct aom_codec_ctx {
   const char *filename;
-  const char *name;             /**< Printable interface name */
-  aom_codec_iface_t *iface;     /**< Interface pointers */
-  aom_codec_err_t err;          /**< Last returned error */
-  const char *err_detail;       /**< Detailed info, if available */
-  aom_codec_flags_t init_flags; /**< Flags passed at init time */
-  union {
-    /**< Decoder Configuration Pointer */
-    const struct aom_codec_dec_cfg *dec;
-    /**< Encoder Configuration Pointer */
-    const struct aom_codec_enc_cfg *enc;
-    const void *raw;
-  } config;               /**< Configuration pointer aliasing union */
-  aom_codec_priv_t *priv; /**< Algorithm private storage */
+  ...
  } aom_codec_ctx_t;
  
 
@@ -46,19 +34,7 @@ In **aom_codec_internal.h**, again, add new member **filename** to the structure
 
   struct aom_codec_priv {
     const char *filename;
-    const char *err_detail;
-    aom_codec_flags_t init_flags;
-    struct {
-      aom_codec_priv_cb_pair_t put_frame_cb;
-      aom_codec_priv_cb_pair_t put_slice_cb;
-    } dec;
-    struct {
-      aom_fixed_buf_t cx_data_dst_buf;
-      unsigned int cx_data_pad_before;
-      unsigned int cx_data_pad_after;
-      aom_codec_cx_pkt_t cx_data_pkt;
-      unsigned int total_encoders;
-    } enc;
+    ...
   };
   
   
@@ -71,6 +47,7 @@ In **aom_codec_internal.h**, again, add new member **filename** to the structure
     const char *filename;
     ...
     int prediction[3][135][240];
+    ...
   } AV1_COMP;
   
 In **encoder.c**, in the function **av1_create_compressor**, add the code to set up memory space for the prediction array.
@@ -159,9 +136,171 @@ In **encode_frame.c**, in the function **encode_frame_internal**, add the follow
        printf("time_for_read=%d\n", time_for_read);
      
  
+Again, in **encode_frame.c**, in the function **rd_pick_partition**, add the following code to replace the original algorithms. Since only 3 block sizes are considered, the condition is set as following code.
+
+.. code-block:: c
+
+  if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	   {
+          int row, col, blocksize;        
+          switch(bsize){
+	      case BLOCK_64X64: blocksize=0;
+	                     row = mi_row>>4;
+	                     col = mi_col>>4;
+                       break;
+       case BLOCK_32X32: blocksize=1;
+                      row = mi_row>>3;
+	                     col = mi_col>>3;
+                       break;
+       case BLOCK_16X16: blocksize=2;
+                      row = mi_row>>2;
+	                     col = mi_col>>2;
+                       break;
+                       }
+		     switch (cpi->prediction[blocksize][row][col])
+		    {
+		       case PARTITION_NONE: goto DO_PARTITION_NONE;				   
+		       case PARTITION_HORZ: goto DO_PARTITION_HORZ;
+   	   	 case PARTITION_VERT:  goto DO_PARTITION_VERT;
+	   	    case PARTITION_SPLIT: goto DO_PARTITION_SPLIT;
+      		 case PARTITION_HORZ_A: goto DO_PARTITION_HORZ_A;
+	      	 case PARTITION_HORZ_B: goto DO_PARTITION_HORZ_B;
+	      	 case PARTITION_VERT_A: goto DO_PARTITION_VERT_A;
+	      	 case PARTITION_VERT_B: goto DO_PARTITION_VERT_B;
+      		 case PARTITION_HORZ_4: goto DO_PARTITION_HORZ_4;
+   	   	 case PARTITION_VERT_4: goto DO_PARTITION_VERT_4;
+	  	   }
+	 	   }
+    ...
+    
+    DO_PARTITION_NONE:
+    
+    if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	   partition_none_allowed=1;
+    
+    // PARTITION_NONE
+    ...
+    
+    if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	   goto ENDING;
+	
+    DO_PARTITION_SPLIT:
+    
+	   if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	   do_square_split=1;
+    
+    // PARTITION_SPLIT
+    ...
+    if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+   	goto ENDING;
+   
+    DO_PARTITION_HORZ:
+    
+    if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+		   {
+		     partition_horz_allowed=1;
+	    	 prune_horz=0;
+	    	 do_rectangular_split=1;
+		   }
+     
+     //PARTITION_HORZ
+     ...
+     if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+		   goto ENDING;
+		   
+     DO_PARTITION_VERT:
+     
+     if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	     {   
+	       partition_vert_allowed=1;
+     	  prune_vert=0;
+	       do_rectangular_split=1;
+	     	}
+       
+      // PARTITION_VERT
+      ...
+      if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	     goto ENDING;
+      ...
+      
+      DO_PARTITION_HORZ_A:
+
+	     if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)	  
+      {	partition_horz_allowed=1;
+	      	horza_partition_allowed=1;	
+	     }
+      
+      //PARTITION_HORZ_A:
+      ...
+      if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	     goto ENDING;
+	   
+      DO_PARTITION_HORZ_B:
+      if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	     {   partition_horz_allowed=1;
+		        horzb_partition_allowed=1;
+		    }
+      
+      // PARTITION_HORZ_B
+      ...
+      if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	     goto ENDING;
+		
+      DO_PARTITION_VERT_A:
+      
+      if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+		    {  verta_partition_allowed=1;
+	       	partition_vert_allowed=1;
+		    }
+      
+      // PARTITION_VERT_A
+	     ...
+      
+      if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+      goto ENDING;
+	   
+      DO_PARTITION_VERT_B:
+	     if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+		    {   vertb_partition_allowed=1;
+		        partition_vert_allowed=1;
+		    }
+      
+      // PARTITION_VERT_B
+      ...
+      
+      if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	     goto ENDING;
+      
+      DO_PARTITION_HORZ_4:
+
+      if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+      {   partition_horz4_allowed=1;
+          do_rectangular_split=1;
+       }
+       
+       // PARTITION_HORZ_4
+       ...
+       
+       if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	      goto ENDING;
+		  
+       DO_PARTITION_VERT_4:
+       
+       if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+		   	 {
+		        partition_vert4_allowed=1;
+		        do_rectangular_split=1;
+			     }
+        // PARTITION_VERT_4
+        ...
+        if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+	       goto ENDING;
+        
+        ...
+        ENDING:
 
 
-  
+      
 
 
 
