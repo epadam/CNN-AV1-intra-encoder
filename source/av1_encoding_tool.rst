@@ -1,6 +1,11 @@
 
 AOM AV1
 ======================================
+
+
+==========================
+Intra Prediction Tools
+==========================
 .. image:: img/intramode.png
 
 {Directional Mode}
@@ -37,3 +42,8 @@ This mode divides the block into 4x2 pixels blocks and apply eight 7-tap filters
 
 {Intra Block Copy (IntraBC)}
 This is another mode suitable for screen contents. It works similar to inter prediction but reference to the block in the same frame. 
+
+==========================
+Review of AV1 Performance
+==========================
+
