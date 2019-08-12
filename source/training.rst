@@ -24,9 +24,9 @@ Following files in the source files are modified for inetgrating CNN model into 
 
 The following files are changed to pass the file name to CNN model
 
-==============
+-----------------------
 aom/src/aom_codec.h
-==============
+-----------------------
 
 Add the pointer of **filename** to aom_codec_ctx. Ths structure is the member called encoder of the structure stream state.
 
@@ -39,9 +39,9 @@ Add the pointer of **filename** to aom_codec_ctx. Ths structure is the member ca
  } aom_codec_ctx_t;
  
 
-==============
+-----------------------
 apps/aomenc.c
-==============
+-----------------------
 
 
 Pass filename to the member enocder of the stream. 
@@ -54,9 +54,9 @@ Pass filename to the member enocder of the stream.
 
 
 
-====================================
+-----------------------------------
 aom/internal/aom_codec_internal.h
-====================================
+-----------------------------------
 
 Add new member **filename** to the structure **aom_codec_priv**. It is a member of **aom_codec_ctx**.
 
@@ -68,9 +68,9 @@ Add new member **filename** to the structure **aom_codec_priv**. It is a member 
   };
   
 
-========================
+-----------------------------------
 av1/encoder/encoder.h
-========================
+------------------------------------
 Add member **filename** to the structure **AV1_COMP**. Also, add an array member that stores the partition index from CNN model.
   
 .. code-block:: c
@@ -83,9 +83,9 @@ Add member **filename** to the structure **AV1_COMP**. Also, add an array member
   } AV1_COMP;
 
 
-======================
+---------------------------
 av1/encoder/encoder.c
-======================
+---------------------------
 
 In the function **av1_create_compressor**, add the code to set up memory space for the prediction array.
 
@@ -93,9 +93,9 @@ In the function **av1_create_compressor**, add the code to set up memory space f
 
     memset(cpi->prediction, 0, sizeof(cpi->prediction));
 
-=====================
+--------------------
 av1/av1_cx_iface.c
-=====================
+--------------------
 
 In the function **encoder_init**, pass the filename from **aom_codec_ctx** to **AV1_COMP** by adding the following code.
 
@@ -106,9 +106,9 @@ In the function **encoder_init**, pass the filename from **aom_codec_ctx** to **
         priv->cpi->filename = ctx->filename;     
       }
 
-===========================
+----------------------------
 av1/encoder/encode_frame.c
-===========================
+----------------------------
 
 In the function **encode_frame_internal**, add the following code to call CNN model in python script. This code first calls CNN model for partition prediction in python, and then read the prediction result from cu_depth.txt into the array set up beforehand.  
 
