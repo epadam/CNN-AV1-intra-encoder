@@ -2,7 +2,7 @@
 Modification in the Encoder
 =======
 
-Following files in the source files are modified for inetgrating CNN model into AV1.
+Following files in the source files are modified for inetgrating CNN model into AV1. The version of AV1 encoder is "1.0.0-2231-g9666276"
 
 The following files are changed to pass the file name to CNN model
 
@@ -150,22 +150,22 @@ Again, in **encode_frame.c**, in the function **rd_pick_partition**, add the fol
 	      case BLOCK_64X64: blocksize=0;
 	                     row = mi_row>>4;
 	                     col = mi_col>>4;
-                       break;
-       case BLOCK_32X32: blocksize=1;
-                      row = mi_row>>3;
+                             break;
+              case BLOCK_32X32: blocksize=1;
+                             row = mi_row>>3;
 	                     col = mi_col>>3;
-                       break;
-       case BLOCK_16X16: blocksize=2;
-                      row = mi_row>>2;
+                             break;
+              case BLOCK_16X16: blocksize=2;
+                             row = mi_row>>2;
 	                     col = mi_col>>2;
-                       break;
-                       }
-		     switch (cpi->prediction[blocksize][row][col])
+                             break;
+                        }
+	   switch (cpi->prediction[blocksize][row][col])
 		    {
-		       case PARTITION_NONE: goto DO_PARTITION_NONE;				   
-		       case PARTITION_HORZ: goto DO_PARTITION_HORZ;
-   	   	 case PARTITION_VERT:  goto DO_PARTITION_VERT;
-	   	    case PARTITION_SPLIT: goto DO_PARTITION_SPLIT;
+	         case PARTITION_NONE: goto DO_PARTITION_NONE;				   
+	         case PARTITION_HORZ: goto DO_PARTITION_HORZ;
+   	         case PARTITION_VERT:  goto DO_PARTITION_VERT;
+	   	 case PARTITION_SPLIT: goto DO_PARTITION_SPLIT;
       		 case PARTITION_HORZ_A: goto DO_PARTITION_HORZ_A;
 	      	 case PARTITION_HORZ_B: goto DO_PARTITION_HORZ_B;
 	      	 case PARTITION_VERT_A: goto DO_PARTITION_VERT_A;
@@ -183,13 +183,13 @@ Again, in **encode_frame.c**, in the function **rd_pick_partition**, add the fol
     
     // PARTITION_NONE
     ...
-    
     if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
 	   goto ENDING;
 	
+	
     DO_PARTITION_SPLIT:
     
-	   if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+    if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
 	   do_square_split=1;
     
     // PARTITION_SPLIT
@@ -200,11 +200,11 @@ Again, in **encode_frame.c**, in the function **rd_pick_partition**, add the fol
     DO_PARTITION_HORZ:
     
     if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
-		   {
-		     partition_horz_allowed=1;
+	 {
+		 partition_horz_allowed=1;
 	    	 prune_horz=0;
 	    	 do_rectangular_split=1;
-		   }
+	  }
      
      //PARTITION_HORZ
      ...
@@ -216,9 +216,9 @@ Again, in **encode_frame.c**, in the function **rd_pick_partition**, add the fol
      if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
 	     {   
 	       partition_vert_allowed=1;
-     	  prune_vert=0;
+     	       prune_vert=0;
 	       do_rectangular_split=1;
-	     	}
+	      }
        
       // PARTITION_VERT
       ...
@@ -228,8 +228,9 @@ Again, in **encode_frame.c**, in the function **rd_pick_partition**, add the fol
       
       DO_PARTITION_HORZ_A:
 
-	     if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)	  
-      {	partition_horz_allowed=1;
+     if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)	  
+            {	
+                partition_horz_allowed=1;
 	      	horza_partition_allowed=1;	
 	     }
       
@@ -240,9 +241,10 @@ Again, in **encode_frame.c**, in the function **rd_pick_partition**, add the fol
 	   
       DO_PARTITION_HORZ_B:
       if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
-	     {   partition_horz_allowed=1;
-		        horzb_partition_allowed=1;
-		    }
+	     {  
+	           partition_horz_allowed=1;
+		   horzb_partition_allowed=1;
+              }
       
       // PARTITION_HORZ_B
       ...
@@ -252,8 +254,9 @@ Again, in **encode_frame.c**, in the function **rd_pick_partition**, add the fol
       DO_PARTITION_VERT_A:
       
       if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
-		    {  verta_partition_allowed=1;
-	       	partition_vert_allowed=1;
+		    {  
+		    verta_partition_allowed=1;
+	       	    partition_vert_allowed=1;
 		    }
       
       // PARTITION_VERT_A
@@ -263,8 +266,9 @@ Again, in **encode_frame.c**, in the function **rd_pick_partition**, add the fol
       goto ENDING;
 	   
       DO_PARTITION_VERT_B:
-	     if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
-		    {   vertb_partition_allowed=1;
+      if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
+		    {   
+		        vertb_partition_allowed=1;
 		        partition_vert_allowed=1;
 		    }
       
@@ -277,29 +281,31 @@ Again, in **encode_frame.c**, in the function **rd_pick_partition**, add the fol
       DO_PARTITION_HORZ_4:
 
       if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
-      {   partition_horz4_allowed=1;
-          do_rectangular_split=1;
-       }
+         {   
+           partition_horz4_allowed=1;
+           do_rectangular_split=1;
+         }
        
        // PARTITION_HORZ_4
        ...
-       
        if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
 	      goto ENDING;
 		  
        DO_PARTITION_VERT_4:
        
        if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
-		   	 {
+		  {
 		        partition_vert4_allowed=1;
 		        do_rectangular_split=1;
-			     }
+		   }
+		   
         // PARTITION_VERT_4
         ...
         if (bsize == BLOCK_64X64 || bsize == BLOCK_32X32 || bsize == BLOCK_16X16)
 	       goto ENDING;
-        
+       
         ...
+
         ENDING:
 
 
