@@ -1,4 +1,4 @@
-Evolution of video codec
+Evolution of Video Codec
 ================================
 The first pratical video codec was H.261, created in 1988 by ITU. Due to the limit of hardware resources, the first video codec can only support 4:2:0 sampling CIF 352x288 and QCIF 176x144 videos. 
 
