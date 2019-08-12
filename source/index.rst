@@ -14,7 +14,7 @@ CNN AV1 intra encoder
    motivation
    evolution_of_video_codec
    encoding_decoding_process
-   av1_encoding_tool
+   aom_av1
    acceleration_encoding
    cnn_partition_intra
    training
