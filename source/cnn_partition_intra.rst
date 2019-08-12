@@ -1,4 +1,4 @@
-CNN Partition Prediction for Intra Frame
+CNN Intra Encoder
 ===========================================
 
 
@@ -21,14 +21,14 @@ For intra frame, the encoder will only use intra prediction tools to calculate t
 .. image:: img/OrderofRDcalculation.png
 
 
+==========================================================
+Partition Mode Prediction with CNN for Intra Frame
+==========================================================
+
 .. image:: img/ml_rd_pick.png
 
 
-
-
 .. image:: img/CNN_for_partition.png
-
-
 
 ================================================
 Brief Theory of Convolutional Neural Network
@@ -75,6 +75,10 @@ Backpropagation
 ----------------------
 
 Many optimization algothrims for backpropagation are proposed 
+
+
+
+
 
 ================================================
 CNN Model in This Research
