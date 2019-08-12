@@ -1,6 +1,21 @@
 
-CNN for Partition Decisions for Intra Frame
+Partition Decisions using CNN for Intra Frame
 ==============================================
+
+
+=========================================
+Partition Decision for Intra Frame in AV1
+=========================================
+
+
+.. image:: img/Partitionhierarchy.png
+
+
+.. image:: img/OrderofRDcalculation.png
+
+
+.. image:: img/ml_rd_pick.png
+
 
 As mentioned in chapter \ref{Related Work}, there are many ways of using CNN to replace some encoding steps in the encoder as shown in Fig \ref{fig:CNN for encoder}. However, applying CNN for partition may save the most encoding time compared to other steps, since prediction and transform functions are sub-functions of partition functions. Replacing partition function means skipping the whole RDO process, which includes prediction, transform, quantization, dequantization and inverse transform and entropy coding. classification on CU splitting decision making can maximally save the encoding time compared to classification for PU and TU. 
 
