@@ -50,7 +50,7 @@ A DenseNet Based Approach for Multi-Frame In-Loop Filter in HEVC used DenseNet f
 
 
 ===========================
-Acceleration tools in AV1
+Acceleration Tools in AV1
 ===========================
 
 
