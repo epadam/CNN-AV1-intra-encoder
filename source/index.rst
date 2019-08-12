@@ -17,7 +17,6 @@ CNN AV1 intra encoder
    av1_encoding_tool
    performance_review
    acceleration_encoding
-   acceleration_av1
    partition_av1
    cnn_partition_intra
    encoder_modification
