@@ -19,9 +19,7 @@ CNN AV1 intra encoder
    acceleration_encoding
    acceleration_av1
    partition_av1
-   cnn_theory
    cnn_partition_intra
-   CNN_model
    encoder_modification
    data_extraction
    metrics
