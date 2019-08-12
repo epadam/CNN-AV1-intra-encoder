@@ -1,6 +1,6 @@
 
 CNN for Partition Decisions for Intra Frame
-======================================
+==============================================
 
 As mentioned in chapter \ref{Related Work}, there are many ways of using CNN to replace some encoding steps in the encoder as shown in Fig \ref{fig:CNN for encoder}. However, applying CNN for partition may save the most encoding time compared to other steps, since prediction and transform functions are sub-functions of partition functions. Replacing partition function means skipping the whole RDO process, which includes prediction, transform, quantization, dequantization and inverse transform and entropy coding. classification on CU splitting decision making can maximally save the encoding time compared to classification for PU and TU. 
 
@@ -9,3 +9,15 @@ And since CNN is very powerful in image recognition, it is very suitable to deci
 
 
 .. image:: img/CNN_for_partition.png
+
+
+
+================================================
+Brief Theory of Convolutional Neural Network
+================================================
+
+
+
+================================================
+CNN Model in This Research
+================================================
