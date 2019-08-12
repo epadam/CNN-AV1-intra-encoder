@@ -20,10 +20,12 @@ The partition decisions of the original encoder are collected processed as follo
 These three txt files (reordered raw images, labels, qps) are all in the same order. 
 
 ===============
+Loss Function
+===============
+
+
+===============
 Optimizer
 ===============
 
 
-===============
-Loss Function
-===============
