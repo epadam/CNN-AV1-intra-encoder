@@ -24,5 +24,5 @@ aom_codec.h
         const void *raw;
       } config;               /**< Configuration pointer aliasing union */
       aom_codec_priv_t *priv; /**< Algorithm private storage */
-    } aom_codec_ctx_t;
+     } aom_codec_ctx_t;
 
