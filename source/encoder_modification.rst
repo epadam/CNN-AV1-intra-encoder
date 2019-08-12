@@ -9,7 +9,7 @@ The following files are changed to pass the file name to
 aom_codec.h
 
 ::
-    typedef struct aom_codec_ctx {
+     typedef struct aom_codec_ctx {
       const char *filename;
       const char *name;             /**< Printable interface name */
       aom_codec_iface_t *iface;     /**< Interface pointers */
