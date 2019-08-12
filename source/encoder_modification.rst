@@ -11,7 +11,8 @@ aom_codec.h
 ::
 
     typedef struct aom_codec_ctx {
-      const char *filename;
+      .. role:: red
+      :red:`const char *filename;`
       const char *name;             /**< Printable interface name */
       aom_codec_iface_t *iface;     /**< Interface pointers */
       aom_codec_err_t err;          /**< Last returned error */
