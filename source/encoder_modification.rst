@@ -159,8 +159,8 @@ In the function **encode_frame_internal**, add the following code to call CNN mo
        uint64_t time_for_read = aom_usec_timer_elapsed(&time_r);
        printf("time_for_read=%d\n", time_for_read);
      
- 
-Again, in **encode_frame.c**, in the function **rd_pick_partition**, add the following code to replace the original algorithms. Since only 3 block sizes are considered, the condition is set as following code.
+
+In the function **rd_pick_partition**, add the following code to replace the original algorithms. Since only 3 block sizes are considered, the condition is set as following code.
 
 .. code-block:: c
 
