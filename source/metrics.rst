@@ -1,3 +1,3 @@
 
-Metrics for Evaluating Encoding Efficiency
+Encoding Efficiency Metrics 
 ==========================================
