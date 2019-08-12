@@ -1,7 +1,7 @@
 
 Introduction of AV1 and Intra Prediction Tools in AV1
 ======================================
-
+.. image:: img/intramode.png
 
 {Directional Mode}
 AV1 offers 8 main directions ( 0, 45, 67, 90, 113, 135, 157, 203) for directional prediction and each direction can have 6 fine-tuned angles with interval of 3 degree. For example, mode with 45 degree can be fine tuned to 36, 39, 42, 48, 51, 54. In total, there are 56 directions available in compared to 33 directions in HEVC. 
