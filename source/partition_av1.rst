@@ -1,7 +1,8 @@
 Partition Decision for Intra Frame in AV1
 =========================================
 
-.. image:: img/Partitionherachy.png
+
+.. image:: img/Partitionhierarchy.png
 
 
 .. image:: img/OrderofRDcalculation.png
