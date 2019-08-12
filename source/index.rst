@@ -16,6 +16,7 @@ CNN AV1 intra encoder
    encoding_decoding_process
    aom_av1
    acceleration_encoding
+   cnn
    cnn_partition_intra
    training
    metrics
