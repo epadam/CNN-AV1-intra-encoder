@@ -74,3 +74,6 @@ Nevertheless, it also shows the encoding speed is extremely slow. Sethuraman et 
 
 In this section, we compare the encoding performance between AV1 and HEVC. We test the performance under 2 modes (CQ and VBR). For CQ mode, we compare it with HM. For VBR mode, we compare it with x265. The reason is explained in the following section.
 
+==========================
+AV1 Performance Test
+==========================
