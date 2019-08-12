@@ -15,12 +15,9 @@ CNN AV1 intra encoder
    evolution_of_video_codec
    encoding_decoding_process
    av1_encoding_tool
-   performance_review
    acceleration_encoding
-   partition_av1
    cnn_partition_intra
-   encoder_modification
-   data_extraction
+   training
    metrics
    performance
    
