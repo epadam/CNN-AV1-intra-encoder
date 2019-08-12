@@ -55,9 +55,13 @@ Current Acceleration Techniques in AV1
 
 
 Unlike HEVC HM, which is demonstrative implementation of HEVC, AV1 is more commercial available solutions, so it already includes a lot of accelerating functions such as SIMD and other fast mode algorithms and machine learning strategies to speed up the encoder. In this chapter, we will give a short discussion on these features.
+
+
 -----------------
 SIMD
 -----------------
+
+
 Most of the functions requiring more intensive computing in AV1 are offered with SIMD acceleration when the CPU is supported. Functions with SIMD support can be seen in Table.
 
 
