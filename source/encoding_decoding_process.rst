@@ -1,5 +1,5 @@
 
-Video Encoding and Decoding Process
+Encoder and Decoder
 ===================================
 Most modern video codecs have similar structure and the encoding process is block-based. Each frame of the input video is normally  sequentially encoded starting from the block in the upper left corner. And each block will try one prediction mode as a first step, as shown in Figure \ref{fig:encoding process}. Intra prediction uses edge pixels of adjacent block (left and above) for prediction and inter prediction searches similar pattern in the same frame or encoded frame called reference frame for prediction. For intra or key frame, only intra prediction is possible and inter frame will try both inter and intra predictions. The pixels in the original block will substract the one in the prediction block built by predictor to obtain the differences called residuals. And step 2, the residuals are transformed from space domain to freqeuncy domain to obtain transformed coefficients. 
 
