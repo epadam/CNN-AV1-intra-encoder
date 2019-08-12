@@ -1,5 +1,5 @@
 
-Introduction of AV1 and Intra Prediction Tools in AV1
+AOM AV1
 ======================================
 .. image:: img/intramode.png
 
