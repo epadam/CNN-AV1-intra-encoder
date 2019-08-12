@@ -9,10 +9,10 @@ The following files are changed to pass the file name to
 aom_codec.h
 
 ::
-
+   .. codeblock:: C
+   :emphasize-lines: 15
     typedef struct aom_codec_ctx {
-      .. role:: red
-      :red:`const char *filename;`
+      const char *filename;
       const char *name;             /**< Printable interface name */
       aom_codec_iface_t *iface;     /**< Interface pointers */
       aom_codec_err_t err;          /**< Last returned error */
