@@ -6,9 +6,8 @@ Following files in the source files are modified for inetgrating CNN model into 
 
 The following files are changed to pass the file name to CNN model
 
-aom_codec.h:
-in aom_codec_ctx, add the pointer of **filename**
 
+In aom_codec.h, add the pointer of **filename** to aom_codec_ctx. Ths structure is the member called encoder of the structure stream state.
 
 .. code-block:: c
 
@@ -28,5 +27,18 @@ in aom_codec_ctx, add the pointer of **filename**
     const void *raw;
   } config;               /**< Configuration pointer aliasing union */
   aom_codec_priv_t *priv; /**< Algorithm private storage */
-  } aom_codec_ctx_t;
+ } aom_codec_ctx_t;
+ 
+
+
+
+In aomenc.c, pass filename to the member enocder of the stream. 
+
+.. code-block:: c
+
+   FOREACH_STREAM(stream, streams) { 
+      stream->encoder.filename=input.filename;
+      initialize_encoder(stream, &global); }
+
+
 
