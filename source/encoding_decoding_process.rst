@@ -14,6 +14,8 @@ And step 7 is to caculate the RD cost. Step 1 to 7 will be repeated for all pred
 And finally, after a frame or tile is encoded, loop/deblock filter is used to remove the ringing effect due to the block based encoding and then store it as a reference frame for inter prediction of next frame. Loop filtering can in loop or out of loop, depending on that if the filtered frame is used as the reference frame later.  
 
 This encoding process is repeated for every block in every frame of input raw video until all the frames are encoded.
+
+
 .. image:: img/EncodingProcess.png
 
 
