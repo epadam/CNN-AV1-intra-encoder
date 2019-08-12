@@ -39,29 +39,29 @@ Convolutional Neural Network(CNN) is the most popular branch of Deep Learning. U
 
 The basic structure of CNN can be seen in Figure XX.
 
-======================================
+-------------------
 Convolutional Layer
-======================================
+-------------------
 
 The most difference between normal neural network and CNN is the convolutional layer, which use kernel map or filter to extract the features from raw data. Figure xx gives the simple demonstration of how filter works. 
 
 
-
-======================================
+-------------------
 Pooling Layer
-======================================
+-------------------
 
 Sometimes, to reduce the spatial size of input data, pooling 
 
-======================================
+----------------------
 Fully Connected Layer
-======================================
+----------------------
 
 Fully connected layer works just like other neural network. 
 
-======================================
+
+----------------------
 Activation Function
-======================================
+----------------------
 
 Normally, the activation function is applied to the output of each layer. The reason is introduce nonlinearity to the network, and make it possible to approximate any nonlinear function.
 
@@ -70,11 +70,11 @@ The most commen used activation functions include sigmoid, Relu and softmax. The
 ReLu (rectified linear unit)/leaky ReLu}
 
 
-======================================
-Back Propagation
-======================================
+----------------------
+Backpropagation
+----------------------
 
-
+Many optimization algothrims for backpropagation are proposed 
 
 ================================================
 CNN Model in This Research
@@ -93,7 +93,7 @@ Table xx shows the number of parameter
 
 
 ============================
-Modification in the Encoder
+Encoder Modification
 ============================
 
 Following files in the source files are modified for inetgrating CNN model into AV1. The version of AV1 encoder is "1.0.0-2231-g9666276"
