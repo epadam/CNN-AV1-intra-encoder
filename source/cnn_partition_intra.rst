@@ -1,5 +1,5 @@
 
-Partition Decisions using CNN for Intra Frame
+CNN Partition Prediction for Intra Frame
 ==============================================
 
 
