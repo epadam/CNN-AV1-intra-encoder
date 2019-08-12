@@ -31,7 +31,7 @@ Partition Mode Prediction with CNN for Intra Frame
 .. image:: img/CNN_for_partition.png
 
 ================================================
-Brief Theory of Convolutional Neural Network
+Brief Introduction of Convolutional Neural Network
 ================================================
 
 
