@@ -2,7 +2,7 @@
 AOM AV1
 ======================================
 
-AV1 introduce many new tools
+AV1 introduce many new tools, in Table, it can be seen the tools comparison between AV1 and HEVC
 
 
 ==========================
