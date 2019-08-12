@@ -7,28 +7,40 @@ For acceleration of video codec, there are two major domains. One is pure hardwa
 However, compared to dedicated hardware, software solutions offer more flexibility and also have very low cost. Thanks to the improvement of general purpose CPU, multi-threading or SIMD, software encoder can also have competitive encoding speed. Thus, many researches focus on the parallelization of the algorithm to maximally use modern multi-core CPU or SIMD hardware. Besides parallelism, simplified or other accelerating algorithms based on statistics or machine learning strategies are also the interest of many research groups. In the following paragraph, related works are presented.
 
 
-\subsection{Parallelism}
+=======================================
+Common Acceleration Strategies
+=======================================
+
+-------------
+Parallelism
+-------------
+
 Parallelism can be divided into Task level and Data level parallelism. Task level parallelism means assign different functions to computing unit and is more achievable through hardware design, since the different complexity of the functions, distributing the task into different multi-core processors is a challenge\cite{Yang2009}.
 
 For data level parallelism, data can be processed on many units running same program. It can be further divided into different levels, from GOP(Group of Pictures), frame level, tile, block to instruction level. Among all the parallelisms, GOP level offers more flexibility and can preserve higher compressibility. There are already several research using GOP parallelism to improve the encoding speed \cite{Sankaraiah,Bahri2014}. Downside of GOP parallelism is that it would consume a lot of memory. And for higher resolution, it is very difficult for GOP to reach real time performance due to huge amount of data in one GOP. The other strategy is tile level parallelism, which means dividing each frame into several tiles and encoding in parallel. Finally, block level parallelism is also possible but rarely used, since the communication and synchronization between blocks will consume too much time.
 
 Data in the block can also be processed in parallel by instruction level parallelism, which is also called SIMD. SIMD is often encoding process since it is supported by most modern processors \cite{Chi2015}.
 
-\subsection{Simplified Algorithm}
+--------------------------
+Reduced Algorithm
+--------------------------
+
 Besides maximizing parallelism among all data level (GOP, Frame, Tiles, Blocks), the other main strategy is to lower the complexity of encoder algorithm itself.
 Rate-Distortion cost calculation needs to go through transform/quantization and inverse quantization/inverse transform and these recursive steps account for most of encoding time. Some researches use simplified RD cost calculation such as absolute transformed differences (SATD) to reduce the complexity\cite{Yu-MingLee2010}. Normally These strategies are not related to the contents of input video.
 
 
+--------------------------
+Statistic Based Approaches
+--------------------------
 
-
-\subsection{Statistic based approaches}
 The idea of using statistics is to discover the some signs for early termination so unnecessary computation can be avoided. Normally these algorithms collect intermediate encoding data on-line or off-line and use them to prune impossible encoding modes or steps. 
 
 Many researchers try to use statistic analysis to eliminate the less possible splitting or prediction modes, thus can terminate the recursive process earlier \cite{Xiong2014}. This strategy is based more explicit equations designed by human beings.
 
 
-
-\subsection{Machine Learning based approaches}\label{ML}
+----------------------------------
+Machine Learning Based Approaches
+----------------------------------
 
 Using machine learning in video codecs already has a long history. Some solutions target the reductions of bit-rate, some focus on increasing the quality, and some aims at reducing encoding time.
 
