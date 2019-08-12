@@ -28,6 +28,8 @@ In **aomenc.c**, pass filename to the member enocder of the stream.
       stream->encoder.filename=input.filename;
       initialize_encoder(stream, &global); }
 
+
+
 In **aom_codec_internal.h**, again, add new member **filename** to the structure **aom_codec_priv**. It is a member of **aom_codec_ctx**.
 
 .. code-block:: c
