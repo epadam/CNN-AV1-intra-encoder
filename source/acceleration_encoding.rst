@@ -1,4 +1,4 @@
-Acceleration Strategies of Video Codec
+Video Codec Acceleration
 ======================================
 In this section we briefly review the tools and strategies used to accelerate encoding speed.
 
@@ -47,3 +47,10 @@ There are many researches trying to use CNN to classify CU splitting.
 (Texture-Classification Accelerated CNN Scheme for Fast Intra CU Partition in HEVC) also use CNN for partition classification
 
 A DenseNet Based Approach for Multi-Frame In-Loop Filter in HEVC used DenseNet for Loop filter 
+
+
+===========================
+Acceleration tools in AV1
+===========================
+
+
