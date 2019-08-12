@@ -40,7 +40,7 @@ In **aom_codec_internal.h**, again, add new member **filename** to the structure
   };
   
   
-  In **encoder.h**, add member **filename** to the structure **AV1_COMP**. Also, add an array member that stores the partition index from CNN model.
+In **encoder.h**, add member **filename** to the structure **AV1_COMP**. Also, add an array member that stores the partition index from CNN model.
   
   
 .. code-block:: c
@@ -51,7 +51,8 @@ In **aom_codec_internal.h**, again, add new member **filename** to the structure
     int prediction[3][135][240];
     ...
   } AV1_COMP;
-  
+
+
 In **encoder.c**, in the function **av1_create_compressor**, add the code to set up memory space for the prediction array.
 
 .. code-block:: c
