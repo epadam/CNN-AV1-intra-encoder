@@ -48,7 +48,6 @@ A simple CNN model is used as the reference and baseline to other models
 
     conv1 = Conv2D(16, (3, 3), strides =(1,1),padding='valid', activation='relu')(image_norm)
     
-
     conv2 = Conv2D(32, (3, 3), strides =(1,1), padding='valid', activation='relu')(conv1)
    
     conv2_pooling = MaxPooling2D(pool_size=(2, 2))(conv2)
@@ -66,10 +65,6 @@ A simple CNN model is used as the reference and baseline to other models
     fc1_d = Dropout(rate = 0.5)(fc1)
 
     fc1_qp = Concatenate(axis=1)([fc1_d, qp_n])
-
-    #fc2 = Dense(64, activation='relu')(fc1_qp)
-    #fc2_d = Dropout(rate = 0.7)(fc2)
-    #fc2_qp = Concatenate(axis=1)([fc2_d, qp_n])
 
     output = Dense(num_classes, activation='softmax')(fc1_qp)
 
