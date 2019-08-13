@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-CNN AV1 intra encoder
+CNN AV1 Intra Encoder
 =================================================
 
 .. toctree::
