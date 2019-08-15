@@ -27,7 +27,6 @@ And finally, after the whole frame is encoded, loop/deblock filter is used to re
 
 .. image:: img/EncodingProcess.png
 
-    Encoding Process
 
 
 =========
@@ -41,5 +40,5 @@ The figure below shows the general decoding process. It can be easily recognized
 
 .. image:: img/DecodingProcess.png
      
-     Decoding Process
+
 
