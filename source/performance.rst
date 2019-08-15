@@ -2,7 +2,7 @@ Performance Evaluation
 ===============================================
 
 ==========================================================
-Performance of Reference AV1 Encoder compared with HEVC
+Performance of Reference AV1 Encoder Compared with HEVC
 ==========================================================
 
 
