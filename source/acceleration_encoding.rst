@@ -1,10 +1,8 @@
 Video Codec Acceleration
 ======================================
-In this section we briefly review the tools and strategies used to accelerate encoding speed.
+For acceleration of video codec, there are two major domains. One is hardware acceleration which uses ASIC or FPGA. It offers very low latency and low power consumption and can achieve real time encoding. AISC normally has higher performance, but is very expensive and thus requires economical scale to cover the developing cost. Mobile devices and PC normally can have dedicated hardware for video encoding. FPGA is more flexible but not suitable for high volume market. 
 
-For acceleration of video codec, there are two major domains. One is pure hardware solution like ASIC or FPGA, which normally offer very low latency and low power consumptions. AISC normally has higher performance, but is for market with high volume demands like mobile. FPGA on the other hand is suitable for low volume market. Today, most mobile devices and PC have dedicated hardware for real time video encoding.
-
-However, compared to dedicated hardware, software solutions offer more flexibility and also have very low cost. Thanks to the improvement of general purpose CPU, multi-threading or SIMD, software encoder can also have competitive encoding speed. Thus, many researches focus on the parallelization of the algorithm to maximally use modern multi-core CPU or SIMD hardware. Besides parallelism, simplified or other accelerating algorithms based on statistics or machine learning strategies are also the interest of many research groups. In the following paragraph, related works are presented.
+The other domain is software-based acceleration and is the focus of this work. These acceleration solution including parallelization, reduced algorithms, statistics based or machine learning based acceleration. Thanks to the improvement of general purpose CPU, multi-threading or SIMD, older encoder such as AVC can also have competitive encoding speed without dedicated hardware. Many researches also focus on the parallelization of the encoding algorithm to maximally use multi-core CPU or SIMD hardware for modern video codec. Reduced algorithms or other acceleration algorithms based on statistics or machine learning strategies are also the interest of many research groups. In the following paragraph, the related works of software-based acceleration are presented.
 
 
 =======================================
@@ -15,11 +13,10 @@ Common Acceleration Strategies
 Parallelism
 -------------
 
-Parallelism can be divided into Task level and Data level parallelism. Task level parallelism means assign different functions to computing unit and is more achievable through hardware design, since the different complexity of the functions, distributing the task into different multi-core processors is a challenge\cite{Yang2009}.
+Parallelism can be divided into Task level and Data level parallelism. Task level parallelism means assign different functions to different computing unit. Since the different complexity of the functions, distributing the task into different multi-core processors is a challenge\cite{Yang2009}.
 
-For data level parallelism, data can be processed on many units running same program. It can be further divided into different levels, from GOP(Group of Pictures), frame level, tile, block to instruction level. Among all the parallelisms, GOP level offers more flexibility and can preserve higher compressibility. There are already several research using GOP parallelism to improve the encoding speed \cite{Sankaraiah,Bahri2014}. Downside of GOP parallelism is that it would consume a lot of memory. And for higher resolution, it is very difficult for GOP to reach real time performance due to huge amount of data in one GOP. The other strategy is tile level parallelism, which means dividing each frame into several tiles and encoding in parallel. Finally, block level parallelism is also possible but rarely used, since the communication and synchronization between blocks will consume too much time.
+For data level parallelism, data can be processed on many units running the same program. It can be further divided into different levels, from Group of Pictures (GOP), frame, tile, block to instruction level. Among all the parallelisms, GOP level offers more flexibility and can preserve higher compressibility. There are already several research using GOP parallelism to improve the encoding speed \cite{Sankaraiah,Bahri2014}. Downside of GOP parallelism is that it would consume a lot of memory. The other strategy is tile level parallelism, which divides each frame into several tiles and encodes in parallel. Finally, block level parallelism is also possible but rarely used, since the communication and synchronization between blocks will consume too much time. Data in each block can also be processed in parallel by instruction level parallelism, also known as SIMD. SIMD is the most important and effective acceleration solutions and is supported by most modern processors \cite{Chi2015}. 
 
-Data in the block can also be processed in parallel by instruction level parallelism, which is also called SIMD. SIMD is often encoding process since it is supported by most modern processors \cite{Chi2015}.
 
 --------------------------
 Reduced Algorithm
