@@ -7,9 +7,9 @@ Performance of Reference AV1 Encoder Compared with HEVC
 
 
 
-====================================
-Performance of Different CNN Model
-====================================
+=================================================
+Evaluation of CNN models with different dataset
+=================================================
 
 
 A medium-sized dataset with single qp is first tested for different models to select suitable model. For 64 and 32 blocks, the image will be down-scaled to 16x16 first. The rest structure of the model remains the same for each model.
@@ -37,9 +37,6 @@ The distribution of classes is shown in the figure.
 
 It can be seen that the accuray is quite close to the highest distribution of classes.
 
--------------------------------- 
-Performance with full dataset 
--------------------------------- 
 
 To further inspect the relation between classes. Only two classes are selected to see if the model can tell the difference between classes.
 
