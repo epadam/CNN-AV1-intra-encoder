@@ -31,13 +31,17 @@ Data Processing
 4. The raw frame is reordered in block-based and stored in a txt file. Since some blocks are skipped during the encoding process, these blocks are deleted.
 These three txt files (reordered raw images, labels, qps) are all in the same order. 
 
-===============
+========================================
+Labels Extraction from the Encoder
+========================================
+
+
+--------------
 Loss Function
-===============
+--------------
 
-
-===============
+--------------
 Optimizer
-===============
+--------------
 
 
