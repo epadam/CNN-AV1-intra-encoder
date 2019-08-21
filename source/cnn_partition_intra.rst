@@ -82,6 +82,11 @@ A simple CNN model is used as the reference and baseline to other models
 
 
 
+.. image:: img/CNN_for_partition.png
+
+
+
+
 A model that is similar to other paper 
 
 A model inspired by Google inception is also tested
