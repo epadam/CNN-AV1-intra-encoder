@@ -6,18 +6,64 @@ Performance of Reference AV1 Encoder Compared with HEVC
 ==========================================================
 
 
-==============================================
-Prediction Performance with Different Dataset
-==============================================
-It can be seen in the figure that the distribution of partition modes are very uneven. To test the performance, data set with even partition modes are also used to train the model.
-
-Loss function and Accuracy comparison
-
-
 
 ====================================
 Performance of Different CNN Model
 ====================================
+
+
+A medium-sized dataset with single qp is first tested for different models to select suitable model. For 64 and 32 blocks, the image will be down-scaled to 16x16 first. The rest structure of the model remains the same for each model.
+
+datasets for 64 and 32 block are smaller than 16 block.
+
+
+----------------------------------------------------------------------------
+Performance with trimmed dataset (equal number of samples for each class)
+----------------------------------------------------------------------------
+
+To avoid a biased training model, the dataset is trimmed so that each class can have equal samples. 
+
+The training result is showing below
+
+The accuracy is low for all the models 
+
+-------------------------------------
+Performance with full dataset 
+-------------------------------------
+
+A full dataset is then tested to see the performance 
+
+The distribution of classes is shown in the figure.
+
+It can be seen that the accuray is quite close to the highest distribution of classes.
+
+-------------------------------- 
+Performance with full dataset 
+-------------------------------- 
+
+To further inspect the relation between classes. Only two classes are selected to see if the model can tell the difference between classes.
+
+-------------------------------------------- 
+Training results for Horz and Vert classes
+--------------------------------------------
+
+
+--------------------------------------------
+Training results for None and Split classes
+--------------------------------------------
+
+
+--------------------------------------
+Performance with Larger Dataset
+--------------------------------------
+
+
+
+---------------------------------------------
+Comparison between seperate qp and mixed qps
+---------------------------------------------
+
+
 
 
 
