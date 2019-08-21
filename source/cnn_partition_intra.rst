@@ -11,6 +11,10 @@ And since CNN is very powerful in image recognition, it is very suitable to deci
 Partition Decision for Intra Frame in AV1
 ==========================================
 
+--------------------
+RDO process in AV1
+--------------------
+
 To decide the partition mode for each block, the encoder will go through the Rate-Distortion Optimization (RDO) Process to find the partition mode with lowest rate-distortion (RD) cost. 
 For intra frame, the encoder will only use intra prediction tools to calculate the residues of block. 
 
