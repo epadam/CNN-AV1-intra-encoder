@@ -53,7 +53,7 @@ Training results for None and Split classes
 --------------------------------------
 Performance with Larger Dataset
 --------------------------------------
-
+It can be seen that the accuracy is becoming lower with larger dataset, which may suggest the model is more confused by the dataset.
 
 
 ---------------------------------------------
