@@ -31,6 +31,7 @@ Partition Mode Prediction with CNN for Intra Frame
 
 The whole partition decision is very time consuming. Thus, use CNN 
 
+.. image:: img/CNN_for_partition.png
 
 
 ================================== 
