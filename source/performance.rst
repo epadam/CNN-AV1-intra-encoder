@@ -27,6 +27,10 @@ The training result is showing below
 
 The accuracy is low for all the models 
 
+Test on Expanded Model
+^^^^^^^^^^^^^^^^^^^^^^^
+
+
 -------------------------------------
 Performance with full dataset 
 -------------------------------------
@@ -36,6 +40,10 @@ A full dataset is then tested to see the performance
 The distribution of classes is shown in the figure.
 
 It can be seen that the accuray is quite close to the highest distribution of classes.
+
+
+Test on Expanded Model
+^^^^^^^^^^^^^^^^^^^^^^^
 
 
 To further inspect the relation between classes. Only two classes are selected to see if the model can tell the difference between classes.
@@ -60,7 +68,10 @@ It can be seen that the accuracy is becoming lower with larger dataset, which ma
 Comparison between seperate qp and mixed qps
 ---------------------------------------------
 
+From figure x, it can be seen that qp affect the partition decision tremendously. 
 
+
+Models trained with single qp (120) and mixed qp data are tested with a test set including one 4K frame, 
 
 
 
