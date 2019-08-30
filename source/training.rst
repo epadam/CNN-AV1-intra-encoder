@@ -14,9 +14,12 @@ AV1 offers 4 different rate control modes, including Variable Bit Rate (VBR), Co
 
 The example encoding command is shown as follows:
 
-```markdown
-./aomenc -o video.ivf --end-usage=q --cq-level=20 --limit=1  -w 3840 -h 2160 video.yuv
 ```
+
+./aomenc -o video.ivf --end-usage=q --cq-level=20 --limit=1  -w 3840 -h 2160 video.yuv
+
+```
+
 -----------------------
 Code change in Encoder
 -----------------------
