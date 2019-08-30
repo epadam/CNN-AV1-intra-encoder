@@ -12,8 +12,11 @@ Encoding Mode
 
 AV1 offers 4 different rate control modes, including Variable Bit Rate (VBR), Constant Bit Rate (CBR), Constrained Quality (CQ) and Constant Quality (Q) mode. Under VBR modes, the bit rate for each frame will be variate according to the frame contents. Under CBR mode, each frame will be encoded with the same bit rate. For these two modes, the quantization parameters (QP) will be selected based on the input bit rate. For CQ mode, QP is set in the required range. For Q mode, a fixed QP is used to encode the whole video. Q mode is used to collect training data in this research, which allows us to encode videos with specified QP.
 
+The example encoding command is shown as follows:
 
-
+```markdown
+./aomenc -o video.ivf --end-usage=q --cq-level=20 --limit=1  -w 3840 -h 2160 video.yuv
+```
 -----------------------
 Code change in Encoder
 -----------------------
