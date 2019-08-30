@@ -10,9 +10,9 @@ Labels Extraction from the Encoder
 Encoding Mode
 ---------------
 
-AV1 provides 4 different rate control modes, including Variable Bit Rate (VBR), Constant Bit Rate (CBR), Constrained Quality (CQ), Constant Quality (Q) modes. 
-Constant quality means
-Under VBR modes, the bit rate for each frame will be variate according to the frame contents. Under CBR mode, each frame will be encoded with the same bit rate. For these two modes. the quantization parameters (QP) will be selected based on preset's bit rate. For CQ modes, QP will be set in certain range. For Q modes, a constant QP will be applied. 
+AV1 offers 4 different rate control modes, including Variable Bit Rate (VBR), Constant Bit Rate (CBR), Constrained Quality (CQ) and Constant Quality (Q) mode. Under VBR modes, the bit rate for each frame will be variate according to the frame contents. Under CBR mode, each frame will be encoded with the same bit rate. For these two modes, the quantization parameters (QP) will be selected based on the input bit rate. For CQ mode, QP is set in the required range. For Q mode, a fixed QP is used to encode the whole video. Q mode is used to collect training data in this research, which allows us to encode videos with specified QP.
+
+
 
 -----------------------
 Code change in Encoder
