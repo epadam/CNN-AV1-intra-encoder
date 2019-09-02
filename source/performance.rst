@@ -1,6 +1,5 @@
 Performance Evaluation
-===============================================
-
+===========================
 
 ============================== 
 Experimental Configuration
@@ -46,6 +45,8 @@ The distribution of classes is shown in the figure.
 
 It can be seen that the accuray is quite close to the highest distribution of classes.
 
+Training with weighted cross entropy 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Test on Expanded Model
 ^^^^^^^^^^^^^^^^^^^^^^^
