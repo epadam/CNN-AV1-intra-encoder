@@ -6,6 +6,15 @@ Training CNN Model
 Labels Extraction from the Encoder
 ========================================
 
+-----------------------
+Vidoe Source
+-----------------------
+
+Videos with different resolution are downloaded from the following websites:
+
+The list of video can be seen in the appendix. 
+
+
 ---------------
 Encoding Mode
 ---------------
