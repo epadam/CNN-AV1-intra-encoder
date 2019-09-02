@@ -11,12 +11,12 @@ Performance of Reference AV1 Encoder Compared with HEVC
 
 
 
+
 =================================================
 Evaluation of CNN models with different dataset
 =================================================
 
-
-A medium-sized dataset with single qp is first tested for different models to select suitable model. For 64 and 32 blocks, the image will be down-scaled to 16x16 first. The rest structure of the model remains the same for each model.
+A medium-sized dataset with 11 frames with single qp is used for evaluating the performance of different models. For 64 and 32 blocks, the image will be down-scaled to 16x16 first. The rest structure of the model remains the same for each model.
 
 datasets for 64 and 32 block are smaller than 16 block.
 
@@ -33,6 +33,8 @@ The accuracy is low for all the models
 
 Test on Expanded Model
 ^^^^^^^^^^^^^^^^^^^^^^^
+
+
 
 
 Test on larger dataset
@@ -58,14 +60,17 @@ Test on Expanded Model
 
 To further inspect the relation between classes. Only two classes are selected to see if the model can tell the difference between classes.
 
+
+--------------------------------------------
+Training results for None and Split classes
+--------------------------------------------
+
+
 -------------------------------------------- 
 Training results for Horz and Vert classes
 --------------------------------------------
 
 
---------------------------------------------
-Training results for None and Split classes
---------------------------------------------
 
 
 --------------------------------------
@@ -73,6 +78,11 @@ Performance with Larger Dataset
 --------------------------------------
 It can be seen that the accuracy is becoming lower with larger dataset, which may suggest the model is more confused by the dataset.
 
+------------------------------------------------
+Dataset from videos with other resolutions
+------------------------------------------------
+
+As shown in Figure. For the same frame, at the same qp, lower resolution tend to have finer partition because the scene is more compact. Thus, if the dataset is from 720p videos, the partition modes distribution will tend to split
 
 ---------------------------------------------
 Comparison between seperate qp and mixed qps
