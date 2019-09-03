@@ -37,11 +37,6 @@ Test on Expanded Model
 
 
 
-
-Test on larger dataset
-^^^^^^^^^^^^^^^^^^^^^^^
-
-
 -------------------------------------
 Performance with full dataset 
 -------------------------------------
@@ -59,7 +54,13 @@ Test on Expanded Model
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 
-To further inspect the relation between classes. Only two classes are selected to see if the model can tell the difference between classes.
+--------------------------------------
+Performance with Larger Dataset
+--------------------------------------
+It can be seen that the accuracy is becoming lower with larger dataset, which may suggest the model is more confused by the dataset.
+
+
+To further inspect the relation between classes. Only two classes are selected to see if the model can tell the difference between classes. 
 
 
 --------------------------------------------
@@ -73,12 +74,15 @@ Training results for Horz and Vert classes
 
 
 
+From the tests above, it can be seen that the model can not really learn the features of some classes. The reason is  
 
---------------------------------------
-Performance with Larger Dataset
---------------------------------------
-It can be seen that the accuracy is becoming lower with larger dataset, which may suggest the model is more confused by the dataset.
+-----------------------------------------------------------------
+Training results with datasets from videos with other resolution
+-----------------------------------------------------------------
 
+It can be seen in the figure, that videos with different resolution have slightly different partition mode distributions. For lower resolution videos, there is higher chance to be encoded in smaller blocks since the contents of the video is more compact. 
+
+Videos with higher resolution like 4K videos, on the other hand, will have more smooth area that can be encoded with larger blocks. 
 
 
 ---------------------------------------------
