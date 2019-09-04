@@ -76,6 +76,9 @@ Training results for Horz and Vert classes
 
 From the tests above, it can be seen that the model can not really learn the features of some classes. The reason is  
 
+
+You can check the following jupyter notebook to see to see the partition modes of the dataset.  
+
 -----------------------------------------------------------------
 Training results with datasets from videos with other resolution
 -----------------------------------------------------------------
