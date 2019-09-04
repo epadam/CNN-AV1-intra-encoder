@@ -11,6 +11,24 @@ And since CNN is very powerful in image recognition, it is very suitable to deci
 Partition Decision for Intra Frame in AV1
 ==========================================
 
+
+enum {
+  PARTITION_NONE,
+  PARTITION_HORZ,
+  PARTITION_VERT,
+  PARTITION_SPLIT,
+  PARTITION_HORZ_A,  // HORZ split and the top partition is split again
+  PARTITION_HORZ_B,  // HORZ split and the bottom partition is split again
+  PARTITION_VERT_A,  // VERT split and the left partition is split again
+  PARTITION_VERT_B,  // VERT split and the right partition is split again
+  PARTITION_HORZ_4,  // 4:1 horizontal partition
+  PARTITION_VERT_4,  // 4:1 vertical partition
+  EXT_PARTITION_TYPES,
+  PARTITION_TYPES = PARTITION_SPLIT + 1,
+  PARTITION_INVALID = 255
+} UENUM1BYTE(PARTITION_TYPE);
+
+
 --------------------
 RDO process in AV1
 --------------------
