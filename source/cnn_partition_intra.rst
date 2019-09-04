@@ -129,7 +129,53 @@ A model that is similar to other paper
 
 A model inspired by Google inception is also tested
 
-Table xx shows the number of parameter
+The number of parameters of the two models are shown in table 1 and table 2.
+
+.. list-table:: tianyili
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Layer
+     - Weights
+     - Bias
+     - Addition
+     - Multiplication
+   * - Conv1
+     - Conv2
+     - Conv3
+     - FC1
+     - FC2
+     - Output
+     - Total
+   * - 256
+     - 1536
+     - 3072
+     - 8192
+     - 3120
+     - 490
+     - 16666
+   * - 16
+     - 24
+     - 32
+     - 64
+     - 48
+     - 10
+     - 194
+   * - 3856
+     - 4632
+     - 2336
+     - 8192
+     - 3072
+     - 190
+     - 22,278
+   * - 4096
+     - 6144
+     - 3072
+     - 14336
+     - 3120
+     - 490
+     - 31,258
+     
 
 
 
