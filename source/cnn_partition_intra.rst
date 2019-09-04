@@ -189,35 +189,30 @@ The number of parameters of the two models are shown in table 1 and table 2.
      - Addition
      - Multiplication
    * - Conv1
-     - 256
-     - 16
-     - 3856
-     - 4096
-   * - Conv2
-     - 1536
-     - 24
-     - 4632
-     - 6144
-   * - Conv3
-     - 3072
+     - 288
      - 32
-     - 2336
-     - 3072
-   * - FC1
-     - 8256
+     - 
+     - 
+   * - Conv2
+     - 18432
      - 64
-     - 8256
-     - 14400
+     - 
+     - 
+   * - FC1
+     - 295168
+     - 0
+     -  
+     -  
    * - Output
-     - 490
-     - 10
-     - 190
-     - 490
+     - 1300
+     - 0
+     - 
+     - 
    * - Total
-     - 16730
-     - 194
-     - 22342
-     - 31322
+     -  
+     -  
+     -  
+     -  
 
 ============================
 Encoder Modification
