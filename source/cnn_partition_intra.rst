@@ -199,13 +199,13 @@ The number of parameters of the two models are shown in table 1 and table 2.
      - 
      - 
    * - FC1
-     - 295168
-     - 0
+     - 295040
+     - 128
      -  
      -  
    * - Output
-     - 1300
-     - 0
+     - 1290
+     - 10
      - 
      - 
    * - Total
