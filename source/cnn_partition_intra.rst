@@ -150,10 +150,10 @@ The number of parameters of the two models are shown in table 1 and table 2.
    * - 256
      - 1536
      - 3072
-     - 8192
+     - 8256
      - 3120
      - 490
-     - 16666
+     - 16730
    * - 16
      - 24
      - 32
@@ -167,14 +167,14 @@ The number of parameters of the two models are shown in table 1 and table 2.
      - 8192
      - 3072
      - 190
-     - 22,278
+     - 22342
    * - 4096
      - 6144
      - 3072
      - 14336
      - 3120
      - 490
-     - 31,258
+     - 31322
      
 
 
