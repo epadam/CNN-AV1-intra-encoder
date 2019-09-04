@@ -132,7 +132,7 @@ A model inspired by Google inception is also tested
 The number of parameters of the two models are shown in table 1 and table 2.
 
 .. list-table:: tianyili
-   :widths: 25 25 50
+   :widths: 10 10 10 10 10 
    :header-rows: 1
 
    * - Layer
@@ -141,43 +141,83 @@ The number of parameters of the two models are shown in table 1 and table 2.
      - Addition
      - Multiplication
    * - Conv1
-     - Conv2
-     - Conv3
-     - FC1
-     - FC2
-     - Output
-     - Total
-   * - 256
+     - 256
+     - 16
+     - 3856
+     - 4096
+   * - Conv2
      - 1536
-     - 3072
-     - 8256
-     - 3120
-     - 490
-     - 16730
-   * - 16
      - 24
-     - 32
-     - 64
-     - 48
-     - 10
-     - 194
-   * - 3856
      - 4632
-     - 2336
-     - 8192
-     - 3072
-     - 190
-     - 22342
-   * - 4096
      - 6144
+   * - Conv3
      - 3072
-     - 14336
+     - 32
+     - 2336
+     - 3072
+   * - FC1
+     - 8256
+     - 64
+     - 8256
+     - 14400
+   * - FC2
      - 3120
+     - 48
+     - 3072
+     - 3120
+   * - Output
      - 490
+     - 10
+     - 190
+     - 490
+   * - Total
+     - 16730
+     - 194
+     - 22342
      - 31322
      
 
+The number of parameters of the two models are shown in table 1 and table 2.
 
+.. list-table:: mnist_modify
+   :widths: 10 10 10 10 10 
+   :header-rows: 1
+
+   * - Layer
+     - Weights
+     - Bias
+     - Addition
+     - Multiplication
+   * - Conv1
+     - 256
+     - 16
+     - 3856
+     - 4096
+   * - Conv2
+     - 1536
+     - 24
+     - 4632
+     - 6144
+   * - Conv3
+     - 3072
+     - 32
+     - 2336
+     - 3072
+   * - FC1
+     - 8256
+     - 64
+     - 8256
+     - 14400
+   * - Output
+     - 490
+     - 10
+     - 190
+     - 490
+   * - Total
+     - 16730
+     - 194
+     - 22342
+     - 31322
 
 ============================
 Encoder Modification
