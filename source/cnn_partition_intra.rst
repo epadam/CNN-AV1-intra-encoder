@@ -11,6 +11,7 @@ And since CNN is very powerful in image recognition, it is very suitable to deci
 Partition Decision for Intra Frame in AV1
 ==========================================
 
+.. code-block:: c
 
 enum {
   PARTITION_NONE,
