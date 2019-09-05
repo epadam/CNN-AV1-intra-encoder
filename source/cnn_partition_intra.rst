@@ -96,6 +96,8 @@ Several CNN models are designed to evaluate the prediction performance.
                   metrics=['accuracy'])
 
 
+.. image:: img/model1.png
+
 
 
 .. code-block:: python
@@ -141,6 +143,7 @@ Several CNN models are designed to evaluate the prediction performance.
                   metrics=['accuracy'])
 
 
+.. image:: img/mnist_model.png
 
 
 A model that is similar to other paper 
