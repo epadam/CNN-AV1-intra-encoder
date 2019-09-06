@@ -19,10 +19,17 @@ Evaluation of CNN models with different dataset
 =================================================
 
 
-In the following sections, the dataset with 11 frames with single qp is used for evaluating the performance of different models. For 64 and 32 blocks, the image will be down-scaled to 16x16 first. The rest structure of the model remains the same for each model.
+In the following sections, the dataset with 11 frames with single qp is used for evaluating the performance of different models. All 11 frames are from different videos. For 64 and 32 blocks, the image will be down-scaled to 16x16 first. The rest structure of the model remains the same for each model.
 
 datasets for 64 and 32 block are smaller than 16 block.
 
+The distribution of partition modes of different block sizes is shown below. 
+
+.. image:: img/4K_11f_mix_distribution_64.jpg
+
+.. image:: img/4K_11f_mix_distribution_32.jpg
+
+.. image:: img/4K_11f_mix_distribution_16.jpg
 
 ----------------------------------------------------------------------------
 Performance with trimmed dataset (equal number of samples for each class)
