@@ -1,16 +1,18 @@
 Performance Evaluation
 ===========================
 
-============================== 
+
+================================
 Experimental Configuration
-============================== 
+================================
+
+The video encoding time is measured on Intel NUC
 
 ==========================================================
 Performance of Reference AV1 Encoder Compared with HEVC
 ==========================================================
 
-
-
+Different videos are encoded with both AV1 and HEVC to compare the encoding efficiency 
 
 =================================================
 Evaluation of CNN models with different dataset
@@ -28,7 +30,10 @@ Performance with trimmed dataset (equal number of samples for each class)
 
 To avoid a biased training model, the dataset is trimmed so that each class can have equal samples. 
 
-The training result is showing below
+The training result for block size 16x16, 32x32, 64x64 is shown below:
+
+
+
 
 The accuracy is low for all the models 
 
@@ -83,7 +88,7 @@ From the tests above, it can be seen that the model can not really learn the fea
 You can check the following jupyter notebook to see to see the partition modes of the dataset.  
 
 -----------------------------------------------------------------
-Training results with datasets from videos with other resolution
+datasets from videos with other resolution
 -----------------------------------------------------------------
 
 It can be seen in the figure, that videos with different resolution have slightly different partition mode distributions. For lower resolution videos, there is higher chance to be encoded in smaller blocks since the contents of the video is more compact. 
@@ -107,4 +112,17 @@ Models trained with single qp (120) and mixed qp data are tested with a test set
 Performance of CNN Intra Encoder
 ====================================
 
+
+
+---------------------------------------------
+Encoding Performance
+---------------------------------------------
+
+Comparison of Encoding Time
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+Comparison of video Quality
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 overhead, complexity reduction, running time
