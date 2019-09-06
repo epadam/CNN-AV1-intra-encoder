@@ -100,12 +100,15 @@ model2
 Training with weighted cross entropy 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+
+model1
 .. image:: img/m1_qp120_64_acc_fw.jpg
    :width: 50%
 .. image:: img/m1_qp120_64_loss_fw.jpg
    :width: 50%
 
-
+model2
 .. image:: img/mnist_qp120_64_acc_fw.jpg
    :width: 50%
 .. image:: img/mnist_qp120_64_loss_fw.jpg
@@ -128,10 +131,32 @@ To further inspect the relation between classes. Only two classes are selected t
 Training results for None and Split classes
 --------------------------------------------
 
+model1
+.. image:: img/mnist_qp120_64_acc_NS.jpg
+   :width: 50%
+.. image:: img/mnist_qp120_64_loss_NS.jpg
+   :width: 50%
 
+model2
+.. image:: img/mnist_qp120_64_acc_NS.jpg
+   :width: 50%
+.. image:: img/mnist_qp120_64_loss_NS.jpg
+   :width: 50%
+  
 -------------------------------------------- 
 Training results for Horz and Vert classes
 --------------------------------------------
+model1
+.. image:: img/mnist_qp120_64_acc_HV.jpg
+   :width: 50%
+.. image:: img/mnist_qp120_64_loss_HV.jpg
+   :width: 50%
+
+model2
+.. image:: img/mnist_qp120_64_acc_HV.jpg
+   :width: 50%
+.. image:: img/mnist_qp120_64_loss_HV.jpg
+   :width: 50%
 
 
 
