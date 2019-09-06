@@ -6,6 +6,11 @@ The members of AOM include all the big players like Google, Facebook, Netflix, A
 
 AV1 introduces many new tools,  Table shows the tool comparison between AV1 and its main competitors, HEVC and VVC
 
+==========================
+Partition Modes
+==========================
+
+
 
 ==========================
 Intra Prediction Tools
@@ -77,3 +82,12 @@ Google also has showed the compression improvement when enabling the experimenta
 Nevertheless, it also shows the encoding speed is extremely slow. Sethuraman et al. \cite {Sethuraman2018} also shows AV1 has better performance than other video codecs but has very slow encoding time. Similar results are also performed by Facebook and Bitmovin.
 
 In this section, we compare the encoding performance between AV1 and HEVC. We test the performance under 2 modes (CQ and VBR). For CQ mode, we compare it with HM. For VBR mode, we compare it with x265. The reason is explained in the following section.
+
+
+============================
+Transform and Quantization
+============================
+
+==========================
+Entropy Coding
+==========================
