@@ -44,10 +44,7 @@ To avoid a biased training model, the dataset is trimmed so that each class can 
 
 The training result for block size 16x16, 32x32, 64x64 is shown below:
 
-
-
-.. rst-class:: center
-  model1
+model1
 
 .. image:: img/m1_qp120_64_acc_ecf.jpg
    :width: 49%
@@ -56,9 +53,7 @@ The training result for block size 16x16, 32x32, 64x64 is shown below:
 
 ..........
 
-
-.. rst-class:: center
-  model2
+model2
 
 
 .. image:: img/mnist_qp120_64_acc_ecf.jpg
@@ -86,7 +81,6 @@ It can be seen that the accuray is quite close to the highest distribution of cl
 The training result with full dataset for block size 16x16, 32x32, 64x64 is shown below:
 
 
-.. rst-class:: center
 model1
 
 .. image:: img/m1_qp120_64_acc_f.jpg
@@ -94,12 +88,12 @@ model1
 .. image:: img/m1_qp120_64_loss_f.jpg
    :width: 49%
 
+
 model2
 
-
-.. image:: img/mnist_qp120_64_acc_fw.jpg
+.. image:: img/mnist_qp120_64_acc_f.jpg
    :width: 49%
-.. image:: img/mnist_qp120_64_loss_fw.jpg
+.. image:: img/mnist_qp120_64_loss_f.jpg
    :width: 49%
 
 
