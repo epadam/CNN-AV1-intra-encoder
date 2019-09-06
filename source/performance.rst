@@ -53,6 +53,13 @@ model1
 .. image:: img/m1_qp120_64_loss_ecf.jpg
    :width: 49%
 
+
+32
+
+
+16
+
+
 ..........
 
 model2
@@ -63,6 +70,12 @@ model2
    :width: 49%
 .. image:: img/mnist_qp120_64_loss_ecf.jpg
    :width: 49%
+
+32
+
+16
+
+
 
 The accuracy is low for all the models 
 
@@ -93,6 +106,9 @@ model1
 .. image:: img/m1_qp120_64_loss_f.jpg
    :width: 49%
 
+32
+
+16
 
 model2
 
@@ -103,6 +119,9 @@ model2
 .. image:: img/mnist_qp120_64_loss_f.jpg
    :width: 49%
 
+32
+
+16
 
 Training with weighted cross entropy 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -116,6 +135,10 @@ model1
 .. image:: img/m1_qp120_64_loss_fw.jpg
     :width: 49%
 
+32
+
+16
+
 model2
 
 64
@@ -124,6 +147,11 @@ model2
     :width: 49%
 .. image:: img/mnist_qp120_64_loss_fw.jpg
     :width: 49%
+
+32
+
+16
+
 
 Test on Expanded Model
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -151,6 +179,10 @@ model1
 .. image:: img/mnist_qp120_64_loss_NS.jpg
     :width: 49%
 
+32
+
+16
+
 model2
 
 64
@@ -159,7 +191,10 @@ model2
     :width: 49%
 .. image:: img/mnist_qp120_64_loss_NS.jpg
     :width: 49%
-  
+
+32
+
+16
 -------------------------------------------- 
 Training results for Horz and Vert classes
 --------------------------------------------
@@ -173,6 +208,10 @@ model1
 .. image:: img/mnist_qp120_64_loss_HV.jpg
     :width: 49%
 
+32
+
+16
+
 model2
 
 64
@@ -182,6 +221,9 @@ model2
 .. image:: img/mnist_qp120_64_loss_HV.jpg
     :width: 49%
 
+32
+
+16
 
 
 From the tests above, it can be seen that the model can not really learn the features of some classes. The reason is  
