@@ -9,9 +9,8 @@ PSNR
 PSNR means peak-to-peak signal-to-noise ratio and is the simplest and most commenly used video quality matric. For each frame in the video, the PSNR is calculated from the following formula:
 
 .. math::
-       :label: eq_lin_cost_func
-       
-       PSNR=10\cdot \log_{10} \frac{MaxErr^2}{MSE},
+        
+        PSNR=10\cdot \log_{10} \frac{MaxErr^2}{MSE},
 
 Where :math:`MSE= \frac{1}{N\cdot M}\sum_{i=1}^{N}{}\sum_{j=1}^{M} {\left(f\left(i,j\right) - f'\left(i,j\right)\right)}^2`.
 
