@@ -160,6 +160,18 @@ Test on Expanded Model
 --------------------------------------
 Performance with Larger Dataset
 --------------------------------------
+We further use dataset mixed with data from different resolution.
+
+datasets from videos with other resolution
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It can be seen in the figure, that videos with different resolution have slightly different partition mode distributions. For lower resolution videos, there is higher chance to be encoded in smaller blocks since the contents of the video is more compact. 
+
+Videos with higher resolution like 4K videos, on the other hand, will have more smooth area that can be encoded with larger blocks.
+
+
+
+
 It can be seen that the accuracy is becoming lower with larger dataset, which may suggest the model is more confused by the dataset.
 
 
@@ -236,13 +248,7 @@ From the tests above, it can be seen that the model can not really learn the fea
 
 You can check the following jupyter notebook to see to see the partition modes of the dataset.  
 
------------------------------------------------------------------
-datasets from videos with other resolution
------------------------------------------------------------------
 
-It can be seen in the figure, that videos with different resolution have slightly different partition mode distributions. For lower resolution videos, there is higher chance to be encoded in smaller blocks since the contents of the video is more compact. 
-
-Videos with higher resolution like 4K videos, on the other hand, will have more smooth area that can be encoded with larger blocks. 
 
 
 ---------------------------------------------
