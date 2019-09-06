@@ -44,8 +44,22 @@ To avoid a biased training model, the dataset is trimmed so that each class can 
 
 The training result for block size 16x16, 32x32, 64x64 is shown below:
 
+model1
+
+.. image:: img/m1_qp120_64_acc_ecf.jpg
+   :width: 50%
+
+.. image:: img/m1_qp120_64_loss_ecf.jpg
+   :width: 50%
+
+model2
 
 
+.. image:: img/mnist_qp120_64_acc_ecf.jpg
+   :width: 50%
+
+.. image:: img/mnist_qp120_64_loss_ecf.jpg
+   :width: 50%
 
 The accuracy is low for all the models 
 
@@ -63,6 +77,27 @@ A full dataset is then tested to see the performance
 The distribution of classes is shown in the figure.
 
 It can be seen that the accuray is quite close to the highest distribution of classes.
+
+The training result with full dataset for block size 16x16, 32x32, 64x64 is shown below:
+
+
+model1
+
+.. image:: img/m1_qp120_64_acc_f.jpg
+   :width: 50%
+
+.. image:: img/m1_qp120_64_loss_f.jpg
+   :width: 50%
+
+model2
+
+
+.. image:: img/m1_qp120_64_acc_f.jpg
+   :width: 50%
+
+.. image:: img/m1_qp120_64_loss_f.jpg
+   :width: 50%
+
 
 Training with weighted cross entropy 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
