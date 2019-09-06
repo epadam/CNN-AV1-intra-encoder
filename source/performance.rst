@@ -163,12 +163,13 @@ Performance with Larger Dataset
 It can be seen that the accuracy is becoming lower with larger dataset, which may suggest the model is more confused by the dataset.
 
 
-To further inspect the relation between classes. Only two classes are selected to see if the model can tell the difference between classes. 
+To further inspect the relation between classes. Only two classes with equal number of samples are selected to see if the model can tell the difference between classes. 
 
+------------------------------------------------------------
+Training results of None and Split partition modes only
+------------------------------------------------------------
 
---------------------------------------------
-Training results for None and Split classes
---------------------------------------------
+It can be seen that the accuracy can reach around 90% for both models when it is only trained with NONE and SPLIT partition modees.
 
 model1
 
@@ -195,9 +196,11 @@ model2
 32
 
 16
--------------------------------------------- 
-Training results for Horz and Vert classes
---------------------------------------------
+
+
+--------------------------------------------------------  
+Training results of Horz and Vert partition modes only
+-------------------------------------------------------- 
 
 model1
 
@@ -224,6 +227,8 @@ model2
 32
 
 16
+
+However, it can only reach 60% for the Horz and Vert datasets.
 
 
 From the tests above, it can be seen that the model can not really learn the features of some classes. The reason is  
@@ -264,9 +269,18 @@ Encoding Performance
 
 Comparison of Encoding Time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Overhead
 
 
-
-Comparison of video Quality
+Comparison of Video Quality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-overhead, complexity reduction, running time
+models trained with different dataset is used to test the encoding efficiency
+
+trimmed dataset
+
+full dataset
+
+full dataset with weighted cross entropy
+
+
+
