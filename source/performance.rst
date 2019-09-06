@@ -45,6 +45,7 @@ To avoid a biased training model, the dataset is trimmed so that each class can 
 The training result for block size 16x16, 32x32, 64x64 is shown below:
 
 model1
+64
 
 .. image:: img/m1_qp120_64_acc_ecf.jpg
    :width: 49%
@@ -54,6 +55,7 @@ model1
 ..........
 
 model2
+64
 
 .. image:: img/mnist_qp120_64_acc_ecf.jpg
    :width: 49%
@@ -81,6 +83,7 @@ The training result with full dataset for block size 16x16, 32x32, 64x64 is show
 
 
 model1
+64
 
 .. image:: img/m1_qp120_64_acc_f.jpg
    :width: 49%
@@ -89,6 +92,7 @@ model1
 
 
 model2
+64
 
 .. image:: img/mnist_qp120_64_acc_f.jpg
    :width: 49%
@@ -100,6 +104,7 @@ Training with weighted cross entropy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 model1
+64
 
 .. image:: img/m1_qp120_64_acc_fw.jpg
     :width: 49%
@@ -107,6 +112,7 @@ model1
     :width: 49%
 
 model2
+64
 
 .. image:: img/mnist_qp120_64_acc_fw.jpg
     :width: 49%
@@ -131,6 +137,7 @@ Training results for None and Split classes
 --------------------------------------------
 
 model1
+64
 
 .. image:: img/mnist_qp120_64_acc_NS.jpg
     :width: 49%
@@ -138,6 +145,7 @@ model1
     :width: 49%
 
 model2
+64
 
 .. image:: img/mnist_qp120_64_acc_NS.jpg
     :width: 49%
@@ -148,6 +156,7 @@ model2
 Training results for Horz and Vert classes
 --------------------------------------------
 model1
+64
 
 .. image:: img/mnist_qp120_64_acc_HV.jpg
     :width: 49%
@@ -155,6 +164,7 @@ model1
     :width: 49%
 
 model2
+64
 
 .. image:: img/mnist_qp120_64_acc_HV.jpg
     :width: 49%
