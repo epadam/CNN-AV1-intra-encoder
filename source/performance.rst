@@ -25,16 +25,12 @@ datasets for 64 and 32 block are smaller than 16 block.
 
 The distribution of partition modes of different block sizes is shown below. 
 
-|pic1|pic2|pic3|
 
-.. |pic1| image:: img/4K_11f_mix_distribution_64.jpg
+image:: img/4K_11f_mix_distribution_64.jpg
+   :width: 33%
+image:: img/4K_11f_mix_distribution_32.jpg
    :width: 33%
 
-.. |pic2| image:: img/4K_11f_mix_distribution_32.jpg
-   :width: 33%
-   
-.. |pic2| image:: img/4K_11f_mix_distribution_16.jpg
-   :width: 33%
 
 ----------------------------------------------------------------------------
 Performance with trimmed dataset (equal number of samples for each class)
