@@ -55,7 +55,6 @@ model1
 
 model2
 
-
 .. image:: img/mnist_qp120_64_acc_ecf.jpg
    :width: 49%
 .. image:: img/mnist_qp120_64_loss_ecf.jpg
@@ -101,12 +100,14 @@ Training with weighted cross entropy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 model1
+
 .. image:: img/m1_qp120_64_acc_fw.jpg
     :width: 49%
 .. image:: img/m1_qp120_64_loss_fw.jpg
     :width: 49%
 
 model2
+
 .. image:: img/mnist_qp120_64_acc_fw.jpg
     :width: 49%
 .. image:: img/mnist_qp120_64_loss_fw.jpg
@@ -130,12 +131,14 @@ Training results for None and Split classes
 --------------------------------------------
 
 model1
+
 .. image:: img/mnist_qp120_64_acc_NS.jpg
     :width: 49%
 .. image:: img/mnist_qp120_64_loss_NS.jpg
     :width: 49%
 
 model2
+
 .. image:: img/mnist_qp120_64_acc_NS.jpg
     :width: 49%
 .. image:: img/mnist_qp120_64_loss_NS.jpg
@@ -145,12 +148,14 @@ model2
 Training results for Horz and Vert classes
 --------------------------------------------
 model1
+
 .. image:: img/mnist_qp120_64_acc_HV.jpg
     :width: 49%
 .. image:: img/mnist_qp120_64_loss_HV.jpg
     :width: 49%
 
 model2
+
 .. image:: img/mnist_qp120_64_acc_HV.jpg
     :width: 49%
 .. image:: img/mnist_qp120_64_loss_HV.jpg
