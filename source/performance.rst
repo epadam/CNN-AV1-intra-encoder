@@ -47,9 +47,9 @@ The training result for block size 16x16, 32x32, 64x64 is shown below:
 model1
 
 .. image:: img/m1_qp120_64_acc_ecf.jpg
-   :width: 50%
+   :width: 49%
 .. image:: img/m1_qp120_64_loss_ecf.jpg
-   :width: 50%
+   :width: 49%
 
 ..........
 
@@ -57,9 +57,9 @@ model2
 
 
 .. image:: img/mnist_qp120_64_acc_ecf.jpg
-   :width: 50%
+   :width: 49%
 .. image:: img/mnist_qp120_64_loss_ecf.jpg
-   :width: 50%
+   :width: 49%
 
 The accuracy is low for all the models 
 
@@ -84,17 +84,17 @@ The training result with full dataset for block size 16x16, 32x32, 64x64 is show
 model1
 
 .. image:: img/m1_qp120_64_acc_f.jpg
-   :width: 50%
+   :width: 49%
 .. image:: img/m1_qp120_64_loss_f.jpg
-   :width: 50%
+   :width: 49%
 
 model2
 
 
 .. image:: img/mnist_qp120_64_acc_fw.jpg
-   :width: 50%
+   :width: 49%
 .. image:: img/mnist_qp120_64_loss_fw.jpg
-   :width: 50%
+   :width: 49%
 
 
 Training with weighted cross entropy 
@@ -104,15 +104,15 @@ Training with weighted cross entropy
 
 model1
 .. image:: img/m1_qp120_64_acc_fw.jpg
-   :width: 50%
+   :width: 49%
 .. image:: img/m1_qp120_64_loss_fw.jpg
-   :width: 50%
+   :width: 49%
 
 model2
 .. image:: img/mnist_qp120_64_acc_fw.jpg
-   :width: 50%
+   :width: 49%
 .. image:: img/mnist_qp120_64_loss_fw.jpg
-   :width: 50%
+   :width: 49%
 
 Test on Expanded Model
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -133,30 +133,30 @@ Training results for None and Split classes
 
 model1
 .. image:: img/mnist_qp120_64_acc_NS.jpg
-   :width: 50%
+   :width: 49%
 .. image:: img/mnist_qp120_64_loss_NS.jpg
-   :width: 50%
+   :width: 49%
 
 model2
 .. image:: img/mnist_qp120_64_acc_NS.jpg
-   :width: 50%
+   :width: 49%
 .. image:: img/mnist_qp120_64_loss_NS.jpg
-   :width: 50%
+   :width: 49%
   
 -------------------------------------------- 
 Training results for Horz and Vert classes
 --------------------------------------------
 model1
 .. image:: img/mnist_qp120_64_acc_HV.jpg
-   :width: 50%
+   :width: 49%
 .. image:: img/mnist_qp120_64_loss_HV.jpg
-   :width: 50%
+   :width: 49%
 
 model2
 .. image:: img/mnist_qp120_64_acc_HV.jpg
-   :width: 50%
+   :width: 49%
 .. image:: img/mnist_qp120_64_loss_HV.jpg
-   :width: 50%
+   :width: 49%
 
 
 
