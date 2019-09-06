@@ -206,9 +206,9 @@ model1
 
 64
 
-.. image:: img/mnist_qp120_64_acc_HV.jpg
+.. image:: img/m1_qp120_64_acc_HV.jpg
     :width: 49%
-.. image:: img/mnist_qp120_64_loss_HV.jpg
+.. image:: img/m1_qp120_64_loss_HV.jpg
     :width: 49%
 
 32
@@ -251,6 +251,13 @@ Comparison between seperate qp and mixed qps
 
 From figure x, it can be seen that qp affect the partition decision tremendously. 
 
+.. image:: img/library64.png
+    :width: 49%
+.. image:: img/library32.png
+    :width: 49%
+
+.. image:: img/library16.png
+    :width: 49%
 
 Models trained with single qp (120) and mixed qp data are tested with a test set including one 4K frame, 
 
