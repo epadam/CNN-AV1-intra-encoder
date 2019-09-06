@@ -8,9 +8,12 @@ PSNR
 
 PSNR means peak-to-peak signal-to-noise ratio and is the simplest and most commenly used video quality matric. For each frame in the video, the PSNR is calculated from the following formula:
 
-$PSNR=10\cdot \log_{10} \frac{MaxErr^2}{MSE}$ ,
+.. math::
+       :label: eq_lin_cost_func
+       
+       PSNR=10\cdot \log_{10} \frac{MaxErr^2}{MSE},
 
-Where  $MSE= \frac{1}{N\cdot M}\sum_{i=1}^{N}{}\sum_{j=1}^{M} {\left(f\left(i,j\right) - f'\left(i,j\right)\right)}^2 $
+Where :math:`MSE= \frac{1}{N\cdot M}\sum_{i=1}^{N}{}\sum_{j=1}^{M} {\left(f\left(i,j\right) - f'\left(i,j\right)\right)}^2`.
 
 f' and f represent encoded frame and original frame,  luma and chroma plane can be calculated seperately or together to obtain the average MSE and PSNR.
 
