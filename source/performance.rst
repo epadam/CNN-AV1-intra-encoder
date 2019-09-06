@@ -28,6 +28,7 @@ The distribution of partition modes of different block sizes is shown below.
 
 image:: img/4K_11f_mix_distribution_64.jpg
    :width: 33%
+   
 image:: img/4K_11f_mix_distribution_32.jpg
    :width: 33%
 
