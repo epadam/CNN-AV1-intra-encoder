@@ -176,7 +176,17 @@ model1
 
 32
 
+.. image:: img/m1_qp120_32_acc_fw.jpg
+    :width: 49%
+.. image:: img/m1_qp120_32_loss_fw.jpg
+    :width: 49%
+
 16
+
+.. image:: img/m1_qp120_16_acc_fw.jpg
+    :width: 49%
+.. image:: img/m1_qp120_16_loss_fw.jpg
+    :width: 49%
 
 model2
 
@@ -189,7 +199,17 @@ model2
 
 32
 
+.. image:: img/mnist_qp120_32_acc_fw.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_32_loss_fw.jpg
+    :width: 49%
+
 16
+
+.. image:: img/mnist_qp120_32_acc_fw.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_32_loss_fw.jpg
+    :width: 49%
 
 
 Test on Expanded Model
