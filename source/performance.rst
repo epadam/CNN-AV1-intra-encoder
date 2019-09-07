@@ -127,9 +127,9 @@ model1
 
 32
 
-.. image:: img/m1_qp120_32_acc_f.jpg
+.. image:: img/m1_qp120_32_acc_sh.jpg
    :width: 49%
-.. image:: img/m1_qp120_32_loss_f.jpg
+.. image:: img/m1_qp120_32_loss_sh.jpg
    :width: 49%
 
 16
@@ -150,9 +150,9 @@ model2
 
 32
 
-.. image:: img/mnist_qp120_32_acc_f.jpg
+.. image:: img/mnist_qp120_32_acc_sh.jpg
    :width: 49%
-.. image:: img/mnist_qp120_32_loss_f.jpg
+.. image:: img/mnist_qp120_32_loss_sh.jpg
    :width: 49%
 
 16
@@ -226,23 +226,23 @@ model1
 
 64
 
-.. image:: img/mnist_qp120_64_acc_NS.jpg
+.. image:: img/m1_qp120_64_acc_NS.jpg
     :width: 49%
-.. image:: img/mnist_qp120_64_loss_NS.jpg
+.. image:: img/m1_qp120_64_loss_NS.jpg
     :width: 49%
 
 32
 
-.. image:: img/mnist_qp120_32_acc_NS.jpg
+.. image:: img/m1_qp120_32_acc_NS.jpg
     :width: 49%
-.. image:: img/mnist_qp120_32_loss_NS.jpg
+.. image:: img/m1_qp120_32_loss_NS.jpg
     :width: 49%
 
 16
 
-.. image:: img/mnist_qp120_16_acc_NS.jpg
+.. image:: img/m1_qp120_16_acc_NS.jpg
     :width: 49%
-.. image:: img/mnist_qp120_16_loss_NS.jpg
+.. image:: img/m1_qp120_16_loss_NS.jpg
     :width: 49%
 
 model2
