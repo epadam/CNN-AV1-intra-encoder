@@ -356,12 +356,12 @@ Comparison between seperate qp and mixed qps
 
 From figure x, it can be seen that qp affect the partition decision tremendously. 
 
-.. image:: img/library64.png
+.. image:: img/library64.jpg
     :width: 49%
-.. image:: img/library32.png
+.. image:: img/library32.jpg
     :width: 49%
 
-.. image:: img/library16.png
+.. image:: img/library16.jpg
     :width: 49%
 
 Models trained with single qp (120) and mixed qp data are tested with a test set including one 4K frame, 
