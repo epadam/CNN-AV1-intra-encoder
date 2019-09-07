@@ -56,9 +56,17 @@ model1
 
 32
 
+.. image:: img/m1_qp120_32_acc_ecf.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_ecf.jpg
+   :width: 49%
 
 16
 
+.. image:: img/m1_qp120_16_acc_ecf.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_ecf.jpg
+   :width: 49%
 
 ..........
 
@@ -73,7 +81,18 @@ model2
 
 32
 
+.. image:: img/mnist_qp120_32_acc_ecf.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_32_loss_ecf.jpg
+   :width: 49%
+
 16
+
+
+.. image:: img/mnist_qp120_16_acc_ecf.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_16_loss_ecf.jpg
+   :width: 49%
 
 
 
@@ -108,7 +127,17 @@ model1
 
 32
 
+.. image:: img/m1_qp120_32_acc_f.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_f.jpg
+   :width: 49%
+
 16
+
+.. image:: img/m1_qp120_16_acc_f.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_f.jpg
+   :width: 49%
 
 model2
 
@@ -121,7 +150,17 @@ model2
 
 32
 
+.. image:: img/mnist_qp120_32_acc_f.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_32_loss_f.jpg
+   :width: 49%
+
 16
+
+.. image:: img/mnist_qp120_16_acc_f.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_16_loss_f.jpg
+   :width: 49%
 
 Training with weighted cross entropy 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -194,7 +233,17 @@ model1
 
 32
 
+.. image:: img/mnist_qp120_32_acc_NS.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_32_loss_NS.jpg
+    :width: 49%
+
 16
+
+.. image:: img/mnist_qp120_16_acc_NS.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_16_loss_NS.jpg
+    :width: 49%
 
 model2
 
@@ -207,8 +256,18 @@ model2
 
 32
 
+.. image:: img/mnist_qp120_32_acc_NS.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_32_loss_NS.jpg
+    :width: 49%
+
+
 16
 
+.. image:: img/mnist_qp120_16_acc_NS.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_16_loss_NS.jpg
+    :width: 49%
 
 --------------------------------------------------------  
 Training results of Horz and Vert partition modes only
@@ -225,7 +284,17 @@ model1
 
 32
 
+.. image:: img/m1_qp120_32_acc_HV.jpg
+    :width: 49%
+.. image:: img/m1_qp120_32_loss_HV.jpg
+    :width: 49%
+    
 16
+
+.. image:: img/m1_qp120_16_acc_HV.jpg
+    :width: 49%
+.. image:: img/m1_qp120_16_loss_HV.jpg
+    :width: 49%
 
 model2
 
@@ -238,7 +307,17 @@ model2
 
 32
 
+.. image:: img/mnist_qp120_32_acc_HV.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_32_loss_HV.jpg
+    :width: 49%
+
 16
+
+.. image:: img/mnist_qp120_16_acc_HV.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_16_loss_HV.jpg
+    :width: 49%
 
 However, it can only reach 60% for the Horz and Vert datasets.
 
