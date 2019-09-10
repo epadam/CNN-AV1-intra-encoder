@@ -394,5 +394,5 @@ full dataset
 
 full dataset with weighted cross entropy
 
-
+Encoder preformance between seperate qp and mixed qps
 
