@@ -49,7 +49,7 @@ Like statistic based solutions, machine learning can use human selected features
 In recent years, deep learning obtains more attentions due to their impressive performance in many fields.
 
 There are many researches trying to use CNN to classify CU splitting.
-:cite:`Xu2018b` achieve averagely 65\% reduction of HEVC encoding time under inter mode by using CNN and Long Term Short Term Memory (LSTM). 
+ :cite:`Xu2018b`  achieve averagely 65\% reduction of HEVC encoding time under inter mode by using CNN and Long Term Short Term Memory (LSTM). 
 
 (Rate-Distortion Optimized Quantization: A Deep Learning Approach) used CNN for prediction of Quantization.
 
@@ -117,3 +117,4 @@ The NN structure used in AV1 is shown in Figure \ref{fig:NN structure}. Although
 
 
 .. bibliography:: reference.bib
+   :cited:
