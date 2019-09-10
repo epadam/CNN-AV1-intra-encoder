@@ -1,7 +1,6 @@
 Reference
 ----------
 
-.. rubric:: References
-
 .. bibliography:: reference.bib
-  :all:
+   :list: enumerated
+   :cited:
