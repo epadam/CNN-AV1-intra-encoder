@@ -346,6 +346,7 @@ model2
 
 However, it can only reach 60% for the Horz and Vert datasets.
 
+Around 50% means the model doesn't really learn. The model can always guess only one class and have 50% accuracy.
 
 From the tests above, it can be seen that the model can not really learn the features of some classes. The reason is  
 
