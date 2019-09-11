@@ -348,6 +348,9 @@ From the tests above, it can be seen that the model can not really learn the fea
 You can check the following jupyter notebook to see to see the partition modes of the dataset.  
 
 
+--------------------------------------------------------  
+Training results of three partition modes
+--------------------------------------------------------
 
 
 ---------------------------------------------
