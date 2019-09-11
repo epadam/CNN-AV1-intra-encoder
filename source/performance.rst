@@ -616,7 +616,7 @@ model2
     :width: 49%
 
 --------------------------------------------------------  
-Training results of Horz4 and Vert4 partition modes only
+Training results of Split and Vert4 partition modes only
 -------------------------------------------------------- 
 
 64
