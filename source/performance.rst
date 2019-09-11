@@ -44,35 +44,17 @@ To avoid a biased training model, the dataset is trimmed so that each class can 
 
 The training result for block size 16x16, 32x32, 64x64 is shown below:
 
-model1
-
 64
+
+
+model1
 
 .. image:: img/m1_qp120_64_acc_ecf.jpg
    :width: 49%
 .. image:: img/m1_qp120_64_loss_ecf.jpg
    :width: 49%
 
-
-32
-
-.. image:: img/m1_qp120_32_acc_ecf.jpg
-   :width: 49%
-.. image:: img/m1_qp120_32_loss_ecf.jpg
-   :width: 49%
-
-16
-
-.. image:: img/m1_qp120_16_acc_ecf.jpg
-   :width: 49%
-.. image:: img/m1_qp120_16_loss_ecf.jpg
-   :width: 49%
-
-..........
-
 model2
-
-64
 
 .. image:: img/mnist_qp120_64_acc_ecf.jpg
    :width: 49%
@@ -81,6 +63,15 @@ model2
 
 32
 
+model1
+
+.. image:: img/m1_qp120_32_acc_ecf.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_ecf.jpg
+   :width: 49%
+   
+model2
+
 .. image:: img/mnist_qp120_32_acc_ecf.jpg
    :width: 49%
 .. image:: img/mnist_qp120_32_loss_ecf.jpg
@@ -88,6 +79,14 @@ model2
 
 16
 
+model1
+
+.. image:: img/m1_qp120_16_acc_ecf.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_ecf.jpg
+   :width: 49%
+   
+model2
 
 .. image:: img/mnist_qp120_16_acc_ecf.jpg
    :width: 49%
@@ -115,33 +114,16 @@ It can be seen that the accuray is quite close to the highest distribution of cl
 
 The training result with full dataset for block size 16x16, 32x32, 64x64 is shown below:
 
+64
 
 model1
-
-64
 
 .. image:: img/m1_qp120_64_acc_f.jpg
    :width: 49%
 .. image:: img/m1_qp120_64_loss_f.jpg
    :width: 49%
 
-32
-
-.. image:: img/m1_qp120_32_acc_sh.jpg
-   :width: 49%
-.. image:: img/m1_qp120_32_loss_sh.jpg
-   :width: 49%
-
-16
-
-.. image:: img/m1_qp120_16_acc_f.jpg
-   :width: 49%
-.. image:: img/m1_qp120_16_loss_f.jpg
-   :width: 49%
-
 model2
-
-64
 
 .. image:: img/mnist_qp120_64_acc_f.jpg
    :width: 49%
@@ -150,12 +132,30 @@ model2
 
 32
 
+model1
+
+.. image:: img/m1_qp120_32_acc_sh.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_sh.jpg
+   :width: 49%
+
+model2
+
 .. image:: img/mnist_qp120_32_acc_sh.jpg
    :width: 49%
 .. image:: img/mnist_qp120_32_loss_sh.jpg
    :width: 49%
 
 16
+
+model1
+
+.. image:: img/m1_qp120_16_acc_f.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_f.jpg
+   :width: 49%
+   
+model2
 
 .. image:: img/mnist_qp120_16_acc_f.jpg
    :width: 49%
@@ -165,32 +165,16 @@ model2
 Training with weighted cross entropy 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-model1
-
 64
+
+model1
 
 .. image:: img/m1_qp120_64_acc_fw.jpg
     :width: 49%
 .. image:: img/m1_qp120_64_loss_fw.jpg
     :width: 49%
 
-32
-
-.. image:: img/m1_qp120_32_acc_fw.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_fw.jpg
-    :width: 49%
-
-16
-
-.. image:: img/m1_qp120_16_acc_fw.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_fw.jpg
-    :width: 49%
-
 model2
-
-64
 
 .. image:: img/mnist_qp120_64_acc_fw.jpg
     :width: 49%
@@ -199,12 +183,30 @@ model2
 
 32
 
+model1
+
+.. image:: img/m1_qp120_32_acc_fw.jpg
+    :width: 49%
+.. image:: img/m1_qp120_32_loss_fw.jpg
+    :width: 49%
+
+model2
+
 .. image:: img/mnist_qp120_32_acc_fw.jpg
     :width: 49%
 .. image:: img/mnist_qp120_32_loss_fw.jpg
     :width: 49%
 
 16
+
+model1
+
+.. image:: img/m1_qp120_16_acc_fw.jpg
+    :width: 49%
+.. image:: img/m1_qp120_16_loss_fw.jpg
+    :width: 49%
+
+model2
 
 .. image:: img/mnist_qp120_32_acc_fw.jpg
     :width: 49%
@@ -242,32 +244,16 @@ Training results of None and Split partition modes only
 
 It can be seen that the accuracy can reach around 90% for both models when it is only trained with NONE and SPLIT partition modees.
 
-model1
-
 64
+
+model1
 
 .. image:: img/m1_qp120_64_acc_NS.jpg
     :width: 49%
 .. image:: img/m1_qp120_64_loss_NS.jpg
     :width: 49%
 
-32
-
-.. image:: img/m1_qp120_32_acc_NS.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_NS.jpg
-    :width: 49%
-
-16
-
-.. image:: img/m1_qp120_16_acc_NS.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_NS.jpg
-    :width: 49%
-
 model2
-
-64
 
 .. image:: img/mnist_qp120_64_acc_NS.jpg
     :width: 49%
@@ -276,13 +262,30 @@ model2
 
 32
 
+model1
+
+.. image:: img/m1_qp120_32_acc_NS.jpg
+    :width: 49%
+.. image:: img/m1_qp120_32_loss_NS.jpg
+    :width: 49%
+
+model2
+
 .. image:: img/mnist_qp120_32_acc_NS.jpg
     :width: 49%
 .. image:: img/mnist_qp120_32_loss_NS.jpg
     :width: 49%
 
-
 16
+
+model1
+
+.. image:: img/m1_qp120_16_acc_NS.jpg
+    :width: 49%
+.. image:: img/m1_qp120_16_loss_NS.jpg
+    :width: 49%
+
+model2
 
 .. image:: img/mnist_qp120_16_acc_NS.jpg
     :width: 49%
@@ -293,32 +296,16 @@ model2
 Training results of Horz and Vert partition modes only
 -------------------------------------------------------- 
 
-model1
-
 64
+
+model1
 
 .. image:: img/m1_qp120_64_acc_HV.jpg
     :width: 49%
 .. image:: img/m1_qp120_64_loss_HV.jpg
     :width: 49%
 
-32
-
-.. image:: img/m1_qp120_32_acc_HV.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_HV.jpg
-    :width: 49%
-    
-16
-
-.. image:: img/m1_qp120_16_acc_HV.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_HV.jpg
-    :width: 49%
-
 model2
-
-64
 
 .. image:: img/mnist_qp120_64_acc_HV.jpg
     :width: 49%
@@ -327,12 +314,30 @@ model2
 
 32
 
+model1
+
+.. image:: img/m1_qp120_32_acc_HV.jpg
+    :width: 49%
+.. image:: img/m1_qp120_32_loss_HV.jpg
+    :width: 49%
+  
+model2
+
 .. image:: img/mnist_qp120_32_acc_HV.jpg
     :width: 49%
 .. image:: img/mnist_qp120_32_loss_HV.jpg
     :width: 49%
-
+    
 16
+
+model1
+
+.. image:: img/m1_qp120_16_acc_HV.jpg
+    :width: 49%
+.. image:: img/m1_qp120_16_loss_HV.jpg
+    :width: 49%
+
+model2
 
 .. image:: img/mnist_qp120_16_acc_HV.jpg
     :width: 49%
