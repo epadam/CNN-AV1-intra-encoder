@@ -350,6 +350,7 @@ Around 50% means the model doesn't really learn. The model can always guess only
 
 From the tests above, it can be seen that the model can not really learn the features of some classes. The reason is  
 
+This may suggest the partition Horz and Vert rely more on the context (neighbor's data)
 
 You can check the following jupyter notebook to see to see the partition modes of the dataset.  
 
