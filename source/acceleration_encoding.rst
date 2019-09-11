@@ -115,4 +115,4 @@ The NN structure used in AV1 is shown in Figure \ref{fig:NN structure}. Although
 .. image:: img/ml_rd_pick.png
 
 
-.. [CIT2002] A citation
+.. [Xu2018b] A citation
