@@ -12,7 +12,27 @@ The video encoding time is measured on Intel NUC
 Performance of Reference AV1 Encoder Compared with HEVC
 ==========================================================
 
-Different videos are encoded with both AV1 and HEVC to compare the encoding efficiency 
+In this section we test the performance of AV1 compared to HEVC and VVC for intra frame encoding. 
+
+All the encoding modes are set to fixed qp. To fairly compare the encoding time for the same PSNR quality, qp is carefully chosen for the three codec. The range of qp for AV1 is 1-64 while it is 1-54 for HEVC and VVC. 
+
+The command is shown below.
+
+Figure below shows the results of the comparison  
+
+It can be seen that for AV1, the encoding time can be greatly improved with SIMD. However, the encoding time is still slower than HEVC and VVC. 
+
+To compare the performance.
+
+The frame is encoded with qp = 25, 30, 36, 42 for AV1 and 16, 25, 32, 42 for HEVC and VVC.
+
+The figure of bit-rate VS PSNR is shown below.
+
+The BD-BR and BD-PSNR is summerized in the table below
+
+It can be seen that the performance of AV1 is better than HEVC but lower than VVC.   
+
+
 
 =================================================
 Evaluation of CNN models with different dataset
@@ -35,7 +55,128 @@ The distribution of partition modes of different block sizes is shown below.
 .. image:: img/4K_11f_mix_distribution_16.jpg
    :width: 50%
    
+-------------------------------------
+Performance with full dataset 
+-------------------------------------
+
+We first train the model with the full dataset directly.
+
+The training result with full dataset for block size 16x16, 32x32, 64x64 is shown below:
+
+64
+
+model1
+
+.. image:: img/m1_qp120_64_acc_f.jpg
+   :width: 49%
+.. image:: img/m1_qp120_64_loss_f.jpg
+   :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_64_acc_f.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_64_loss_f.jpg
+   :width: 49%
+
+32
+
+model1
+
+.. image:: img/m1_qp120_32_acc_sh.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_sh.jpg
+   :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_32_acc_sh.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_32_loss_sh.jpg
+   :width: 49%
+
+16
+
+model1
+
+.. image:: img/m1_qp120_16_acc_f.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_f.jpg
+   :width: 49%
    
+model2
+
+.. image:: img/mnist_qp120_16_acc_f.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_16_loss_f.jpg
+   :width: 49%
+
+It can be seen that the accuray is quite close to the highest distribution of classes for both models.
+
+This may suggest the model mostly guess split mode for block 64x64 and none and split modes for 32x32 and mostly none for 16x16.
+
+Part of the prediction result is recored show the model did still predict other modes. 
+
+The other two strategies are used to help the model make correct prediction.
+
+Training with weighted cross entropy 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To compensate the imbalanced dataset, weights are given to different classes. The weights are inverse propotional to the number of samples of each class. This means when a false prediction on the class with less samples, the cross entropy will be much higher to adjust the parameters.  
+
+64
+
+model1
+
+.. image:: img/m1_qp120_64_acc_fw.jpg
+    :width: 49%
+.. image:: img/m1_qp120_64_loss_fw.jpg
+    :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_64_acc_fw.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_64_loss_fw.jpg
+    :width: 49%
+
+32
+
+model1
+
+.. image:: img/m1_qp120_32_acc_fw.jpg
+    :width: 49%
+.. image:: img/m1_qp120_32_loss_fw.jpg
+    :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_32_acc_fw.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_32_loss_fw.jpg
+    :width: 49%
+
+16
+
+model1
+
+.. image:: img/m1_qp120_16_acc_fw.jpg
+    :width: 49%
+.. image:: img/m1_qp120_16_loss_fw.jpg
+    :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_32_acc_fw.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_32_loss_fw.jpg
+    :width: 49%
+
+
+It can be observed that the accuracy for all the block sizes dropped. The expectation of using weights for different classes is to compensate the classes with less samples. However, it shows the accuracy dropped by almost 20% for all block sizes. There can be two possiblilities. Both two models offers too less parameters to learn all the features of all 10 classes. The other possibility is the patterns of different claases are not unique so the model can not learn correctly. 
+
+To further identify the problem, the dataset is trimmed to make every class has equal number of samples.
+
 ----------------------------------------------------------------------------
 Performance with trimmed dataset (equal number of samples for each class)
 ----------------------------------------------------------------------------
@@ -95,145 +236,9 @@ model2
 
 
 
-The accuracy is low for all the models 
-
-Test on Expanded Model
-^^^^^^^^^^^^^^^^^^^^^^^
+To further identify the problem. Only two classes are used to train the model
 
 
-
--------------------------------------
-Performance with full dataset 
--------------------------------------
-
-A full dataset is then tested to see the performance 
-
-The distribution of classes is shown in the figure.
-
-It can be seen that the accuray is quite close to the highest distribution of classes.
-
-The training result with full dataset for block size 16x16, 32x32, 64x64 is shown below:
-
-64
-
-model1
-
-.. image:: img/m1_qp120_64_acc_f.jpg
-   :width: 49%
-.. image:: img/m1_qp120_64_loss_f.jpg
-   :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_64_acc_f.jpg
-   :width: 49%
-.. image:: img/mnist_qp120_64_loss_f.jpg
-   :width: 49%
-
-32
-
-model1
-
-.. image:: img/m1_qp120_32_acc_sh.jpg
-   :width: 49%
-.. image:: img/m1_qp120_32_loss_sh.jpg
-   :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_32_acc_sh.jpg
-   :width: 49%
-.. image:: img/mnist_qp120_32_loss_sh.jpg
-   :width: 49%
-
-16
-
-model1
-
-.. image:: img/m1_qp120_16_acc_f.jpg
-   :width: 49%
-.. image:: img/m1_qp120_16_loss_f.jpg
-   :width: 49%
-   
-model2
-
-.. image:: img/mnist_qp120_16_acc_f.jpg
-   :width: 49%
-.. image:: img/mnist_qp120_16_loss_f.jpg
-   :width: 49%
-
-Training with weighted cross entropy 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-64
-
-model1
-
-.. image:: img/m1_qp120_64_acc_fw.jpg
-    :width: 49%
-.. image:: img/m1_qp120_64_loss_fw.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_64_acc_fw.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_64_loss_fw.jpg
-    :width: 49%
-
-32
-
-model1
-
-.. image:: img/m1_qp120_32_acc_fw.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_fw.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_32_acc_fw.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_32_loss_fw.jpg
-    :width: 49%
-
-16
-
-model1
-
-.. image:: img/m1_qp120_16_acc_fw.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_fw.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_32_acc_fw.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_32_loss_fw.jpg
-    :width: 49%
-
-
-Test on Expanded Model
-^^^^^^^^^^^^^^^^^^^^^^^
-
-
---------------------------------------
-Performance with Larger Dataset
---------------------------------------
-We further use dataset mixed with data from different resolution.
-
-datasets from videos with other resolution
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-It can be seen in the figure, that videos with different resolution have slightly different partition mode distributions. For lower resolution videos, there is higher chance to be encoded in smaller blocks since the contents of the video is more compact. 
-
-Videos with higher resolution like 4K videos, on the other hand, will have more smooth area that can be encoded with larger blocks.
-
-
-
-
-It can be seen that the accuracy is becoming lower with larger dataset, which may suggest the model is more confused by the dataset.
 
 
 To further inspect the relation between classes. Only two classes with equal number of samples are selected to see if the model can tell the difference between classes. 
@@ -353,6 +358,37 @@ From the tests above, it can be seen that the model can not really learn the fea
 This may suggest the partition Horz and Vert rely more on the context (neighbor's data)
 
 You can check the following jupyter notebook to see to see the partition modes of the dataset.  
+
+Test on Expanded Model
+^^^^^^^^^^^^^^^^^^^^^^^
+
+A deeper and wider model is used to test if it is possible to increase the accuracy by offering more parameters.
+
+
+64
+
+.. image:: img/xl_qp120_64_acc_ecf.jpg
+   :width: 49%
+.. image:: img/xl_qp120_64_loss_ecf.jpg
+   :width: 49%
+
+32
+
+.. image:: img/xl_qp120_32_acc_ecf.jpg
+   :width: 49%
+.. image:: img/xl_qp120_32_loss_ecf.jpg
+   :width: 49%
+
+16
+
+.. image:: img/xl_qp120_16_acc_ecf.jpg
+   :width: 49%
+.. image:: img/xl_qp120_16_loss_ecf.jpg
+   :width: 49%
+
+However, the results show the accuracy is still quite low.
+
+
 
 --------------------------------------------------------  
 Training results of None and Horz partition modes only
@@ -774,6 +810,25 @@ model2
 
 
 
+
+--------------------------------------
+Performance with Larger Dataset
+--------------------------------------
+We further use dataset mixed with data from different resolution.
+
+datasets from videos with other resolution
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It can be seen in the figure, that videos with different resolution have slightly different partition mode distributions. For lower resolution videos, there is higher chance to be encoded in smaller blocks since the contents of the video is more compact. 
+
+Videos with higher resolution like 4K videos, on the other hand, will have more smooth area that can be encoded with larger blocks.
+
+
+
+
+It can be seen that the accuracy is becoming lower with larger dataset, which may suggest the model is more confused by the dataset.
+
+
 ---------------------------------------------
 Comparison between seperate qp and mixed qps
 ---------------------------------------------
@@ -791,6 +846,11 @@ From figure x, it can be seen that qp affect the partition decision tremendously
 Models trained with single qp (120) and mixed qp data are tested with a test set including one 4K frame, 
 
 
+---------------------------------------------
+Summary
+---------------------------------------------
+
+In real cases, let the model learn the distribution of the classes may lead to the closest encoding efficiency to the original encoder.
 
 
 ====================================
@@ -812,11 +872,14 @@ Comparison of Video Quality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 models trained with different dataset is used to test the encoding efficiency
 
+Here we compare the same 
+
 trimmed dataset
+
+The figure below show
 
 full dataset
 
 full dataset with weighted cross entropy
 
-Encoder preformance between seperate qp and mixed qps
 
