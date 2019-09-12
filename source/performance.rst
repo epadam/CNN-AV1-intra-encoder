@@ -823,9 +823,9 @@ Based on the tests above.
 
 Two solution can be used
 
-First, let the model learn the distribution of the classes may lead to the closest encoding efficiency to the original encoder. the down side of this solution is every frame has slightly different distribution. This will lower the performance of the encoder.
+First, let the model learn the distribution of the classes may lead to the closest encoding efficiency to the original encoder. the down side of this solution is every frame has its own distribution. This will make the prediction imprecise. This will lower the performance of the encoder.
 
-Second, merge the classes that can not be recognized easily. If the merged class is chosen, then use a sub model to further predict the partition mode.
+Second strategy is, merge the classes that can not be recognized easily. If the merged class is chosen, then use a sub model to further predict the partition mode.
 
 These part may be deleted. Since use average distribution wont suit every frame.
 --------------------------------------
@@ -842,7 +842,9 @@ Videos with higher resolution like 4K videos, on the other hand, will have more 
 
 
 
-Mix qp won't work since the distribution is averaged
+Mix qp won't work since the distribution is averaged (check if the model only always prediction none or split)
+
+But if the model is really telling the difference between classes not the distribution, mixed qp may work, but this may leads to much work.
 
 ---------------------------------------------
 Comparison between seperate qp and mixed qps
@@ -876,6 +878,11 @@ Comparison of Encoding Time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Overhead
 
+full dataset (learn distribution)
+
+merged classes with binary submodel (really learn the class)
+
+complexity reduction
 
 Comparison of Video Quality
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -883,12 +890,12 @@ models trained with different dataset is used to test the encoding efficiency
 
 Here we compare the same 
 
-trimmed dataset
+trimmed dataset (shouldnt be considered, the accuracy is too low)
 
-The figure below show
+full dataset (learn distribution)
 
-full dataset
+merged classes with binary submodel (really learn the class)
 
-full dataset with weighted cross entropy
+
 
 
