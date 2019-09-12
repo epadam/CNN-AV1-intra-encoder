@@ -173,15 +173,13 @@ model2
     :width: 49%
 
 
-It can be observed that the accuracy for all the block sizes dropped. The expectation of using weights for different classes is to compensate the classes with less samples. However, it shows the accuracy dropped by almost 20% for all block sizes. There can be two possiblilities. Both two models offers too less parameters to learn all the features of all 10 classes. The other possibility is the patterns of different claases are not unique so the model can not learn correctly. 
-
-To further identify the problem, the dataset is trimmed to make every class has equal number of samples.
+It can be observed that the accuracy for all the block sizes dropped. The expectation of using weights for different classes is to compensate the classes with less samples. However, it shows the accuracy dropped by almost 20% for all block sizes. This may suggest the model is less biased but still couldn't predict correcty. 
 
 ----------------------------------------------------------------------------
 Performance with trimmed dataset (equal number of samples for each class)
 ----------------------------------------------------------------------------
 
-To avoid a biased training model, the dataset is trimmed so that each class can have equal samples. 
+To avoid a biased training model, the dataset is trimmed or cut so that each class can have equal number of samples. 
 
 The training result for block size 16x16, 32x32, 64x64 is shown below:
 
@@ -234,12 +232,7 @@ model2
 .. image:: img/mnist_qp120_16_loss_ecf.jpg
    :width: 49%
 
-
-
-To further identify the problem. Only two classes are used to train the model
-
-
-
+The results show that the accuracy is even lower, around 30% for all block sizes. There can be two possiblilities. The first possible reason is that both two models offer too less parameters to learn all the features of all 10 classes. The other possibility is the patterns of different claases are not unique so the model can not learn correctly. 
 
 To further inspect the relation between classes. Only two classes with equal number of samples are selected to see if the model can tell the difference between classes. 
 
@@ -247,7 +240,9 @@ To further inspect the relation between classes. Only two classes with equal num
 Training results of None and Split partition modes only
 ------------------------------------------------------------
 
-It can be seen that the accuracy can reach around 90% for both models when it is only trained with NONE and SPLIT partition modees.
+First, the None and Split classses are tested. The number of samples for both are 
+
+Notice the output of the model is changed to only two classes, the loss function is also changed binary cross entropy.
 
 64
 
@@ -297,9 +292,13 @@ model2
 .. image:: img/mnist_qp120_16_loss_NS.jpg
     :width: 49%
 
+The result shows that both models can distinguish these two classes easily. For all three block sizes, the accuray can reach around 90%.
+
 --------------------------------------------------------  
 Training results of Horz and Vert partition modes only
 -------------------------------------------------------- 
+
+Next, the Horz and Vert classses are tested. The number of samples for both are 
 
 64
 
@@ -349,15 +348,11 @@ model2
 .. image:: img/mnist_qp120_16_loss_HV.jpg
     :width: 49%
 
-However, it can only reach 60% for the Horz and Vert datasets.
+However, the accuracy is much lower. it can only reach between 55% to 70% for the Horz and Vert datasets.
 
 Around 50% means the model doesn't really learn. The model can always guess only one class and have 50% accuracy.
 
-From the tests above, it can be seen that the model can not really learn the features of some classes. The reason is  
-
-This may suggest the partition Horz and Vert rely more on the context (neighbor's data)
-
-You can check the following jupyter notebook to see to see the partition modes of the dataset.  
+From the tests above, it can be seen that the model can not really learn the features of some classes.
 
 Test on Expanded Model
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -388,11 +383,15 @@ A deeper and wider model is used to test if it is possible to increase the accur
 
 However, the results show the accuracy is still quite low.
 
+Figure shows the some patterns of blocks encoded in Vert and Horz partition modes. It seems some patterns are very similar but encoded with different modes. This may suggest the partition Horz and Vert has less unique pattern and rely more on the context (neighbor's data)
 
+The full dataset can be found online (A jupyter notebook can be used to see the partition modes of the dataset)  
 
 --------------------------------------------------------  
 Training results of None and Horz partition modes only
 -------------------------------------------------------- 
+
+More binary classes are tested
 
 64
 
@@ -441,6 +440,8 @@ model2
     :width: 49%
 .. image:: img/mnist_qp120_16_loss_NH.jpg
     :width: 49%
+
+These two classes can not be seperated well.
 
 ----------------------------------------------------------------  
 Training results of Horz and Split partition modes only
@@ -494,10 +495,13 @@ model2
 .. image:: img/mnist_qp120_16_loss_HS.jpg
     :width: 49%
 
+Horz and Split mode can be seperated well.
 
---------------------------------------------------------  
+--------------------------------------------------------------   
 Training results of None, Horz and Split partition modes only
--------------------------------------------------------- 
+--------------------------------------------------------------
+
+Three classes are tested
 
 64
 
@@ -547,9 +551,9 @@ model2
 .. image:: img/mnist_qp120_16_loss_NHS.jpg
     :width: 49%
 
---------------------------------------------------------  
+------------------------------------------------------------ 
 Training results of Horz4 and Vert4 partition modes only
--------------------------------------------------------- 
+------------------------------------------------------------ 
 
 64
 
@@ -598,6 +602,7 @@ model2
     :width: 49%
 .. image:: img/mnist_qp120_16_loss_HV4.jpg
     :width: 49%
+
 
 --------------------------------------------------------  
 Training results of Split and Horz4 partition modes only
@@ -810,7 +815,19 @@ model2
 
 
 
+---------------------------------------------
+Summary
+---------------------------------------------
 
+Based on the tests above.
+
+Two solution can be used
+
+First, let the model learn the distribution of the classes may lead to the closest encoding efficiency to the original encoder. the down side of this solution is every frame has slightly different distribution. This will lower the performance of the encoder.
+
+Second, merge the classes that can not be recognized easily. If the merged class is chosen, then use a sub model to further predict the partition mode.
+
+These part may be deleted. Since use average distribution wont suit every frame.
 --------------------------------------
 Performance with Larger Dataset
 --------------------------------------
@@ -825,9 +842,7 @@ Videos with higher resolution like 4K videos, on the other hand, will have more 
 
 
 
-
-It can be seen that the accuracy is becoming lower with larger dataset, which may suggest the model is more confused by the dataset.
-
+Mix qp won't work since the distribution is averaged
 
 ---------------------------------------------
 Comparison between seperate qp and mixed qps
@@ -845,12 +860,6 @@ From figure x, it can be seen that qp affect the partition decision tremendously
 
 Models trained with single qp (120) and mixed qp data are tested with a test set including one 4K frame, 
 
-
----------------------------------------------
-Summary
----------------------------------------------
-
-In real cases, let the model learn the distribution of the classes may lead to the closest encoding efficiency to the original encoder.
 
 
 ====================================
