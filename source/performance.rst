@@ -402,7 +402,7 @@ A deeper and wider model is used to test if it is possible to increase the accur
 
 32
 
-.. image:: img/mnist_xl_qp120_32_loss_HV.jpg
+.. image:: img/mnist_xl_qp120_32_acc_HV.jpg
    :width: 49%
 .. image:: img/mnist_xl_qp120_32_loss_HV.jpg
    :width: 49%
