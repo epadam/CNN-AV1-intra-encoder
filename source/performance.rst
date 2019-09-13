@@ -395,23 +395,23 @@ A deeper and wider model is used to test if it is possible to increase the accur
 
 64
 
-.. image:: img/xl_qp120_64_acc_ecf.jpg
+.. image:: img/mnist_xl_qp120_64_acc_HV.jpg
    :width: 49%
-.. image:: img/xl_qp120_64_loss_ecf.jpg
+.. image:: img/mnist_xl_qp120_64_loss_HV.jpg
    :width: 49%
 
 32
 
-.. image:: img/xl_qp120_32_acc_ecf.jpg
+.. image:: img/mnist_xl_qp120_32_loss_HV.jpg
    :width: 49%
-.. image:: img/xl_qp120_32_loss_ecf.jpg
+.. image:: img/mnist_xl_qp120_32_loss_HV.jpg
    :width: 49%
 
 16
 
-.. image:: img/xl_qp120_16_acc_ecf.jpg
+.. image:: img/mnist_xl_qp120_16_acc_HV.jpg
    :width: 49%
-.. image:: img/xl_qp120_16_loss_ecf.jpg
+.. image:: img/mnist_xl_qp120_16_loss_HV.jpg
    :width: 49%
 
 However, the results show the accuracy is still quite low.
