@@ -63,21 +63,18 @@ We first train the model with the full dataset directly.
 
 The training result with full dataset for block size 16x16, 32x32, 64x64 is shown below:
 
-64
-
-model1
-
 .. image:: img/m1_qp120_64_acc_f.jpg
    :width: 49%
 .. image:: img/m1_qp120_64_loss_f.jpg
    :width: 49%
-
-model2
+   model1
 
 .. image:: img/mnist_qp120_64_acc_f.jpg
    :width: 49%
 .. image:: img/mnist_qp120_64_loss_f.jpg
    :width: 49%
+   model2
+   block size : 64x64
 
 32
 
