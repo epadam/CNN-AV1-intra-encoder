@@ -115,7 +115,40 @@ It can be seen that the accuray is quite close to the highest distribution of cl
 
 This may suggest the model mostly guess split mode for block 64x64 and none and split modes for 32x32 and mostly none for 16x16.
 
-Part of the prediction result is recored show the model did still predict other modes. 
+
+Training with 720p full data set
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Another 720p data set is used to examine this persumption.
+
+64
+
+model1
+
+.. image:: img/m1_qp120_64_acc_f_720.jpg
+   :width: 49%
+.. image:: img/m1_qp120_64_loss_f_720.jpg
+   :width: 49%
+
+32
+
+model1
+
+.. image:: img/m1_qp120_32_acc_f_720.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_f_720.jpg
+   :width: 49%
+
+16
+
+model1
+
+.. image:: img/m1_qp120_16_acc_f_720.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_f_720.jpg
+   :width: 49%
+
+This shows the model always predicts from top 3 distribution. 
 
 The other two strategies are used to help the model make correct prediction.
 
