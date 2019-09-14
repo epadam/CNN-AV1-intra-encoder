@@ -120,6 +120,19 @@ Training with 720p full data set
 
 Another 720p data set is used to examine this persumption.
 
+
+The distribution of partition modes of different block sizes is shown below. 
+
+
+.. image:: img/720_9f_qp120_distribution_64.jpg
+   :width: 49%  
+.. image:: img/720_9f_qp120_distribution_32.jpg
+   :width: 49%
+
+
+.. image:: img/720_9f_qp120_distribution_16.jpg
+   :width: 50%
+
 64
 
 model1
