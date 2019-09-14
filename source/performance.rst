@@ -76,6 +76,8 @@ The training result with full dataset for block size 16x16, 32x32, 64x64 is show
 
 (top) model1, (down) model2,  block size : 64x64
 
+----
+
 32
 
 model1
