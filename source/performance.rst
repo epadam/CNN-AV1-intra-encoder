@@ -67,14 +67,14 @@ The training result with full dataset for block size 16x16, 32x32, 64x64 is show
    :width: 49%
 .. image:: img/m1_qp120_64_loss_f.jpg
    :width: 49%
-   :alt: model1
+
 
 .. image:: img/mnist_qp120_64_acc_f.jpg
    :width: 49%
 .. image:: img/mnist_qp120_64_loss_f.jpg
    :width: 49%
-   :alt: model2
-block size : 64x64
+
+(top) model1, (down) model2,  block size : 64x64
 
 32
 
