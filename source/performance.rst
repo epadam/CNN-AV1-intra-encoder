@@ -35,7 +35,7 @@ It can be seen that the performance of AV1 is better than HEVC but lower than VV
 
 
 =================================================
-Evaluation of CNN models with different dataset
+Evaluation of CNN models with different data set
 =================================================
 
 
@@ -440,7 +440,7 @@ Other training results of different combinaion of classes can be found in refere
 
 The full dataset can be found online (A jupyter notebook can be used to see the partition modes of the dataset)  
 
-Since None and split is the most important classes, we merge the rest of the classes into one class. The reason is to avoid noises affecting each other.The rest of classes are trained with a sub model to obtain higher
+Since None and split is the most important classes, we merge the rest of the classes into one class. The reason is to avoid noises affecting each other. This strategy is to insure none and split can get the most correct prediction. The rest of classes are trained with a sub model to obtain higher accuracy
 
 --------------------------------------------------------  
 Training results of None, Split and the rest
@@ -494,13 +494,9 @@ block size : 16x16
    
 **(top) model 1, (bottom) model 2** 
 
-It can be seen that 
+It can be seen that, compared to the accuracy of trimmed data set, this can increase the prediction accuracy for noe and split  
 
 
-
-Mix qp won't work since the distribution is averaged (check if the model only always prediction none or split)
-
-But if the model is really telling the difference between classes not the distribution, mixed qp may work, but this may leads to much work.
 
 ---------------------------------------------
 Comparison between seperate qp and mixed qps
@@ -516,7 +512,9 @@ From figure x, it can be seen that qp affect the partition decision tremendously
 .. image:: img/library16.jpg
     :width: 49%
 
-Models trained with single qp (120) and mixed qp data are tested with a test set including one 4K frame, 
+In this section, we test if the model can still learn the partition moedes for 3 classes with mixed qp.
+
+The results show that the accuracy is quite low, in pratical usage, it is better to store  different parameters for different QP range.
 
 
 
@@ -524,26 +522,23 @@ Models trained with single qp (120) and mixed qp data are tested with a test set
 Performance of CNN Intra Encoder
 ====================================
 
-Based on the tests above.
-
-Two solution can be used
-
-First, let the model learn the distribution of the classes may lead to the closest encoding efficiency to the original encoder. the down side of this solution is every frame has its own distribution. This will make the prediction imprecise. This will lower the performance of the encoder.
-
-Second strategy is, merge the classes that can not be recognized easily. If the merged class is chosen, then use a sub model to further predict the partition mode.
-
-
 ---------------------------------------------
 Encoding Performance
 ---------------------------------------------
 
 Comparison of Encoding Time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+**full dataset with weighted cross entropy**
+
+First, let the model learn the distribution of the classes may lead to the closest encoding efficiency to the original encoder. the down side of this solution is every frame has its own distribution. This will make the prediction imprecise. This will lower the performance of the encoder.
+
+**merged classes with binary submodel (really learn the class)**
+
+Second strategy is, merge the classes that can not be recognized easily. If the merged class is chosen, then use a sub model to further predict the partition mode.
+
 Overhead
-
-full dataset (learn distribution)
-
-merged classes with binary submodel (really learn the class)
 
 complexity reduction
 
@@ -553,11 +548,11 @@ models trained with different dataset is used to test the encoding efficiency
 
 Here we compare the same 
 
-trimmed dataset (shouldnt be considered, the accuracy is too low)
 
-full dataset (learn distribution)
+**full dataset with weighted cross entropy**
 
-merged classes with binary submodel (really learn the class)
+
+**merged classes with binary submodel (really learn the class)**
 
 
 
