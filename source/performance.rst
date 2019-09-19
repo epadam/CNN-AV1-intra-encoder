@@ -80,6 +80,8 @@ block size : 64x64
 
 ----
 
+block size : 32x32
+
 .. image:: img/m1_qp120_32_acc_sh.jpg
    :width: 49%
 .. image:: img/m1_qp120_32_loss_sh.jpg
@@ -90,9 +92,11 @@ block size : 64x64
 .. image:: img/mnist_qp120_32_loss_sh.jpg
    :width: 49%
 
-(top) model1, (bottom) model2,  block size : 32x32
+**(top) model 1, (bottom) model 2** 
 
 ----
+
+block size : 16x16
 
 .. image:: img/m1_qp120_16_acc_f.jpg
    :width: 49%
@@ -105,7 +109,7 @@ block size : 64x64
 .. image:: img/mnist_qp120_16_loss_f.jpg
    :width: 49%
    
-(top) model1, (bottom) model2,  block size : 16x16
+**(top) model 1, (bottom) model 2** 
 
 ----
 
@@ -279,13 +283,13 @@ model2
 
 The results show that the accuracy is even lower, around 30% for all block sizes, which means the models can not really learn the features of each class. Two possible reasons are considered. The first possible reason is the patterns of different claases are not unique so the model can not learn correctly. The second possible reason is that both two models offer too less parameters to learn all the features of all 10 classes. 
 
-To clarify the first possible reason, we further inspect the relation between classes. Only two classes with equal number of samples are selected to see if the model can tell the difference between classes. 
+To clarify the first possible reason, we tear down the datas set to further inspect the relation between classes. Only two classes with equal number of samples are selected to see if the model can tell the difference between classes. 
 
 ------------------------------------------------------------
 Training results of None and Split partition modes only
 ------------------------------------------------------------
 
-First, the None and Split classses are tested. The number of samples for both are 
+First, the None and Split classses are tested. The number of samples for both classes is equal.
 
 Notice the output of the model is changed to only two classes, the loss function is also changed binary cross entropy.
 
@@ -337,13 +341,13 @@ model2
 .. image:: img/mnist_qp120_16_loss_NS.jpg
     :width: 49%
 
-The result shows that both models can distinguish these two classes easily. For all three block sizes, the accuray can reach around 90%.
+The result shows that both models can distinguish these two classes easily. For all three block sizes, the accuray can reach around 90%. This means the model can successfully tell the difference between these two classes.
 
 --------------------------------------------------------  
 Training results of Horz and Vert partition modes only
 -------------------------------------------------------- 
 
-Next, the Horz and Vert classses are tested. The number of samples for both are 
+Next, the Horz and Vert classses are tested. The number of samples for both classes are also the same. 
 
 64
 
@@ -395,9 +399,11 @@ model2
 
 However, the accuracy is much lower. it can only reach between 55% to 70% for the Horz and Vert datasets.
 
-Around 50% means the model doesn't really learn. The model can always guess only one class and have 50% accuracy.
+Around 50% means may suggest the model only guess one class for evey sample.
 
 From the tests above, it can be seen that the model can not really learn the features of some classes.
+
+To clarify the root cause of this result, we train it with deeper and wider model to see if it is due to the model lack of sufficient parameters or it is because the horz and vert classes don't have clear features. 
 
 Test on Expanded Model
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -426,464 +432,69 @@ A deeper and wider model is used to test if it is possible to increase the accur
 .. image:: img/mnist_xl_qp120_16_loss_HV.jpg
    :width: 49%
 
-However, the results show the accuracy is still quite low.
+For 64x64, the accuracy is a little bit higher, but for 32x32, 16x16, it stays the same.
 
-Figure shows the some patterns of blocks encoded in Vert and Horz partition modes. It seems some patterns are very similar but encoded with different modes. This may suggest the partition Horz and Vert has less unique pattern and rely more on the context (neighbor's data)
+Thus, the possible reason for low accuracy may due to the pattern encoded with these two partition modes are not unique so the model can not learn very well. Figure shows some patterns of blocks encoded in Vert and Horz partition modes. It seems some patterns are very similar but encoded with different modes. The reason may be that Horz and Vert rely more on the context in the frame (neighbor's data).
+
+Other training results of different combinaion of classes can be found in reference. 
 
 The full dataset can be found online (A jupyter notebook can be used to see the partition modes of the dataset)  
 
---------------------------------------------------------  
-Training results of None and Horz partition modes only
--------------------------------------------------------- 
-
-More binary classes are tested
-
-64
-
-model1
-
-.. image:: img/m1_qp120_64_acc_NH.jpg
-    :width: 49%
-.. image:: img/m1_qp120_64_loss_NH.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_64_acc_NH.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_64_loss_NH.jpg
-    :width: 49%
-
-32
-
-model1
-
-.. image:: img/m1_qp120_32_acc_NH.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_NH.jpg
-    :width: 49%
-  
-model2
-
-.. image:: img/mnist_qp120_32_acc_NH.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_32_loss_NH.jpg
-    :width: 49%
-    
-16
-
-model1
-
-.. image:: img/m1_qp120_16_acc_NH.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_NH.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_16_acc_NH.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_16_loss_NH.jpg
-    :width: 49%
-
-These two classes can not be seperated well.
-
-----------------------------------------------------------------  
-Training results of Horz and Split partition modes only
-----------------------------------------------------------------  
-
-64
-
-model1
-
-.. image:: img/m1_qp120_64_acc_HS.jpg
-    :width: 49%
-.. image:: img/m1_qp120_64_loss_HS.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_64_acc_HS.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_64_loss_HS.jpg
-    :width: 49%
-
-32
-
-model1
-
-.. image:: img/m1_qp120_32_acc_HS.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_HS.jpg
-    :width: 49%
-  
-model2
-
-.. image:: img/mnist_qp120_32_acc_HS.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_32_loss_HS.jpg
-    :width: 49%
-    
-16
-
-model1
-
-.. image:: img/m1_qp120_16_acc_HS.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_HS.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_16_acc_HS.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_16_loss_HS.jpg
-    :width: 49%
-
-Horz and Split mode can be seperated well.
-
---------------------------------------------------------------   
-Training results of None, Horz and Split partition modes only
---------------------------------------------------------------
-
-Three classes are tested
-
-64
-
-model1
-
-.. image:: img/m1_qp120_64_acc_NHS.jpg
-    :width: 49%
-.. image:: img/m1_qp120_64_loss_NHS.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_64_acc_NHS.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_64_loss_NHS.jpg
-    :width: 49%
-
-32
-
-model1
-
-.. image:: img/m1_qp120_32_acc_NHS.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_NHS.jpg
-    :width: 49%
-  
-model2
-
-.. image:: img/mnist_qp120_32_acc_NHS.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_32_loss_NHS.jpg
-    :width: 49%
-    
-16
-
-model1
-
-.. image:: img/m1_qp120_16_acc_NHS.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_NHS.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_16_acc_NHS.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_16_loss_NHS.jpg
-    :width: 49%
-
------------------------------------------------------------- 
-Training results of Horz4 and Vert4 partition modes only
------------------------------------------------------------- 
-
-64
-
-model1
-
-.. image:: img/m1_qp120_64_acc_HV4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_64_loss_HV4.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_64_acc_HV4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_64_loss_HV4.jpg
-    :width: 49%
-
-32
-
-model1
-
-.. image:: img/m1_qp120_32_acc_HV4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_HV4.jpg
-    :width: 49%
-  
-model2
-
-.. image:: img/mnist_qp120_32_acc_HV4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_32_loss_HV4.jpg
-    :width: 49%
-    
-16
-
-model1
-
-.. image:: img/m1_qp120_16_acc_HV4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_HV4.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_16_acc_HV4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_16_loss_HV4.jpg
-    :width: 49%
-
+Since None and split is the most important classes, we merge the rest of the classes into one class. The reason is to avoid noises affecting each other.The rest of classes are trained with a sub model to obtain higher
 
 --------------------------------------------------------  
-Training results of Split and Horz4 partition modes only
+Training results of None, Split and the rest
 -------------------------------------------------------- 
 
-64
+block size : 64x64
 
-model1
+.. image:: img/m1_qp120_64_acc_NSR.jpg
+   :width: 49%
+.. image:: img/m1_qp120_64_loss_NSR.jpg
+   :width: 49%
 
-.. image:: img/m1_qp120_64_acc_SH4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_64_loss_SH4.jpg
-    :width: 49%
 
-model2
+.. image:: img/mnist_qp120_64_acc_NSR.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_64_loss_NSR.jpg
+   :width: 49%
 
-.. image:: img/mnist_qp120_64_acc_SH4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_64_loss_SH4.jpg
-    :width: 49%
+**(top) model 1, (bottom) model 2** 
 
-32
+----
 
-model1
+block size : 32x32
 
-.. image:: img/m1_qp120_32_acc_SH4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_SH4.jpg
-    :width: 49%
-  
-model2
+.. image:: img/m1_qp120_32_acc_NSR.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_NSR.jpg
+   :width: 49%
 
-.. image:: img/mnist_qp120_32_acc_SH4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_32_loss_SH4.jpg
-    :width: 49%
-    
-16
+.. image:: img/mnist_qp120_32_acc_NSR.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_32_loss_NSR.jpg
+   :width: 49%
 
-model1
+**(top) model 1, (bottom) model 2** 
 
-.. image:: img/m1_qp120_16_acc_SH4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_SH4.jpg
-    :width: 49%
+----
 
-model2
+block size : 16x16
 
-.. image:: img/mnist_qp120_16_acc_SH4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_16_loss_SH4.jpg
-    :width: 49%
+.. image:: img/m1_qp120_16_acc_NSR.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_NSR.jpg
+   :width: 49%
 
---------------------------------------------------------  
-Training results of Split and Vert4 partition modes only
--------------------------------------------------------- 
 
-64
+.. image:: img/mnist_qp120_16_acc_NSR.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_16_loss_NSR.jpg
+   :width: 49%
+   
+**(top) model 1, (bottom) model 2** 
 
-model1
-
-.. image:: img/m1_qp120_64_acc_SV4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_64_loss_SV4.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_64_acc_SV4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_64_loss_SV4.jpg
-    :width: 49%
-
-32
-
-model1
-
-.. image:: img/m1_qp120_32_acc_SV4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_SV4.jpg
-    :width: 49%
-  
-model2
-
-.. image:: img/mnist_qp120_32_acc_SV4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_32_loss_SV4.jpg
-    :width: 49%
-    
-16
-
-model1
-
-.. image:: img/m1_qp120_16_acc_SV4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_SV4.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_16_acc_SV4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_16_loss_SV4.jpg
-    :width: 49%
-
-
-----------------------------------------------------------------  
-Training results of Split, Horz4 and Vert4 partition modes only
-----------------------------------------------------------------  
-
-64
-
-model1
-
-.. image:: img/m1_qp120_64_acc_SHV4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_64_loss_SHV4.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_64_acc_SHV4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_64_loss_SHV4.jpg
-    :width: 49%
-
-32
-
-model1
-
-.. image:: img/m1_qp120_32_acc_SHV4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_SHV4.jpg
-    :width: 49%
-  
-model2
-
-.. image:: img/mnist_qp120_32_acc_SHV4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_32_loss_SHV4.jpg
-    :width: 49%
-    
-16
-
-model1
-
-.. image:: img/m1_qp120_16_acc_SHV4.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_SHV4.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_16_acc_SHV4.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_16_loss_SHV4.jpg
-    :width: 49%
-
-----------------------------------------------------------------  
-Training results of HorzA and HorzB partition modes only
-----------------------------------------------------------------  
-
-64
-
-model1
-
-.. image:: img/m1_qp120_64_acc_HAB.jpg
-    :width: 49%
-.. image:: img/m1_qp120_64_loss_HAB.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_64_acc_HAB.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_64_loss_HAB.jpg
-    :width: 49%
-
-32
-
-model1
-
-.. image:: img/m1_qp120_32_acc_HAB.jpg
-    :width: 49%
-.. image:: img/m1_qp120_32_loss_HAB.jpg
-    :width: 49%
-  
-model2
-
-.. image:: img/mnist_qp120_32_acc_HAB.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_32_loss_HAB.jpg
-    :width: 49%
-    
-16
-
-model1
-
-.. image:: img/m1_qp120_16_acc_HAB.jpg
-    :width: 49%
-.. image:: img/m1_qp120_16_loss_HAB.jpg
-    :width: 49%
-
-model2
-
-.. image:: img/mnist_qp120_16_acc_HAB.jpg
-    :width: 49%
-.. image:: img/mnist_qp120_16_loss_HAB.jpg
-    :width: 49%
-
-
-
----------------------------------------------
-Summary
----------------------------------------------
-
-Based on the tests above.
-
-Two solution can be used
-
-First, let the model learn the distribution of the classes may lead to the closest encoding efficiency to the original encoder. the down side of this solution is every frame has its own distribution. This will make the prediction imprecise. This will lower the performance of the encoder.
-
-Second strategy is, merge the classes that can not be recognized easily. If the merged class is chosen, then use a sub model to further predict the partition mode.
-
-These part may be deleted. Since use average distribution wont suit every frame.
---------------------------------------
-Performance with Larger Dataset
---------------------------------------
-We further use dataset mixed with data from different resolution.
-
-datasets from videos with other resolution
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-It can be seen in the figure, that videos with different resolution have slightly different partition mode distributions. For lower resolution videos, there is higher chance to be encoded in smaller blocks since the contents of the video is more compact. 
-
-Videos with higher resolution like 4K videos, on the other hand, will have more smooth area that can be encoded with larger blocks.
+It can be seen that 
 
 
 
@@ -913,6 +524,13 @@ Models trained with single qp (120) and mixed qp data are tested with a test set
 Performance of CNN Intra Encoder
 ====================================
 
+Based on the tests above.
+
+Two solution can be used
+
+First, let the model learn the distribution of the classes may lead to the closest encoding efficiency to the original encoder. the down side of this solution is every frame has its own distribution. This will make the prediction imprecise. This will lower the performance of the encoder.
+
+Second strategy is, merge the classes that can not be recognized easily. If the merged class is chosen, then use a sub model to further predict the partition mode.
 
 
 ---------------------------------------------
