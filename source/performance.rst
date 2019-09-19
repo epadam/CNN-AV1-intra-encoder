@@ -165,7 +165,9 @@ To compensate the imbalanced dataset, weights are given to different classes. Th
 
 The actual number is showing below:
 64x64 {0: 8.74, 1: 36.4, 2: 33.82, 3: 1, 4: 132.52, 5: 112.28, 6: 188., 7: 109.24, 8: 63.65, 9: 53.18}
+
 32x32 {0: 1.55, 1: 6.87, 2: 7.47, 3: 1, 4: 21.73, 5: 21.2, 6: 23.74, 7: 23.61, 8: 9.64, 9: 11.74} 
+
 16x16 {0: 1., 1: 5.77, 2: 6.29, 3: 11.74, 4: 28.27, 5: 37.52, 6: 28.54, 7: 37.04, 8: 14.1, 9: 15.53} 
 
 64
@@ -217,18 +219,17 @@ model2
     :width: 49%
 
 
-It can be observed that the accuracy for all the block sizes dropped. The expectation of using weights for different classes is to compensate the classes with less samples. However, it shows the accuracy dropped by almost 20% for all block sizes. This may suggest the model is less biased but still couldn't predict correcty. 
+It can be observed that the accuracy for all block sizes dropped. The expectation of using weights for different classes is to compensate the classes with less samples. However, it shows the accuracy dropped by almost 20% for all block sizes. This may suggest the model is less biased but still couldn't predict correctly. 
 
 ----------------------------------------------------------------------------
 Performance with trimmed dataset (equal number of samples for each class)
 ----------------------------------------------------------------------------
 
-To avoid a biased training model, the dataset is trimmed or cut so that each class can have equal number of samples. 
+In this method, the dataset is trimmed so that each class can have equal number of samples. 
 
 The training result for block size 16x16, 32x32, 64x64 is shown below:
 
 64
-
 
 model1
 
@@ -276,9 +277,9 @@ model2
 .. image:: img/mnist_qp120_16_loss_ecf.jpg
    :width: 49%
 
-The results show that the accuracy is even lower, around 30% for all block sizes. There can be two possiblilities. The first possible reason is that both two models offer too less parameters to learn all the features of all 10 classes. The other possibility is the patterns of different claases are not unique so the model can not learn correctly. 
+The results show that the accuracy is even lower, around 30% for all block sizes, which means the models can not really learn the features of each class. Two possible reasons are considered. The first possible reason is the patterns of different claases are not unique so the model can not learn correctly. The second possible reason is that both two models offer too less parameters to learn all the features of all 10 classes. 
 
-To further inspect the relation between classes. Only two classes with equal number of samples are selected to see if the model can tell the difference between classes. 
+To clarify the first possible reason, we further inspect the relation between classes. Only two classes with equal number of samples are selected to see if the model can tell the difference between classes. 
 
 ------------------------------------------------------------
 Training results of None and Split partition modes only
