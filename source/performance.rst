@@ -14,7 +14,7 @@ Performance of Reference AV1 Encoder Compared with HEVC
 
 In this section we test the performance of AV1 compared to HEVC and VVC for intra frame encoding. 
 
-All the encoding modes are set to fixed qp. To fairly compare the encoding time for the same PSNR quality, qp is carefully chosen for the three codec. The range of qp for AV1 is 1-64 while it is 1-54 for HEVC and VVC. 
+All the encoding modes are set to fixed qp. To fairly compare the encoding time for the same PSNR quality, qp is carefully chosen for the three codec. The range of qp for AV1 is 1-64 while it is 1-51 for HEVC and VVC. 
 
 The command is shown below.
 
@@ -24,7 +24,7 @@ It can be seen that for AV1, the encoding time can be greatly improved with SIMD
 
 To compare the performance.
 
-The frame is encoded with qp = 25, 30, 36, 42 for AV1 and 16, 25, 32, 42 for HEVC and VVC.
+The frame is encoded with QPs = 31, 39, 47, and 55 for AV1 and 27, 32, 37, and 42 for HEVC and VVC.
 
 The figure of bit-rate VS PSNR is shown below.
 
