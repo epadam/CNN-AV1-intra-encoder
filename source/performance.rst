@@ -74,41 +74,38 @@ The training result with full dataset for block size 16x16, 32x32, 64x64 is show
 .. image:: img/mnist_qp120_64_loss_f.jpg
    :width: 49%
 
-           (top) model1, (down) model2,  block size : 64x64
+(top) model1, (down) model2,  block size : 64x64
 
 ----
-
-32
-
-model1
 
 .. image:: img/m1_qp120_32_acc_sh.jpg
    :width: 49%
 .. image:: img/m1_qp120_32_loss_sh.jpg
    :width: 49%
 
-model2
-
 .. image:: img/mnist_qp120_32_acc_sh.jpg
    :width: 49%
 .. image:: img/mnist_qp120_32_loss_sh.jpg
    :width: 49%
 
-16
+(top) model1, (down) model2,  block size : 32x32
 
-model1
+----
 
 .. image:: img/m1_qp120_16_acc_f.jpg
    :width: 49%
 .. image:: img/m1_qp120_16_loss_f.jpg
    :width: 49%
-   
-model2
+
 
 .. image:: img/mnist_qp120_16_acc_f.jpg
    :width: 49%
 .. image:: img/mnist_qp120_16_loss_f.jpg
    :width: 49%
+   
+(top) model1, (down) model2,  block size : 32x32
+
+----
 
 It can be seen that the accuray is quite close to the highest distribution of classes for both models.
 
