@@ -127,41 +127,43 @@ The distribution of partition modes of different block sizes is shown below.
 .. image:: img/720_9f_qp120_distribution_16.jpg
    :width: 50%
 
-64
+Notice the distribution of parititon modes is different from the 4K data set. It has higher ratio of Split partition mode for both block size 64x64 and 32x32, and less NONE partition modes for block size 16x16. This may be because the 720p frames have more concise scene than 4K frames.
 
-model1
+Here we only test model1 and the result is presented below:
+
+block size : 64x64
 
 .. image:: img/m1_qp120_64_acc_f_720.jpg
    :width: 49%
 .. image:: img/m1_qp120_64_loss_f_720.jpg
    :width: 49%
 
-32
-
-model1
+block size : 32x32
 
 .. image:: img/m1_qp120_32_acc_f_720.jpg
    :width: 49%
 .. image:: img/m1_qp120_32_loss_f_720.jpg
    :width: 49%
 
-16
-
-model1
+block size : 16x16
 
 .. image:: img/m1_qp120_16_acc_f_720.jpg
    :width: 49%
 .. image:: img/m1_qp120_16_loss_f_720.jpg
    :width: 49%
 
-This shows the model always predicts from top 3 distribution. 
+For block size 64x64, it can be seen that the accuracy increase to above 90%, which is close to percentage of none and split together. For32x32, the accuracy is also very close to the none and split together. For 16x16, the accuracy becomes lower. Notice that the partition modes are more distributed for 16x16 in this data set. 
 
-The other two strategies are used to help the model make correct prediction.
+In order to avoid biased model due to the imbalanced data set. The other two strategies are used to correct this problem.
 
-Training with weighted cross entropy 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+First one is to add a weight for cross entropy for each class to comprehend for the class with less data. Second one is to trim the data set so that every class has equal number of samples.
+
+Training Results with weighted cross entropy 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To compensate the imbalanced dataset, weights are given to different classes. The weights are inverse propotional to the number of samples of each class. This means when a false prediction on the class with less samples, the cross entropy will be much higher to adjust the parameters.  
+
+
 
 64
 
