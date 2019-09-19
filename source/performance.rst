@@ -55,13 +55,15 @@ The distribution of partition modes of different block sizes is shown below.
 .. image:: img/4K_11f_mix_distribution_16.jpg
    :width: 50%
    
--------------------------------------
-Performance with full dataset 
--------------------------------------
+------------------------------------------------------
+Training Results with 4K full dataset with 11 frames
+------------------------------------------------------
 
 We first train the model with the full dataset directly.
 
 The training result with full dataset for block size 16x16, 32x32, 64x64 is shown below:
+
+block size : 64x64
 
 .. image:: img/m1_qp120_64_acc_f.jpg
    :width: 49%
@@ -74,7 +76,7 @@ The training result with full dataset for block size 16x16, 32x32, 64x64 is show
 .. image:: img/mnist_qp120_64_loss_f.jpg
    :width: 49%
 
-(top) model1, (bottom) model2,  block size : 64x64
+**(top) model 1, (bottom) model 2** 
 
 ----
 
@@ -88,7 +90,7 @@ The training result with full dataset for block size 16x16, 32x32, 64x64 is show
 .. image:: img/mnist_qp120_32_loss_sh.jpg
    :width: 49%
 
-(top) model1, (down) model2,  block size : 32x32
+(top) model1, (bottom) model2,  block size : 32x32
 
 ----
 
@@ -103,7 +105,7 @@ The training result with full dataset for block size 16x16, 32x32, 64x64 is show
 .. image:: img/mnist_qp120_16_loss_f.jpg
    :width: 49%
    
-(top) model1, (down) model2,  block size : 32x32
+(top) model1, (bottom) model2,  block size : 16x16
 
 ----
 
@@ -111,12 +113,7 @@ It can be seen that the accuray is quite close to the highest distribution of cl
 
 This may suggest the model mostly guess split mode for block 64x64 and none and split modes for 32x32 and mostly none for 16x16.
 
-
-Training with 720p full data set
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Another 720p data set is used to examine this persumption.
-
+To further prove this assumption, another data set with 9 720p frames is used to train the model.
 
 The distribution of partition modes of different block sizes is shown below. 
 
