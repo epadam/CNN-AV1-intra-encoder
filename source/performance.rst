@@ -94,7 +94,7 @@ block size : 32x32
 
 **(top) model 1, (bottom) model 2** 
 
-Here it can be seen that model2 start overfitting after 20 epochs, which means it can't 
+Here it can be seen that model2 start overfitting after 20 epochs, which may suggest the features the model can learn can only reach 65% accuracy, then the model starts to fit the training dataset. Two possible reasons for the encoder to stay at 65% accuracy. One is the model only learn the distribution. The other reason is that there is not enough data set.
 
 ----
 
