@@ -105,6 +105,7 @@ block size : 16x16
 .. image:: img/m1_qp120_16_loss_f.jpg
    :width: 49%
 
+This needs to be checked again, since the higher accuracy but higher loss 
 
 .. image:: img/mnist_qp120_16_acc_f.jpg
    :width: 49%
@@ -138,7 +139,7 @@ The distribution of partition modes of different block sizes is shown below.
 
 Notice the distribution of parititon modes is different from the 4K data set. It has higher ratio of Split partition mode for both block size 64x64 and 32x32, and less NONE partition modes for block size 16x16. This may be because the 720p frames have more concise scene than 4K frames.
 
-Here we only test model1 and the result is presented below:
+Here we only test model 1 and the result is presented below:
 
 block size : 64x64
 
@@ -163,6 +164,8 @@ block size : 16x16
 
 For block size 64x64, it can be seen that the accuracy increase to above 90%, which is close to percentage of none and split together. For32x32, the accuracy is also very close to the none and split together. For 16x16, the accuracy becomes lower. Notice that the partition modes are more distributed for 16x16 in this data set. 
 
+Again, we use this model to predict the partition mode of a frame. The result shows it only predict the classes with top 3 number of sampels.
+
 In order to avoid biased model due to the imbalanced data set. The other two strategies are used to correct this problem.
 
 First one is to add a weight for cross entropy for each class to comprehend for the class with less data. Second one is to trim the data set so that every class has equal number of samples.
@@ -173,6 +176,7 @@ Training Results with weighted cross entropy
 To compensate the imbalanced dataset, weights are given to different classes. The weights are inverse propotional to the number of samples of each class. This means when a false prediction on the class with less samples, the cross entropy will be much higher to adjust the parameters.  
 
 The actual number is showing below:
+
 64x64 {0: 8.74, 1: 36.4, 2: 33.82, 3: 1, 4: 132.52, 5: 112.28, 6: 188., 7: 109.24, 8: 63.65, 9: 53.18}
 
 32x32 {0: 1.55, 1: 6.87, 2: 7.47, 3: 1, 4: 21.73, 5: 21.2, 6: 23.74, 7: 23.61, 8: 9.64, 9: 11.74} 
