@@ -173,3 +173,34 @@ block size : 16x16
 
 None and the Rest 8 classes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+Test on Expanded Model
+^^^^^^^^^^^^^^^^^^^^^^^
+
+A deeper and wider model is used to test if it is possible to increase the accuracy by offering more parameters.
+
+
+64
+
+.. image:: img/mnist_xl_qp120_64_acc_HV.jpg
+   :width: 49%
+.. image:: img/mnist_xl_qp120_64_loss_HV.jpg
+   :width: 49%
+
+32
+
+.. image:: img/mnist_xl_qp120_32_acc_HV.jpg
+   :width: 49%
+.. image:: img/mnist_xl_qp120_32_loss_HV.jpg
+   :width: 49%
+
+16
+
+.. image:: img/mnist_xl_qp120_16_acc_HV.jpg
+   :width: 49%
+.. image:: img/mnist_xl_qp120_16_loss_HV.jpg
+   :width: 49%
+
+For 64x64, the accuracy is a little bit higher, but for 32x32, 16x16, it stays the same.
