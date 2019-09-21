@@ -94,6 +94,8 @@ block size : 32x32
 
 **(top) model 1, (bottom) model 2** 
 
+Here it can be seen that model2 start overfitting after 20 epochs, which means it can't 
+
 ----
 
 block size : 16x16
@@ -115,7 +117,10 @@ block size : 16x16
 
 It can be seen that the accuray is quite close to the highest distribution of classes for both models.
 
-This may suggest the model mostly guess split mode for block 64x64 and none and split modes for 32x32 and mostly none for 16x16.
+When using this model to predict a new frame, the prediction result is shown below.
+
+The model mostly guess only split mode for block 64x64 and none and split modes for 32x32 and mostly none for 16x16.
+
 
 To further prove this assumption, another data set with 9 720p frames is used to train the model.
 
