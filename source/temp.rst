@@ -13,12 +13,6 @@ block size : 64x64
 .. image:: img/m1_qp120_64_loss_NR.jpg
    :width: 49%
 
-
-.. image:: img/mnist_qp120_64_acc_NR.jpg
-   :width: 49%
-.. image:: img/mnist_qp120_64_loss_NR.jpg
-   :width: 49%
-
 **(top) model 1, (bottom) model 2** 
 
 ----
@@ -30,11 +24,6 @@ block size : 32x32
 .. image:: img/m1_qp120_32_loss_NR.jpg
    :width: 49%
 
-.. image:: img/mnist_qp120_32_acc_NR.jpg
-   :width: 49%
-.. image:: img/mnist_qp120_32_loss_NR.jpg
-   :width: 49%
-
 **(top) model 1, (bottom) model 2** 
 
 ----
@@ -44,12 +33,6 @@ block size : 16x16
 .. image:: img/m1_qp120_16_acc_NR.jpg
    :width: 49%
 .. image:: img/m1_qp120_16_loss_NR.jpg
-   :width: 49%
-
-
-.. image:: img/mnist_qp120_16_acc_NR.jpg
-   :width: 49%
-.. image:: img/mnist_qp120_16_loss_NR.jpg
    :width: 49%
    
 **(top) model 1, (bottom) model 2** 
