@@ -8,15 +8,15 @@ Binary None and the Rest
 
 block size : 64x64
 
-.. image:: img/m1_qp120_64_acc_f.jpg
+.. image:: img/m1_qp120_64_acc_NR.jpg
    :width: 49%
-.. image:: img/m1_qp120_64_loss_f.jpg
+.. image:: img/m1_qp120_64_loss_NR.jpg
    :width: 49%
 
 
-.. image:: img/mnist_qp120_64_acc_f.jpg
+.. image:: img/mnist_qp120_64_acc_NR.jpg
    :width: 49%
-.. image:: img/mnist_qp120_64_loss_f.jpg
+.. image:: img/mnist_qp120_64_loss_NR.jpg
    :width: 49%
 
 **(top) model 1, (bottom) model 2** 
@@ -25,14 +25,14 @@ block size : 64x64
 
 block size : 32x32
 
-.. image:: img/m1_qp120_32_acc_sh.jpg
+.. image:: img/m1_qp120_32_acc_NR.jpg
    :width: 49%
-.. image:: img/m1_qp120_32_loss_sh.jpg
+.. image:: img/m1_qp120_32_loss_NR.jpg
    :width: 49%
 
-.. image:: img/mnist_qp120_32_acc_sh.jpg
+.. image:: img/mnist_qp120_32_acc_NR.jpg
    :width: 49%
-.. image:: img/mnist_qp120_32_loss_sh.jpg
+.. image:: img/mnist_qp120_32_loss_NR.jpg
    :width: 49%
 
 **(top) model 1, (bottom) model 2** 
@@ -41,47 +41,47 @@ block size : 32x32
 
 block size : 16x16
 
-.. image:: img/m1_qp120_16_acc_f.jpg
+.. image:: img/m1_qp120_16_acc_NR.jpg
    :width: 49%
-.. image:: img/m1_qp120_16_loss_f.jpg
+.. image:: img/m1_qp120_16_loss_NR.jpg
    :width: 49%
 
 
-.. image:: img/mnist_qp120_16_acc_f.jpg
+.. image:: img/mnist_qp120_16_acc_NR.jpg
    :width: 49%
-.. image:: img/mnist_qp120_16_loss_f.jpg
+.. image:: img/mnist_qp120_16_loss_NR.jpg
    :width: 49%
    
 **(top) model 1, (bottom) model 2** 
 
 
-9 classes except None
+9 classes (without None)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 block size : 64x64
 
-.. image:: img/m1_qp120_64_acc_f.jpg
+.. image:: img/m1_qp120_64_acc_S9c.jpg
    :width: 49%
-.. image:: img/m1_qp120_64_loss_f.jpg
+.. image:: img/m1_qp120_64_loss_S9c.jpg
    :width: 49%
 
 ----
 
 block size : 32x32
 
-.. image:: img/m1_qp120_32_acc_sh.jpg
+.. image:: img/m1_qp120_32_acc_S9c.jpg
    :width: 49%
-.. image:: img/m1_qp120_32_loss_sh.jpg
+.. image:: img/m1_qp120_32_loss_S9c.jpg
    :width: 49%
 
 ----
 
 block size : 16x16
 
-.. image:: img/m1_qp120_16_acc_f.jpg
+.. image:: img/m1_qp120_16_acc_S9c.jpg
    :width: 49%
-.. image:: img/m1_qp120_16_loss_f.jpg
+.. image:: img/m1_qp120_16_loss_S9c.jpg
    :width: 49%
    
 
@@ -90,27 +90,27 @@ split and rest 8 classes (binary)
 
 block size : 64x64
 
-.. image:: img/m1_qp120_64_acc_f.jpg
+.. image:: img/m1_qp120_64_acc_SR8.jpg
    :width: 49%
-.. image:: img/m1_qp120_64_loss_f.jpg
+.. image:: img/m1_qp120_64_loss_SR8.jpg
    :width: 49%
 
 ----
 
 block size : 32x32
 
-.. image:: img/m1_qp120_32_acc_sh.jpg
+.. image:: img/m1_qp120_32_acc_SR8.jpg
    :width: 49%
-.. image:: img/m1_qp120_32_loss_sh.jpg
+.. image:: img/m1_qp120_32_loss_SR8.jpg
    :width: 49%
 
 ----
 
 block size : 16x16
 
-.. image:: img/m1_qp120_16_acc_f.jpg
+.. image:: img/m1_qp120_16_acc_SR8.jpg
    :width: 49%
-.. image:: img/m1_qp120_16_loss_f.jpg
+.. image:: img/m1_qp120_16_loss_SR8.jpg
    :width: 49%
    
 
@@ -119,60 +119,85 @@ Binary Split and the Rest 9 classes
 
 block size : 64x64
 
-.. image:: img/m1_qp120_64_acc_f.jpg
+.. image:: img/m1_qp120_64_acc_SR.jpg
    :width: 49%
-.. image:: img/m1_qp120_64_loss_f.jpg
+.. image:: img/m1_qp120_64_loss_SR.jpg
    :width: 49%
 
 ----
 
 block size : 32x32
 
-.. image:: img/m1_qp120_32_acc_sh.jpg
+.. image:: img/m1_qp120_32_acc_SR.jpg
    :width: 49%
-.. image:: img/m1_qp120_32_loss_sh.jpg
+.. image:: img/m1_qp120_32_loss_SR.jpg
    :width: 49%
 
 ----
 
 block size : 16x16
 
-.. image:: img/m1_qp120_16_acc_f.jpg
+.. image:: img/m1_qp120_16_acc_SR.jpg
    :width: 49%
-.. image:: img/m1_qp120_16_loss_f.jpg
+.. image:: img/m1_qp120_16_loss_SR.jpg
    :width: 49%
 
-9 classes (no SPLIT)
+9 classes (without SPLIT)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 block size : 64x64
 
-.. image:: img/m1_qp120_64_acc_f.jpg
+.. image:: img/m1_qp120_64_acc_N9c.jpg
    :width: 49%
-.. image:: img/m1_qp120_64_loss_f.jpg
+.. image:: img/m1_qp120_64_loss_N9c.jpg
    :width: 49%
 
 ----
 
 block size : 32x32
 
-.. image:: img/m1_qp120_32_acc_sh.jpg
+.. image:: img/m1_qp120_32_acc_N9c.jpg
    :width: 49%
-.. image:: img/m1_qp120_32_loss_sh.jpg
+.. image:: img/m1_qp120_32_loss_N9c.jpg
    :width: 49%
 
 ----
 
 block size : 16x16
 
-.. image:: img/m1_qp120_16_acc_f.jpg
+.. image:: img/m1_qp120_16_acc_N9c.jpg
    :width: 49%
-.. image:: img/m1_qp120_16_loss_f.jpg
+.. image:: img/m1_qp120_16_loss_N9c.jpg
    :width: 49%
 
 
-None and the Rest 8 classes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+None and the Rest 8 classes (binary)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+block size : 64x64
+
+.. image:: img/m1_qp120_64_acc_NR8.jpg
+   :width: 49%
+.. image:: img/m1_qp120_64_loss_NR8.jpg
+   :width: 49%
+
+----
+
+block size : 32x32
+
+.. image:: img/m1_qp120_32_acc_NR8.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_NR8.jpg
+   :width: 49%
+
+----
+
+block size : 16x16
+
+.. image:: img/m1_qp120_16_acc_NR8.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_NR8.jpg
+   :width: 49%
 
 
 
