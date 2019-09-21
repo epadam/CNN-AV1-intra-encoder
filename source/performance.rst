@@ -414,34 +414,7 @@ From the tests above, it can be seen that the model can not really learn the fea
 
 To clarify the root cause of this result, we train it with deeper and wider model to see if it is due to the model lack of sufficient parameters or it is because the horz and vert classes don't have clear features. 
 
-Test on Expanded Model
-^^^^^^^^^^^^^^^^^^^^^^^
 
-A deeper and wider model is used to test if it is possible to increase the accuracy by offering more parameters.
-
-
-64
-
-.. image:: img/mnist_xl_qp120_64_acc_HV.jpg
-   :width: 49%
-.. image:: img/mnist_xl_qp120_64_loss_HV.jpg
-   :width: 49%
-
-32
-
-.. image:: img/mnist_xl_qp120_32_acc_HV.jpg
-   :width: 49%
-.. image:: img/mnist_xl_qp120_32_loss_HV.jpg
-   :width: 49%
-
-16
-
-.. image:: img/mnist_xl_qp120_16_acc_HV.jpg
-   :width: 49%
-.. image:: img/mnist_xl_qp120_16_loss_HV.jpg
-   :width: 49%
-
-For 64x64, the accuracy is a little bit higher, but for 32x32, 16x16, it stays the same.
 
 Thus, the possible reason for low accuracy may due to the pattern encoded with these two partition modes are not unique so the model can not learn very well. Figure shows some patterns of blocks encoded in Vert and Horz partition modes. It seems some patterns are very similar but encoded with different modes. The reason may be that Horz and Vert rely more on the context in the frame (neighbor's data).
 
