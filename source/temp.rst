@@ -635,3 +635,49 @@ block size : 16x16
 **(top) model 1, (bottom) model 2** 
 
 It can be seen that, compared to the accuracy of trimmed data set, this can increase the prediction accuracy for noe and split  
+
+
+
+To further prove this assumption, another data set with 9 720p frames is used to train the model.
+
+The distribution of partition modes of different block sizes is shown below. 
+
+
+.. image:: img/720_9f_qp120_distribution_64.jpg
+   :width: 49%  
+.. image:: img/720_9f_qp120_distribution_32.jpg
+   :width: 49%
+
+
+.. image:: img/720_9f_qp120_distribution_16.jpg
+   :width: 50%
+
+Notice the distribution of parititon modes is different from the 4K data set. It has higher ratio of Split partition mode for both block size 64x64 and 32x32, and less NONE partition modes for block size 16x16. This may be because the 720p frames have more concise scene than 4K frames.
+
+Here we only test model 1 and the result is presented below:
+
+block size : 64x64
+
+.. image:: img/m1_qp120_64_acc_f_720.jpg
+   :width: 49%
+.. image:: img/m1_qp120_64_loss_f_720.jpg
+   :width: 49%
+
+block size : 32x32
+
+.. image:: img/m1_qp120_32_acc_f_720.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_f_720.jpg
+   :width: 49%
+
+block size : 16x16
+
+.. image:: img/m1_qp120_16_acc_f_720.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_f_720.jpg
+   :width: 49%
+
+For block size 64x64, it can be seen that the accuracy increase to above 90%, which is close to percentage of none and split together. For32x32, the accuracy is also very close to the none and split together. For 16x16, the accuracy becomes lower. Notice that the partition modes are more distributed for 16x16 in this data set. 
+
+Again, we use this model to predict the partition mode of a frame. The result shows it only predict the classes with top 3 number of sampels.
+
