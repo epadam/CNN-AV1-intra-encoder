@@ -270,6 +270,8 @@ Notice the output of the model is changed to only two classes, the loss function
 
 64
 
+each class has 2000 samples
+
 model1
 
 .. image:: img/m1_qp120_64_acc_NS.jpg
@@ -286,6 +288,8 @@ model2
 
 32
 
+each class has 25000 samples
+
 model1
 
 .. image:: img/m1_qp120_32_acc_NS.jpg
@@ -301,6 +305,8 @@ model2
     :width: 49%
 
 16
+
+each class has 17500 samples
 
 model1
 
