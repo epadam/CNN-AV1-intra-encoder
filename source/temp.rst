@@ -5,7 +5,6 @@ TEMP
 Binary None and the Rest
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
 block size : 64x64
 
 .. image:: img/m1_qp120_64_acc_NR.jpg
@@ -97,33 +96,7 @@ block size : 16x16
    :width: 49%
    
 
-Binary Split and the Rest 9 classes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-block size : 64x64
-
-.. image:: img/m1_qp120_64_acc_SR.jpg
-   :width: 49%
-.. image:: img/m1_qp120_64_loss_SR.jpg
-   :width: 49%
-
-----
-
-block size : 32x32
-
-.. image:: img/m1_qp120_32_acc_SR.jpg
-   :width: 49%
-.. image:: img/m1_qp120_32_loss_SR.jpg
-   :width: 49%
-
-----
-
-block size : 16x16
-
-.. image:: img/m1_qp120_16_acc_SR.jpg
-   :width: 49%
-.. image:: img/m1_qp120_16_loss_SR.jpg
-   :width: 49%
 
 9 classes (without SPLIT)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
