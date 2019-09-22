@@ -408,6 +408,8 @@ Binary Split and the Rest 9 classes
 
 block size : 64x64
 
+Split has 873 samples, the reast of classes also have 973 samples
+
 .. image:: img/m1_qp120_64_acc_SR.jpg
    :width: 49%
 .. image:: img/m1_qp120_64_loss_SR.jpg
@@ -417,6 +419,8 @@ block size : 64x64
 
 block size : 32x32
 
+Split has 16479 samples, the reast of classes also have 16479 samples
+
 .. image:: img/m1_qp120_32_acc_SR.jpg
    :width: 49%
 .. image:: img/m1_qp120_32_loss_SR.jpg
@@ -425,6 +429,8 @@ block size : 32x32
 ----
 
 block size : 16x16
+
+Split has 873 samples, the reast of classes also have 973 samples
 
 .. image:: img/m1_qp120_16_acc_SR.jpg
    :width: 49%
