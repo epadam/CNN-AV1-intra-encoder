@@ -204,6 +204,8 @@ The training result for block size 16x16, 32x32, 64x64 is shown below:
 
 64
 
+each class has 97 samples
+
 model1
 
 .. image:: img/m1_qp120_64_acc_ecf.jpg
@@ -220,6 +222,8 @@ model2
 
 32
 
+each class has 1654 samples
+
 model1
 
 .. image:: img/m1_qp120_32_acc_ecf.jpg
@@ -235,6 +239,8 @@ model2
    :width: 49%
 
 16
+
+each class has 5493 samples
 
 model1
 
