@@ -443,6 +443,8 @@ None and the Rest 8 classes (binary)
 
 block size : 64x64
 
+None has 776 samples, the reast of classes also have 776 samples
+
 .. image:: img/m1_qp120_64_acc_NR8.jpg
    :width: 49%
 .. image:: img/m1_qp120_64_loss_NR8.jpg
