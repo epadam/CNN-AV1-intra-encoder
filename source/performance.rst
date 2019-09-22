@@ -332,6 +332,8 @@ Next, the Horz and Vert classses are tested. The number of samples for both clas
 
 64
 
+each class has 499 samples
+
 model1
 
 .. image:: img/m1_qp120_64_acc_HV.jpg
@@ -348,6 +350,8 @@ model2
 
 32
 
+each class has 5200 samples
+
 model1
 
 .. image:: img/m1_qp120_32_acc_HV.jpg
@@ -363,6 +367,8 @@ model2
     :width: 49%
     
 16
+
+each class has 32500 samples
 
 model1
 
