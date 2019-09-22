@@ -453,6 +453,35 @@ block size : 16x16
    :width: 49%
 
 
+None and the Rest 8 classes (binary)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+block size : 64x64
+
+.. image:: img/m1_qp120_64_acc_NR8.jpg
+   :width: 49%
+.. image:: img/m1_qp120_64_loss_NR8.jpg
+   :width: 49%
+
+----
+
+block size : 32x32
+
+.. image:: img/m1_qp120_32_acc_NR8.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_NR8.jpg
+   :width: 49%
+
+----
+
+block size : 16x16
+
+.. image:: img/m1_qp120_16_acc_NR8.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_NR8.jpg
+   :width: 49%
+
+
 ---------------------------------------------
 Comparison between seperate qp and mixed qps
 ---------------------------------------------
