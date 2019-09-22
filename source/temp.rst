@@ -212,3 +212,58 @@ A deeper and wider model is used to test if it is possible to increase the accur
    :width: 49%
 
 For 64x64, the accuracy is a little bit higher, but for 32x32, 16x16, it stays the same.
+
+
+--------------------------------------------------------  
+Training results of None, Split and the rest
+-------------------------------------------------------- 
+
+block size : 64x64
+
+.. image:: img/m1_qp120_64_acc_NSR.jpg
+   :width: 49%
+.. image:: img/m1_qp120_64_loss_NSR.jpg
+   :width: 49%
+
+
+.. image:: img/mnist_qp120_64_acc_NSR.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_64_loss_NSR.jpg
+   :width: 49%
+
+**(top) model 1, (bottom) model 2** 
+
+----
+
+block size : 32x32
+
+.. image:: img/m1_qp120_32_acc_NSR.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_NSR.jpg
+   :width: 49%
+
+.. image:: img/mnist_qp120_32_acc_NSR.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_32_loss_NSR.jpg
+   :width: 49%
+
+**(top) model 1, (bottom) model 2** 
+
+----
+
+block size : 16x16
+
+.. image:: img/m1_qp120_16_acc_NSR.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_NSR.jpg
+   :width: 49%
+
+
+.. image:: img/mnist_qp120_16_acc_NSR.jpg
+   :width: 49%
+.. image:: img/mnist_qp120_16_loss_NSR.jpg
+   :width: 49%
+   
+**(top) model 1, (bottom) model 2** 
+
+It can be seen that, compared to the accuracy of trimmed data set, this can increase the prediction accuracy for noe and split  
