@@ -210,8 +210,8 @@ The number of parameters of the two models are shown in table 1 and table 2.
      - 
      - 
    * - Total
-     -  
-     -  
+     - 313760 
+     - 234
      -  
      -  
 
