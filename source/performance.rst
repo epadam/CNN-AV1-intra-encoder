@@ -424,7 +424,33 @@ The full dataset can be found online (A jupyter notebook can be used to see the 
 
 Since None and split is the most important classes, we merge the rest of the classes into one class. The reason is to avoid noises affecting each other. This strategy is to insure none and split can get the most correct prediction. The rest of classes are trained with a sub model to obtain higher accuracy
 
+Binary Split and the Rest 9 classes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+block size : 64x64
+
+.. image:: img/m1_qp120_64_acc_SR.jpg
+   :width: 49%
+.. image:: img/m1_qp120_64_loss_SR.jpg
+   :width: 49%
+
+----
+
+block size : 32x32
+
+.. image:: img/m1_qp120_32_acc_SR.jpg
+   :width: 49%
+.. image:: img/m1_qp120_32_loss_SR.jpg
+   :width: 49%
+
+----
+
+block size : 16x16
+
+.. image:: img/m1_qp120_16_acc_SR.jpg
+   :width: 49%
+.. image:: img/m1_qp120_16_loss_SR.jpg
+   :width: 49%
 
 
 ---------------------------------------------
