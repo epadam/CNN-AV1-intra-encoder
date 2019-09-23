@@ -88,9 +88,9 @@ Many research groups and companies have already tested and evaluated the perform
 
 Google also has showed the compression improvement when enabling the experimental tools. Nevertheless, it also shows the encoding speed is extremely slow. Sethuraman et al. \cite [#]_ also shows AV1 has better performance than other video codecs but has very slow encoding time. Similar results are also performed by Facebook [#]_ and Bitmovin [#]_.
 
-.. [#] Urvang Joshi, Debargha Mukherjee, Jingning Han, Yue Chen, Sarah Parker, Hui Su, Angie Chiang, Yaowu Xu, Zoe Liu, Yunqing Wang, Jim Bankoski, Chen Wang, Emil Keyder, "Novel inter and intra prediction tools under consideration for the emerging AV1 video codec," Proc. SPIE 10396, Applications of Digital Image Processing XL, 103960F (19 September 2017);
+.. [#] `Urvang Joshi, Debargha Mukherjee, Jingning Han, Yue Chen, Sarah Parker, Hui Su, Angie Chiang, Yaowu Xu, Zoe Liu, Yunqing Wang, Jim Bankoski, Chen Wang, Emil Keyder, "Novel inter and intra prediction tools under consideration for the emerging AV1 video codec," Proc. SPIE 10396, Applications of Digital Image Processing XL, 103960F (19 September 2017);<https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10396/103960F/Novel-inter-and-intra-prediction-tools-under-consideration-for-the/10.1117/12.2274022.full>`_
 
-.. [#] Y. Chen et al., "`An Overview of Core Coding Tools in the AV1 Video Codec <https://ieeexplore.ieee.org/document/8456249>`_," 2018 Picture Coding Symposium (PCS), San Francisco, CA, 2018, pp. 41-45.
+.. [#] `Y. Chen et al., "An Overview of Core Coding Tools in the AV1 Video Codec," 2018 Picture Coding Symposium (PCS), San Francisco, CA, 2018, pp. 41-45.<https://ieeexplore.ieee.org/document/8456249>`_
 
 .. [#] Dan Grois, Tung Nguyen, and Detlev Marpe "Performance comparison of AV1, JEM, VP9, and HEVC encoders", Proc. SPIE 10396, Applications of Digital Image Processing XL, 103960L (8 February 2018);
 
