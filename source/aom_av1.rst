@@ -51,9 +51,7 @@ The prediction formula is as follows:
 
 .. math:: 
   PSMOOTH\_H=w(x)L+(1-w(x))TR
-  
   PSMOOTH\_V=w(y)T+(1-w(y))BL
-  
   PSMOOTH=1/2(PSMOOTH\_H+PSMOOTH\_V)
 
 
