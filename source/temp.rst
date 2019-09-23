@@ -681,3 +681,21 @@ For block size 64x64, it can be seen that the accuracy increase to above 90%, wh
 
 Again, we use this model to predict the partition mode of a frame. The result shows it only predict the classes with top 3 number of sampels.
 
+
+---------------------------------------------
+Comparison between seperate qp and mixed qps
+---------------------------------------------
+
+From figure x, it can be seen that qp affect the partition decision tremendously. 
+
+.. image:: img/library64.jpg
+    :width: 49%
+.. image:: img/library32.jpg
+    :width: 49%
+
+.. image:: img/library16.jpg
+    :width: 49%
+
+In this section, we test if the model can still learn the partition moedes for 3 classes with mixed qp.
+
+The results show that the accuracy is quite low, in pratical usage, it is better to store  different parameters for different QP range.
