@@ -94,6 +94,7 @@ Google also has showed the compression improvement when enabling the experimenta
 
 .. [#] Y. Chen et al., "`An Overview of Core Coding Tools in the AV1 Video Codec, <https://ieeexplore.ieee.org/document/8456249>`_
 " 2018 Picture Coding Symposium (PCS), San Francisco, CA, 2018, pp. 41-45.
+
 .. [#] Dan Grois, Tung Nguyen, and Detlev Marpe "`Performance comparison of AV1, JEM, VP9, and HEVC encoders,  <https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10396/103960L/Performance-comparison-of-AV1-JEM-VP9-and-HEVC-encoders-Conference/10.1117/12.2283428.full>`_" Proc. SPIE 10396, Applications of Digital Image Processing XL, 103960L (8 February 2018);
 
 .. [#] https://www.compression.ru/video/codec_comparison/hevc_2018/
@@ -102,8 +103,8 @@ Google also has showed the compression improvement when enabling the experimenta
 
 .. [#] https://www.bbc.co.uk/rd/blog/2019-05-av1-codec-streaming-processing-hevc-vvc
 
-.. [#] S. Sethuraman, C. Rajan and K. Patankar, "`Analysis of the Emerging AOMedia AV1 Video Coding Format for OTT Use-Cases, <https://ieeexplore.ieee.org/document/8370808>`_
-" in SMPTE Motion Imaging Journal, vol. 127, no. 5, pp. 44-50, June 2018.
+.. [#] S. Sethuraman, C. Rajan and K. Patankar, "`Analysis of the Emerging AOMedia AV1 Video Coding Format for OTT Use-Cases <https://ieeexplore.ieee.org/document/8370808>`_," in SMPTE Motion Imaging Journal, vol. 127, no. 5, pp. 44-50, June 2018.
+
 .. [#] https://engineering.fb.com/video-engineering/av1-beats-x264-and-libvpx-vp9-in-practical-use-case/
 
 .. [#] https://bitmovin.com/av1-multi-codec-dash-dataset/
