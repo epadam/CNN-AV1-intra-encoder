@@ -84,7 +84,7 @@ This is another mode suitable for screen contents. It works similar to inter pre
 AV1 Performance Review
 ==========================
 
-Many research groups and companies have already tested and evaluated the performance of AV1. Speed of AV1 is very slow at this moment. BBC compared the efficiency between HEVC, AV1, JEM by Mean Opinion Score (MOS) and found AV1 is slightly better than HM. Fraunhofer Institute for Telecommunications also compare AV1, JEM, VP9, and HEVC encoders, the results show.
+Many research groups and companies have already tested and evaluated the performance of AV1. Speed of AV1 is very slow at this moment. BBC compared the efficiency between HEVC, AV1, VVC by Mean Opinion Score (MOS) and found AV1 is slightly better than HM. Fraunhofer Institute for Telecommunications also compare AV1, JEM, VP9, and HEVC encoders, the results show.
 	 	 	
 Grois, D et al.\cite{Grois2018} have compared the performance between AV1 and HEVC. Their result shows HM has better performance than AV1. On the other hand, the research of MSU Graphics \& Media Lab in 2018 has also showed that AV1 has superior performance than other codecs \cite{Dolganov2018}.
 Some research also shows the performances between AV1 and HEVC have very similar\cite{Akyazi2018}.
@@ -97,4 +97,6 @@ In this section, we compare the encoding performance between AV1 and HEVC. We te
 
 .. [#] Urvang Joshi, Debargha Mukherjee, Jingning Han, Yue Chen, Sarah Parker, Hui Su, Angie Chiang, Yaowu Xu, Zoe Liu, Yunqing Wang, Jim Bankoski, Chen Wang, Emil Keyder, "Novel inter and intra prediction tools under consideration for the emerging AV1 video codec," Proc. SPIE 10396, Applications of Digital Image Processing XL, 103960F (19 September 2017);
 
-.. [#] Y. Chen et al., "An Overview of Core Coding Tools in the AV1 Video Codec," 2018 Picture Coding Symposium (PCS), San Francisco, CA, 2018, pp. 41-45.
+.. [#] Y. Chen et al., "`An Overview of Core Coding Tools in the AV1 Video Codec <https://ieeexplore.ieee.org/document/8456249>`_," 2018 Picture Coding Symposium (PCS), San Francisco, CA, 2018, pp. 41-45.
+
+.. [#] https://www.bbc.co.uk/rd/blog/2019-05-av1-codec-streaming-processing-hevc-vvc
