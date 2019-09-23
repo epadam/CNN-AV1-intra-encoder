@@ -7,7 +7,7 @@ Encoder
 =========
 Most modern video codecs share very similar structure, as shown in the figure below. The encoding process is block-based. Each frame of the input video is sequentially encoded starting from the block in the upper left corner. **Each block** goes through all the steps in the figure to find the best encoding mode.
 
-.. image:: img/EncodingProcess.png
+.. figure:: img/EncodingProcess.png
    :align: center
    
    Encoding Process
@@ -42,7 +42,7 @@ The figure below shows the general decoding process. It can be easily recognized
 
 
 
-.. image:: img/DecodingProcess.png
+.. figure:: img/DecodingProcess.png
    :align: center
    
    Encoding Process
