@@ -12,3 +12,4 @@ At the same time, Google also developed their own video codec standard,known as 
 
 On the other hand, in 2015, ITU-T VCEG and ISO/IEC MPEG again together formed the Joint Video Exploration (JVET) to prepare another standard. After the call for proposals, it became the Joint Video Experts Team (also JVET) in 2018, and announced the new video coding standard, Versatile Video Codec (VVC). It aims for 8K videos and other applications such as 360- degree video and virtual reality. The standard is expected to be finalized by 2020.
 
+.. image:: https://bitmovin.com/wp-content/themes/Bitmovin-V-0.1/images/codec-timeline-short.png
