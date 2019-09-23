@@ -17,7 +17,7 @@ AV1 allows 10 different partiton modes as shown in the Figure below. More possib
 Intra Prediction Tools
 ==========================
 
-As shown in Table, AV1 has more intra prediction tools than HEVC. These intra predcition tools are breifly introduced as follows:
+AV1 introduce 5 new non-directional modes and up to 56 directions for direction modes depends on the block size.
 
 ----------------
 Directional Mode
@@ -34,7 +34,9 @@ PAETH Mode
 ----------------
 
 Paeth mode uses above, left and upper left pixels as reference, also shown in Fig.\ref{fig:intra mode}. The actual formula is as follows:
-$base= L+T-TL, P=argmin|x-base|, x \{T,L,TL\}$
+
+.. math::
+      base= L+T-TL, P=argmin|x-base|, x \{T,L,TL\}
 
 ----------------
 SMOOTH Mode
@@ -42,9 +44,13 @@ SMOOTH Mode
 
 Smooth mode includes three modes (horizontal, vertical, bi-directional), also shown in Fig.\ref{fig:intra mode}.
 The prediction formula is as follows:
-PSMOOTH\_H=w(x)L+(1-w(x))TR
-PSMOOTH\_V=w(y)T+(1-w(y))BL
-PSMOOTH=1/2(PSMOOTH\_H+PSMOOTH\_V)
+
+.. math:: 
+  PSMOOTH\_H=w(x)L+(1-w(x))TR
+  
+  PSMOOTH\_V=w(y)T+(1-w(y))BL
+  
+  PSMOOTH=1/2(PSMOOTH\_H+PSMOOTH\_V)
 
 
 --------------------------------
@@ -58,7 +64,6 @@ Chroma from Luma uses luma prediction block for chroma prediction. The predicted
 Palette mode
 --------------------------------
 
-
 This tool is especially for screen content videos. It can choose up to 8 base colors for prediction. Only the colors and the index map need to be signaled into the bitstream.
 
 --------------------------------
@@ -67,7 +72,10 @@ Recursive Intra Filter
 
 This mode divides the block into 4x2 pixels blocks and apply eight 7-tap filters for each pixels in the block.
 
-{Intra Block Copy (IntraBC)}
+--------------------------------
+Intra Block Copy (IntraBC)
+--------------------------------
+
 This is another mode suitable for screen contents. It works similar to inter prediction but reference to the block in the same frame. 
 
 ==========================
