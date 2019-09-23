@@ -30,9 +30,6 @@ However, each block be divided into smaller blocks. For each sub-block, the step
 And finally, after the whole frame is encoded, loop/deblock filter is used to remove the ringing effect, which is the side effect of the block based encoding. Then the frame will be used as a reference frame for the next frame. This process is repeated until all the frames in the video are encoded.
 
 
-
-
-
 =========
 Decoder
 =========
@@ -45,7 +42,7 @@ The figure below shows the general decoding process. It can be easily recognized
 .. figure:: img/DecodingProcess.png
    :align: center
    
-   Encoding Process
+   Decoding Process
      
 
 
