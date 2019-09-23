@@ -9,7 +9,8 @@ In the following years, the MPEG and VCEG established a Joint Collaborative Team
 
 At the same time, Google also developed their own video codec standard,known as VP8/VP9, to avoid huge licencing fee from HEVC. In 2015, big companies including Amazon, Cisco, Google, Intel, Microsoft, Mozilla, and Netflix, etc, formed Alliance of Open Media(AOM) to develop a royalty-free video codec as an alternative to H.264 and HEVC. In 2016, AOM announced the new video codec standard, AV1. After two years of development, the bitstream format was finally frozen in June, 2018.
 
+.. image:: https://bitmovin.com/wp-content/themes/Bitmovin-V-0.1/images/codec-timeline-short.png
+    :alt: video codec timeline
 
 On the other hand, in 2015, ITU-T VCEG and ISO/IEC MPEG again together formed the Joint Video Exploration (JVET) to prepare another standard. After the call for proposals, it became the Joint Video Experts Team (also JVET) in 2018, and announced the new video coding standard, Versatile Video Codec (VVC). It aims for 8K videos and other applications such as 360- degree video and virtual reality. The standard is expected to be finalized by 2020.
 
-.. image:: https://bitmovin.com/wp-content/themes/Bitmovin-V-0.1/images/codec-timeline-short.png
