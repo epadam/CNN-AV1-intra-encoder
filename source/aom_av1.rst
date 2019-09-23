@@ -1,15 +1,14 @@
 
 AOM AV1
-======================================
+============
 
-The members of AOM include all the big players like Google, Facebook, Netflix, Apple, Intel, etc, the maintenance and development of AV1 are more guaranteed. All these reasons increase the chance for AV1 to dominate the video market. 
-
-AV1 introduces many new tools,  Table shows the tool comparison between AV1 and its main competitors, HEVC and VVC
+AV1 introduces many new tools, in the following paragraph, the partition modes and the intra prediction tools are presented. Full discription of the coding tools can be found in [#]_ and [#]_.
 
 ==========================
 Partition Modes
 ==========================
 
+AV1 allows 10 different partiton modes.
 
 
 ==========================
@@ -84,10 +83,6 @@ Nevertheless, it also shows the encoding speed is extremely slow. Sethuraman et 
 In this section, we compare the encoding performance between AV1 and HEVC. We test the performance under 2 modes (CQ and VBR). For CQ mode, we compare it with HM. For VBR mode, we compare it with x265. The reason is explained in the following section.
 
 
-============================
-Transform and Quantization
-============================
+.. [#] Urvang Joshi, Debargha Mukherjee, Jingning Han, Yue Chen, Sarah Parker, Hui Su, Angie Chiang, Yaowu Xu, Zoe Liu, Yunqing Wang, Jim Bankoski, Chen Wang, Emil Keyder, "Novel inter and intra prediction tools under consideration for the emerging AV1 video codec," Proc. SPIE 10396, Applications of Digital Image Processing XL, 103960F (19 September 2017);
 
-==========================
-Entropy Coding
-==========================
+.. [#] Y. Chen et al., "An Overview of Core Coding Tools in the AV1 Video Codec," 2018 Picture Coding Symposium (PCS), San Francisco, CA, 2018, pp. 41-45.
