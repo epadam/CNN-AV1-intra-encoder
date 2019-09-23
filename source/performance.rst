@@ -304,6 +304,8 @@ model2
 .. image:: img/mnist_qp120_32_loss_NS.jpg
     :width: 49%
 
+Model 2 offers more parameters. After it learns all the required features, it starts to memorize certain features only belongs to this data set, which cause overfitting. on the other side, model 1 has just enough parameters to memorize the correct features.
+
 16
 
 each class has 17500 samples
