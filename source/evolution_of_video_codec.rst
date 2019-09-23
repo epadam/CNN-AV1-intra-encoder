@@ -10,7 +10,7 @@ In the following years, the MPEG and VCEG established a Joint Collaborative Team
 At the same time, Google also developed their own video codec standard,known as VP8/VP9, to avoid huge licencing fee from HEVC. In 2015, big companies including Amazon, Cisco, Google, Intel, Microsoft, Mozilla, and Netflix, etc, formed Alliance of Open Media(AOM) to develop a royalty-free video codec as an alternative to H.264 and HEVC. In 2016, AOM announced the new video codec standard, AV1. After two years of development, the bitstream format was finally frozen in June, 2018.
 
 .. figure:: https://bitmovin.com/wp-content/themes/Bitmovin-V-0.1/images/codec-timeline-short.png
-    :figclass: align-center
+   :figclass: align-center
 
    picture one
 
