@@ -21,6 +21,7 @@ The command is shown below.
 Figure below shows the results of the comparison  
 
 .. image:: img/encoding_time.png
+   :width: 60%
 
 It can be seen that for AV1, the encoding time can be greatly improved with SIMD. However, the encoding time is still slower than HEVC and VVC. 
 
@@ -31,6 +32,7 @@ The frame is encoded with QPs = 31, 39, 47, and 55 for AV1 and 27, 32, 37, and 4
 The figure of bit-rate VS PSNR is shown below.
 
 .. image:: img/comparison.png
+   :width: 60%
 
 The BD-BR and BD-PSNR is summerized in the table below
 
