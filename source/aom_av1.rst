@@ -46,7 +46,7 @@ Paeth mode uses above, left and upper left pixels as reference, also shown in Fi
 SMOOTH Mode
 ----------------
 
-Smooth mode includes three modes (horizontal, vertical, bi-directional), also shown in Fig.\ref{fig:intra mode}.
+Smooth mode includes three modes (horizontal, vertical, bi-directional).
 The prediction formula is as follows:
 
 .. math:: 
