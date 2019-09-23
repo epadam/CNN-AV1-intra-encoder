@@ -5,7 +5,12 @@ Encoder and Decoder
 =========
 Encoder
 =========
-Most modern video codecs share very similar structure, as shown in the figure. The encoding process is block-based. Each frame of the input video is sequentially encoded starting from the block in the upper left corner. **Each block** goes through all the steps in the figure to find the best encoding mode.
+Most modern video codecs share very similar structure, as shown in the figure below. The encoding process is block-based. Each frame of the input video is sequentially encoded starting from the block in the upper left corner. **Each block** goes through all the steps in the figure to find the best encoding mode.
+
+.. image:: img/EncodingProcess.png
+   :align: center
+   
+   Encoding Process
 
 Prediction tools can be divided into intra and inter prediction. Intra prediction tools are used to eliminate the spatial redundancy in the same frame. It uses edge pixels of adjacent block (left and above) as reference for prediction. Inter prediction tools are used to eliminate temporal redundancy in the video. It searches similar pattern in the same frame or other encoded frame (reference frame) for prediction. The first frame or key frame can only be intra frame, which means it can only use intra prediction. For inter frame, it will try both inter and intra predictions.  Redundancy removal is done by subtracting the original block with prediction block built by predictor and only store the differences. These differences are called residuals. 
 
@@ -25,7 +30,6 @@ However, each block be divided into smaller blocks. For each sub-block, the step
 And finally, after the whole frame is encoded, loop/deblock filter is used to remove the ringing effect, which is the side effect of the block based encoding. Then the frame will be used as a reference frame for the next frame. This process is repeated until all the frames in the video are encoded.
 
 
-.. image:: img/EncodingProcess.png
 
 
 
@@ -39,6 +43,9 @@ The figure below shows the general decoding process. It can be easily recognized
 
 
 .. image:: img/DecodingProcess.png
+   :align: center
+   
+   Encoding Process
      
 
 
