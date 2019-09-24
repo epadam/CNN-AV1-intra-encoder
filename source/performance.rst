@@ -485,6 +485,38 @@ Encoding Performance
 Comparison of Encoding Time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+**full dataset with weighted cross entropy**
+
+First, let the model learn the distribution of the classes may lead to the closest encoding efficiency to the original encoder. the down side of this solution is every frame has its own distribution. This will make the prediction imprecise. This will lower the performance of the encoder.
+
+**merged classes with binary submodel (really learn the class)**
+
+Second strategy is, merge the classes that can not be recognized easily. If the merged class is chosen, then use a sub model to further predict the partition mode.
+
+Overhead
+
+complexity reduction
+
+
+
+
+
+Comparison of Video Quality
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+models trained with different dataset is used to test the encoding efficiency
+
+Here we compare the same 
+
+
+**full dataset with weighted cross entropy**
+
+
+**merged classes with binary submodel (really learn the class)**
+
+.. image:: img/encoded_frame.png
+
+
 .. list-table:: Encoding time
    :widths: 10 10 10 10 10 
    :header-rows: 1
@@ -529,31 +561,4 @@ Comparison of Encoding Time
      - 194
      - 22342
      - 31322
-
-**full dataset with weighted cross entropy**
-
-First, let the model learn the distribution of the classes may lead to the closest encoding efficiency to the original encoder. the down side of this solution is every frame has its own distribution. This will make the prediction imprecise. This will lower the performance of the encoder.
-
-**merged classes with binary submodel (really learn the class)**
-
-Second strategy is, merge the classes that can not be recognized easily. If the merged class is chosen, then use a sub model to further predict the partition mode.
-
-Overhead
-
-complexity reduction
-
-Comparison of Video Quality
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-models trained with different dataset is used to test the encoding efficiency
-
-Here we compare the same 
-
-
-**full dataset with weighted cross entropy**
-
-
-**merged classes with binary submodel (really learn the class)**
-
-
-
 
