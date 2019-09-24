@@ -534,14 +534,12 @@ Here we compare the same
      - 
      -
      - AV1
-       CNN-AV1
      - 
      - 
    * - 
      - 
      - 
      - AV1
-       CNN-AV1 
      -
      - 
 
