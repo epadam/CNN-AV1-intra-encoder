@@ -7,10 +7,14 @@ Labels Extraction from the Encoder
 ========================================
 
 -----------------------
-Vidoe Source
+Video Source
 -----------------------
 
 Videos with different resolution are downloaded from the following websites:
+
+http://medialab.sjtu.edu.cn/web4k/index.html
+
+https://media.xiph.org/video/derf/
 
 The list of video can be seen in the appendix. 
 
@@ -30,10 +34,9 @@ Since a scene in a video is normally highly similar, only one frame in a scene i
 Code change in Encoder
 -----------------------
 
-For each frame, when it goes to the function ''rd\_pcik\_partition'', the partition decisions of each 64x64, 32x32 and 16x16 blocks are recorded and stored in a txt file. Partition decisions are used as labels and indexed from 0 to 9 for each block as shown in Table. The qp of the frame is also stored.
+For each frame, when it goes to the function ''rd_pcik_partition'', the partition decisions of each 64x64, 32x32 and 16x16 blocks are recorded and stored in a txt file.  Partition decisions are used as labels and indexed from 0 to 9 for each block as shown in Table. The qp of the frame is also stored.
 
-The code is shown as follows::
-
+The source code can be found here.
 
 
 -----------------------
@@ -61,9 +64,7 @@ Training and Evaluation Setting
 Loss Function
 --------------
 
-categorical cross entropy and binary cross entropy are used as loss function in this research.
-
-The formula is shown as follows:
+The built-in loss functions including in keras are used for the training. Categorical cross entropy and binary cross entropy are used as loss function in this research.
 
 The source code can be found in the link
 
@@ -75,12 +76,10 @@ Optimizer
 
 Adam is used 
 
-The theory is briefly explained below.
-
 The source code can also be found in the link.
 
 ----------------------------
 Evaluation and Test Setting
 ----------------------------
 
-Another video pool dataset is used to test the accuracy of the model
+For evaluation, 10% of the training data is split. 
