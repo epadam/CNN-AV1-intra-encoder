@@ -13,10 +13,11 @@ Convolutional Layer
 
 Convolutional layer uses kernel map or filter to extract the features from raw data. 
 
+The operation is defined as:
+
 .. math::
 
   (I \ast K)_{ij} &= \sum_{m = 0}^{k_1 - 1} \sum_{n = 0}^{k_2 - 1} I(i-m, j-n)K(m,n)
-
 
 -------------------
 Pooling Layer
