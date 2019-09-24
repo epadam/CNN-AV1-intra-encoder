@@ -2,15 +2,21 @@ Convolutional Neural Network
 ===================================================
 
 
-Convolutional Neural Network(CNN) is the most popular branch of Deep Learning. Unlike other neural network, not all the layers in CNN are fully connected. The basic structured is described as follows.
+Convolutional Neural Network(CNN) is the most popular branch of Deep Learning. The most difference between normal neural network and CNN is the convolutional layer. 
 
-The basic structure of CNN can be seen in Figure XX.
 
--------------------
+The explanation of each layer is presented as follows.
+
+---------------------
 Convolutional Layer
--------------------
+---------------------
 
-The most difference between normal neural network and CNN is the convolutional layer, which use kernel map or filter to extract the features from raw data. Figure xx gives the simple demonstration of how filter works. 
+Convolutional layer uses kernel map or filter to extract the features from raw data. 
+
+.. math::
+
+  (I \ast K)_{ij} &= \sum_{m = 0}^{k_1 - 1} \sum_{n = 0}^{k_2 - 1} I(i-m, j-n)K(m,n)
+
 
 -------------------
 Pooling Layer
