@@ -24,7 +24,7 @@ For intra frame, the encoder will only use intra prediction tools to calculate t
 Current Statistic and Machine Learning Strategies for Partition Mode Selection in AV1
 =========================================================================================
 
-.. image:: img/NNstructure.png
+.. image:: img/ml_rd_pick.png
 
 
 
