@@ -24,8 +24,11 @@ For intra frame, the encoder will only use intra prediction tools to calculate t
 Current Statistic and Machine Learning Strategies for Partition Mode Selection in AV1
 =========================================================================================
 
+In order to save encoding time, AV1 applies the most acceleration functions in partition mode selections, as shown in figure below.
+
 .. image:: img/ml_rd_pick.png
 
+However
 
 
 ==========================================================
