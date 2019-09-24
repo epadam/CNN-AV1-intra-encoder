@@ -18,9 +18,14 @@ For intra frame, the encoder will only use intra prediction tools to calculate t
 
 .. image:: img/Partitionhierarchy.png
 
-
-
 .. image:: img/OrderofRDcalculation.png
+
+=========================================================================================
+Current Statistic and Machine Learning Strategies for Partition Mode Selection in AV1
+=========================================================================================
+
+.. image:: img/NNstructure.png
+
 
 
 ==========================================================
