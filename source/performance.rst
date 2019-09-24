@@ -520,7 +520,7 @@ Here we compare the same
 
 
 .. list-table:: Comparison
-   :widths: 5 5 5 5 5
+   :widths: 5 5 5 5 5 5 5
    :header-rows: 1
 
    * - Video Frame
@@ -528,11 +528,14 @@ Here we compare the same
      - QP
      - Encoder
      - PSNR(dB)
-
+     - bit
+     - Encoding Time
    * - 
      - 
      -
      - AV1
+     -
+     -
      -
 
 
