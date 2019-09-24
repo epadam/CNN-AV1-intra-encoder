@@ -83,17 +83,11 @@ When enabling first pass, the square partition search will be executed and the s
 Machine Learning Approaches
 -------------------------------- 
 
-In AV1, many pruning functions are driven by the machine learning. In this section, we try to discuss their functionalities in the encoder.
-   
-
-Neural Network
-```````````````
-
-The NN structure used in AV1 is shown in Figure \ref{fig:NN structure}. Although it allows maximum 10 layers and 128 nodes per hidden layer. All the models used in AV1 only contain 1 or 2 hidden layers and 16 to 64 nodes per layer. All the functions' weights and bias are pre stored in the source file.
+In AV1, many pruning functions are driven by the machine learning. It is applied in partition mode decisions, prediction and transform mode selection. All these functions share the same simple neural network structure as shown in the Figure below. Although it allows maximum 10 layers and 128 nodes per hidden layer. All the models used in AV1 only contain 1 or 2 hidden layers and 16 to 64 nodes per layer. All the functions' weights and bias are pre stored in the source file.
 
 
+.. image:: img/NNstructure.png
 
 
-.. image:: img/ml_rd_pick.png
 
 
