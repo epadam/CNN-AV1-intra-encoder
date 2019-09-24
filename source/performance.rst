@@ -536,12 +536,7 @@ Here we compare the same
      - AV1
      - 
      - 
-   * - 
-     - 
-     - 
-     - AV1
-     -
-     - 
+
 
 
 
