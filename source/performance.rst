@@ -500,7 +500,7 @@ Overhead
 
 complexity reduction
 
-
+.. image:: img/overhead_reduction.png
 
 
 
@@ -519,48 +519,31 @@ Here we compare the same
 .. image:: img/encoded_frame.png
 
 
-.. list-table:: Encoding time
+.. list-table:: Comparison
    :widths: 10 10 10 10 10 
    :header-rows: 1
 
-   * - Layer
-     - Weights
-     - Bias
-     - Addition
-     - Multiplication
-   * - Conv1
-     - 256
-     - 16
-     - 3856
-     - 4096
-   * - Conv2
-     - 1536
-     - 24
-     - 4632
-     - 6144
-   * - Conv3
-     - 3072
-     - 32
-     - 2336
-     - 3072
-   * - FC1
-     - 8256
-     - 64
-     - 8256
-     - 14400
-   * - FC2
-     - 3120
-     - 48
-     - 3072
-     - 3120
-   * - Output
-     - 490
-     - 10
-     - 190
-     - 490
-   * - Total
-     - 16730
-     - 194
-     - 22342
-     - 31322
+   * - Video Frame
+     - Resolution
+     - QP
+     - Encoder
+     - PSNR(dB)
+     - bit
+     - Encoding Time
+   * - 
+     - 
+     -
+     - AV1
+       CNN-AV1
+     - 
+     - 
+   * - 
+     - 
+     - 
+     - AV1
+       CNN-AV1 
+     -
+     - 
+
+
 
