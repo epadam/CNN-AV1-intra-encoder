@@ -36,10 +36,15 @@ The most commen used activation functions include sigmoid, Relu and softmax. The
 ReLu (rectified linear unit)/leaky ReLu}
 
 ---------------------
+Training CNN Model
+---------------------
+
+
+
 Loss (Error) Function
 ---------------------
 
-----------------------
+
 Backpropagation
 ----------------------
 
