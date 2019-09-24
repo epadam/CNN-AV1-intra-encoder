@@ -12,7 +12,6 @@ Convolutional Layer
 
 The most difference between normal neural network and CNN is the convolutional layer, which use kernel map or filter to extract the features from raw data. Figure xx gives the simple demonstration of how filter works. 
 
-
 -------------------
 Pooling Layer
 -------------------
@@ -36,6 +35,9 @@ The most commen used activation functions include sigmoid, Relu and softmax. The
 
 ReLu (rectified linear unit)/leaky ReLu}
 
+---------------------
+Loss (Error) Function
+---------------------
 
 ----------------------
 Backpropagation
