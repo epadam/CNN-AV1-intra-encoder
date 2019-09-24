@@ -31,6 +31,7 @@ In order to save encoding time, AV1 applies the most acceleration functions in p
 All the machine learning functions share the same simple neural network structure as shown in the Figure below. Although it allows maximum 10 layers and 128 nodes per hidden layer. All the models used in AV1 only contain 1 or 2 hidden layers and 16 to 64 nodes per layer. All the functions' weights and bias are pre stored in the source file.
 
 .. image:: img/NNstructure.png
+   :width: 60%
 
 ==========================================================
 Partition Mode Prediction with CNN for Intra Frame
