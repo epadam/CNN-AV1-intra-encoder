@@ -54,7 +54,13 @@ code::
 
 Thus, the dataset includes three txt files (reordered raw images, labels, qps). All three files are in the same order. 
 
-An example dataset is shown in the following files.
+Some example raw images of each class is shown below:
+
+.. figure:: partition0.png
+    
+    None
+
+
 
 ========================================
 Training and Evaluation Setting
