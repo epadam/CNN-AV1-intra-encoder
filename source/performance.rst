@@ -67,7 +67,7 @@ The distribution of partition modes of different block sizes is shown below.
 .. image:: img/4K_11f_mix_distribution_16.jpg
    :width: 50%
 
-Some example raw 64x64 images of each partition mode is shown below:
+Some raw 64x64 images of each partition mode is shown below:
 
 .. image:: img/partition0.png
    :width: 49%   
