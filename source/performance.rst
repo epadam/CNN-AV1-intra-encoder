@@ -585,26 +585,6 @@ Here we compare the same
 .. image:: img/encoded_frame.png
 
 
-.. list-table:: Comparison
-   :widths: 5 5 5 5 5 5 5
-   :header-rows: 1
-
-   * - Video Frame
-     - Resolution
-     - QP
-     - Encoder
-     - PSNR(dB)
-     - bit
-     - Encoding Time
-   * - 
-     - 
-     -
-     - AV1
-       CNN-AV1
-     -
-     -
-     -
-
 
 +---------------+------------+-----+-----------+-----------+-------------+------------------+
 |  Video Frame  | Resolution | QP  |  Encoder  |  PSNR(dB) |     bit     | Encoding Time (s)|
