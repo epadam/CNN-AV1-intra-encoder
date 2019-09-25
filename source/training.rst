@@ -82,20 +82,20 @@ Some example raw images of each class is shown below:
    
    Horizontal B
  
-.. figure:: img/partition5.png
+.. figure:: img/partition6.png
    :width: 49%
    
    Vertical A
-.. figure:: img/partition5.png
+.. figure:: img/partition7.png
    :width: 49%
    
    Vertical B
    
-.. figure:: img/partition5.png
+.. figure:: img/partition8.png
    :width: 49%
    
    Horizontal 4
-.. figure:: img/partition5.png
+.. figure:: img/partition9.png
    :width: 49%
    
    Vertical 4
