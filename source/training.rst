@@ -54,7 +54,7 @@ code
 
 Thus, the dataset includes three txt files (reordered raw images, labels, qps). All three files are in the same order. 
 
-Some example raw images of each class is shown below:
+Some example raw 64x64 images of each partition mode is shown below:
 
 .. image:: img/partition0.png
    :width: 49%   
