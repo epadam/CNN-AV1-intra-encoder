@@ -20,7 +20,7 @@ The command is shown below.
 
 Figure below shows the results of the comparison  
 
-.. image:: img/encoding_time.png
+.. figure:: img/encoding_time.png
    :width: 60%
    :align: center
    
@@ -34,7 +34,7 @@ The frame is encoded with QPs = 31, 39, 47, and 55 for AV1 and 27, 32, 37, and 4
 
 The figure of bit-rate VS PSNR is shown below.
 
-.. image:: img/comparison.png
+.. figure:: img/comparison.png
    :width: 60%
    :align: center
    
@@ -391,7 +391,7 @@ model2
 
 The result shows that both models can distinguish these two classes easily. For all three block sizes, the accuray can reach around 90%. This means the model can successfully tell the difference between these two classes.
 
-.. image:: img/tensorboard_projector_NS.jpg
+.. image:: img/projector_NS.jpg
 
 --------------------------------------------------------  
 Training results of Horz and Vert partition modes only
@@ -465,7 +465,7 @@ To clarify the root cause of this result, we train it with deeper and wider mode
 
 Thus, the possible reason for low accuracy may due to the pattern encoded with these two partition modes are not unique so the model can not learn very well. Figure shows some patterns of blocks encoded in Vert and Horz partition modes. It seems some patterns are very similar but encoded with different modes. The reason may be that Horz and Vert rely more on the context in the frame (neighbor's data).
 
-.. image:: img/tensorboard_projector_HV.jpg
+.. image:: img/projector_HV.jpg
 
 
 Other training results of different combinaion of classes can be found in reference. 
