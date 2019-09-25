@@ -61,7 +61,7 @@ Some example raw images of each class is shown below:
 .. image:: img/partition3.png
    :width: 49%   
    
-   (left) None, (right) Split
+(left) None, (right) Split
 
 
 .. figure:: img/partition1.png
