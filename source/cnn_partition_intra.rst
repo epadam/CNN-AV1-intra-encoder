@@ -55,11 +55,13 @@ Several CNN models are designed to evaluate the prediction performance.
 .. image:: img/model1.png
 
 
+code
 
 
 
 .. image:: img/mnist_model.png
 
+code
 
 A model that is similar to other paper 
 
