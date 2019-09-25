@@ -90,12 +90,14 @@ Some example raw images of each class is shown below:
    
    
 (left) Vertical A, (right) Vertical B
-   
+
+
 .. image:: img/partition8.png
    :width: 49%
 .. image:: img/partition9.png
    :width: 49%
-   
+
+
 (left) Horizontal 4, (right) Vertical 4
 
 ========================================
