@@ -58,14 +58,48 @@ Some example raw images of each class is shown below:
 
 .. figure:: img/partition0.png
    :width: 49%
-   :figclass: align-center
    
    None
 .. figure:: img/partition3.png
    :width: 49%
-   :figclass: align-center
+   
+   Split
+   
+.. figure:: img/partition1.png
+   :width: 49%
    
    Horizontal
+.. figure:: img/partition2.png
+   :width: 49%
+   
+   Vertical
+   
+.. figure:: img/partition4.png
+   :width: 49%
+   
+   Horizontal A
+.. figure:: img/partition5.png
+   :width: 49%
+   
+   Horizontal B
+ 
+.. figure:: img/partition5.png
+   :width: 49%
+   
+   Vertical A
+.. figure:: img/partition5.png
+   :width: 49%
+   
+   Vertical B
+   
+.. figure:: img/partition5.png
+   :width: 49%
+   
+   Horizontal 4
+.. figure:: img/partition5.png
+   :width: 49%
+   
+   Vertical 4
 
 ========================================
 Training and Evaluation Setting
