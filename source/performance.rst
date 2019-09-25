@@ -77,6 +77,7 @@ Some raw 64x64 images of each partition mode is shown below:
 
 (left) None, (right) Split
 
+It can be seen that blocks encoded with none are simpler and blocks encoded in Split mode have more complicated patterns. 
 
 .. image:: img/partition1.png
    :width: 49%
@@ -86,6 +87,7 @@ Some raw 64x64 images of each partition mode is shown below:
 
 (left) Horizontal, (right) Vertical
 
+These two classes don't have very clearer differences visually
 
 .. image:: img/partition4.png
    :width: 49%
@@ -95,6 +97,7 @@ Some raw 64x64 images of each partition mode is shown below:
 
 (left) Horizontal A, (right) Horizontal B
 
+These two classes don't have very clearer differences visually
 
 .. image:: img/partition6.png
    :width: 49%
@@ -104,6 +107,7 @@ Some raw 64x64 images of each partition mode is shown below:
    
 (left) Vertical A, (right) Vertical B
 
+These two classes don't have very clearer differences visually
 
 .. image:: img/partition8.png
    :width: 49%
@@ -112,6 +116,13 @@ Some raw 64x64 images of each partition mode is shown below:
 
 
 (left) Horizontal 4, (right) Vertical 4
+
+These two classes don't have more clearer differences.
+
+Overall, it can be seen that some classes show very similar patterns, which may be difficult for the model to classify them.
+
+
+More examples can be found here.
 
 ------------------------------------------------------
 Training Results with 4K full dataset with 11 frames
@@ -380,6 +391,8 @@ model2
 
 The result shows that both models can distinguish these two classes easily. For all three block sizes, the accuray can reach around 90%. This means the model can successfully tell the difference between these two classes.
 
+.. image:: img/tensorboard_projector_NS.jpg
+
 --------------------------------------------------------  
 Training results of Horz and Vert partition modes only
 -------------------------------------------------------- 
@@ -451,6 +464,9 @@ To clarify the root cause of this result, we train it with deeper and wider mode
 
 
 Thus, the possible reason for low accuracy may due to the pattern encoded with these two partition modes are not unique so the model can not learn very well. Figure shows some patterns of blocks encoded in Vert and Horz partition modes. It seems some patterns are very similar but encoded with different modes. The reason may be that Horz and Vert rely more on the context in the frame (neighbor's data).
+
+.. image:: img/tensorboard_projector_HV.jpg
+
 
 Other training results of different combinaion of classes can be found in reference. 
 
@@ -593,8 +609,9 @@ Here we compare the same
 +---------------+------------+-----+-----------+-----------+-------------+------------------+
 |  Video Frame  | Resolution | QP  |  Encoder  |  PSNR(dB) |     bit     | Encoding Time (s)|
 +===============+============+=====+===========+===========+=============+==================+
-|  Basketball   |  1920x1080 | 30  | - AV1     |   37.5    |             |                  |
-|               |            |     | - CNN-AV1 |   36.6    |             |                  |
+|  Basketball   |  1920x1080 | 30  |   AV1     |   37.5    |             |                  |
+|               |            |     +-----------+-----------+-------------+------------------+
+|               |            |     |   CNN-AV1 |   36.6    |             |                  |
 +---------------+------------+-----+-----------+-----------+-------------+------------------+
 
 
