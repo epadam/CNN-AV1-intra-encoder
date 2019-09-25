@@ -23,6 +23,8 @@ Figure below shows the results of the comparison
 .. image:: img/encoding_time.png
    :width: 60%
    :align: center
+   
+   comparison of encoding time with similar PSNR
 
 It can be seen that for AV1, the encoding time can be greatly improved with SIMD. However, the encoding time is still slower than HEVC and VVC. 
 
@@ -35,6 +37,8 @@ The figure of bit-rate VS PSNR is shown below.
 .. image:: img/comparison.png
    :width: 60%
    :align: center
+   
+   bit-rate VS PSNR
 
 The BD-BR and BD-PSNR is summerized in the table below
 
