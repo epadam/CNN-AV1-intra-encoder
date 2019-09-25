@@ -24,7 +24,7 @@ Figure below shows the results of the comparison
    :width: 60%
    :align: center
    
-   comparison of encoding time with similar PSNR
+   comparison of encoding time with similar PSNR (one 1080p frame)
 
 It can be seen that for AV1, the encoding time can be greatly improved with SIMD. However, the encoding time is still slower than HEVC and VVC. 
 
