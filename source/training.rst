@@ -57,10 +57,16 @@ Thus, the dataset includes three txt files (reordered raw images, labels, qps). 
 Some example raw images of each class is shown below:
 
 .. figure:: img/partition0.png
-    
-    None
+   :width: 49%
+   :figclass: align-center
+   
+   None
 
-
+.. figure:: img/partition1.png
+   :width: 49%
+   :figclass: align-center
+   
+   Horizontal
 
 ========================================
 Training and Evaluation Setting
