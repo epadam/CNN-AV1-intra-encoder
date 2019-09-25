@@ -10,7 +10,7 @@ Partition Modes
 
 AV1 allows 10 different partiton modes as shown in the Figure below. More possible partition modes can help encoder to achieve higher compression rate.
 
-.. image:: img/partition_modes.png
+.. figure:: img/partition_modes.png
    :width: 60%
    :align: center
    
