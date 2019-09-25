@@ -60,7 +60,8 @@ Some example raw images of each class is shown below:
    :width: 49%   
 .. image:: img/partition3.png
    :width: 49%   
-   
+
+
 (left) None, (right) Split
 
 
