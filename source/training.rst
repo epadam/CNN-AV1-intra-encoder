@@ -65,35 +65,35 @@ Some example raw images of each class is shown below:
 (left) None, (right) Split
 
 
-.. figure:: img/partition1.png
+.. image:: img/partition1.png
    :width: 49%
-.. figure:: img/partition2.png
+.. image:: img/partition2.png
    :width: 49%
 
 
 (left) Horizontal, (right) Vertical
 
 
-.. figure:: img/partition4.png
+.. image:: img/partition4.png
    :width: 49%
-.. figure:: img/partition5.png
+.. image:: img/partition5.png
    :width: 49%
 
 
 (left) Horizontal A, (right) Horizontal B
 
 
-.. figure:: img/partition6.png
+.. image:: img/partition6.png
    :width: 49%
-.. figure:: img/partition7.png
+.. image:: img/partition7.png
    :width: 49%
    
    
 (left) Vertical A, (right) Vertical B
    
-.. figure:: img/partition8.png
+.. image:: img/partition8.png
    :width: 49%
-.. figure:: img/partition9.png
+.. image:: img/partition9.png
    :width: 49%
    
 (left) Horizontal 4, (right) Vertical 4
