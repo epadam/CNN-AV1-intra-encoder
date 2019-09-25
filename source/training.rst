@@ -57,12 +57,15 @@ Thus, the dataset includes three txt files (reordered raw images, labels, qps). 
 Some example raw images of each class is shown below:
 
 .. figure:: img/partition0.png
-   :width: 49%   
+   :width: 35%   
+   
    None
 .. figure:: img/partition3.png
-   :width: 49%   
-   Split
+   :width: 35%   
    
+   Split
+
+
 .. figure:: img/partition1.png
    :width: 49%
    
