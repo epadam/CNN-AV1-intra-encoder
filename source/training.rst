@@ -67,39 +67,36 @@ Some example raw images of each class is shown below:
 
 .. figure:: img/partition1.png
    :width: 49%
-   
-   Horizontal
 .. figure:: img/partition2.png
    :width: 49%
-   
-   Vertical
-   
+
+
+(left) Horizontal, (right) Vertical
+
+
 .. figure:: img/partition4.png
    :width: 49%
-   
-   Horizontal A
 .. figure:: img/partition5.png
    :width: 49%
-   
-   Horizontal B
- 
+
+
+(left) Horizontal A, (right) Horizontal B
+
+
 .. figure:: img/partition6.png
    :width: 49%
-   
-   Vertical A
 .. figure:: img/partition7.png
    :width: 49%
    
-   Vertical B
+   
+(left) Vertical A, (right) Vertical B
    
 .. figure:: img/partition8.png
    :width: 49%
-   
-   Horizontal 4
 .. figure:: img/partition9.png
    :width: 49%
    
-   Vertical 4
+(left) Horizontal 4, (right) Vertical 4
 
 ========================================
 Training and Evaluation Setting
