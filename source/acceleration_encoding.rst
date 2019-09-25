@@ -17,6 +17,8 @@ Parallelism can be divided into Task level and Data level parallelism. Task leve
 
 For data level parallelism, data can be processed on many units running the same program. It can be further divided into different levels, from Group of Pictures (GOP), frame, tile, block to instruction level. Among all the parallelisms, GOP level offers more flexibility and can preserve higher compressibility. There are already several research using GOP parallelism to improve the encoding speed \cite{Sankaraiah,Bahri2014}. Downside of GOP parallelism is that it would consume a lot of memory. The other strategy is tile level parallelism, which divides each frame into several tiles and encodes in parallel. Finally, block level parallelism is also possible but rarely used, since the communication and synchronization between blocks will consume too much time. Data in each block can also be processed in parallel by instruction level parallelism, also known as SIMD. SIMD is the most important and effective acceleration solutions and is supported by most modern processors \cite{Chi2015}. 
 
+In AV1, it supports tile level parallelism (multi-threading) and instruction level parallelism (SIMD). Since most operation are pixel-wise which can be accelerated by SIMD, most coding functions in AV1 have SIMD support. 
+
 
 --------------------------
 Reduced Algorithm
