@@ -26,11 +26,9 @@ Figure below shows the results of the comparison
    
    comparison of encoding time with similar PSNR (one 1080p frame)
 
-It can be seen that for AV1, the encoding time can be greatly improved with SIMD. However, the encoding time is still slower than HEVC and VVC. 
+It can be seen that for AV1, the encoding time can be greatly improved with SIMD. However, the encoding time is still slower than HEVC HM. It is 10 times slower than HEVC HM even with SIMD acceleration. Notice that the encoding time of AV1 without SIMD is very close to VVC.  
 
-To compare the performance.
-
-The frame is encoded with QPs = 31, 39, 47, and 55 for AV1 and 27, 32, 37, and 42 for HEVC and VVC.
+To compare the compression efficiency, one 1080p video frame is encoded with QPs = 31, 39, 47, and 55 for AV1 and 27, 32, 37, and 42 for HEVC and VVC to evaluate the BD-BR and BD-PSNR.
 
 The figure of bit-rate VS PSNR is shown below.
 
@@ -40,9 +38,18 @@ The figure of bit-rate VS PSNR is shown below.
    
    bit-rate VS PSNR
 
-The BD-BR and BD-PSNR is summerized in the table below
-
 It can be seen that the performance of AV1 is better than HEVC but lower than VVC.   
+
+The BD-BR and BD-PSNR of AV1 compared to HEVC HM in the table below
+
++--------------------------------------+
+|         Baseline: HEVC HM            |
++-------------+------------+-----------+ 
+|  Encoder    | BD-PSNR(dB)|  BD-BR(%) | 
++=============+============+===========+ 
+|    AV1      |            |           | 
++-------------+------------+-----------+
+
 
 
 
