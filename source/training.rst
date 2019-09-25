@@ -61,8 +61,7 @@ Some example raw images of each class is shown below:
    :figclass: align-center
    
    None
-
-.. figure:: img/partition1.png
+.. figure:: img/partition3.png
    :width: 49%
    :figclass: align-center
    
