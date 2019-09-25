@@ -54,51 +54,7 @@ code
 
 Thus, the dataset includes three txt files (reordered raw images, labels, qps). All three files are in the same order. 
 
-Some example raw 64x64 images of each partition mode is shown below:
 
-.. image:: img/partition0.png
-   :width: 49%   
-.. image:: img/partition3.png
-   :width: 49%   
-
-
-(left) None, (right) Split
-
-
-.. image:: img/partition1.png
-   :width: 49%
-.. image:: img/partition2.png
-   :width: 49%
-
-
-(left) Horizontal, (right) Vertical
-
-
-.. image:: img/partition4.png
-   :width: 49%
-.. image:: img/partition5.png
-   :width: 49%
-
-
-(left) Horizontal A, (right) Horizontal B
-
-
-.. image:: img/partition6.png
-   :width: 49%
-.. image:: img/partition7.png
-   :width: 49%
-   
-   
-(left) Vertical A, (right) Vertical B
-
-
-.. image:: img/partition8.png
-   :width: 49%
-.. image:: img/partition9.png
-   :width: 49%
-
-
-(left) Horizontal 4, (right) Vertical 4
 
 ========================================
 Training and Evaluation Setting
