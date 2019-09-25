@@ -28,3 +28,24 @@ In AV1, many pruning functions are driven by the machine learning. It is applied
 
 
 .. image:: img/NNstructure.png
+
+
+.. list-table:: Comparison
+   :widths: 5 5 5 5 5 5 5
+   :header-rows: 1
+
+   * - Video Frame
+     - Resolution
+     - QP
+     - Encoder
+     - PSNR(dB)
+     - bit
+     - Encoding Time
+   * - 
+     - 
+     -
+     - AV1
+       CNN-AV1
+     -
+     -
+     -
