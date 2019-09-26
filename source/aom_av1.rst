@@ -40,7 +40,7 @@ PAETH Mode
 Paeth mode uses above, left and upper left pixels as reference, also shown in Fig.\ref{fig:intra mode}. The actual formula is as follows:
 
 .. math::
-      base= L+T-TL, P=argmin|x-base|, x \{T,L,TL\}
+      base= L+T-TL, P=argmin|x-base|,  x \{T,L,TL\}
 
 ----------------
 SMOOTH Mode
