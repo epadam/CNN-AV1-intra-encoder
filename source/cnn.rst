@@ -1,5 +1,5 @@
 Convolutional Neural Network
-===================================================
+==================================
 
 
 Convolutional Neural Network(CNN) is the most popular branch of Deep Learning. The most difference between normal neural network and CNN is the convolutional layer. 
@@ -15,7 +15,9 @@ Convolutional Layer
 
 Convolutional layer uses kernel map or filter to extract the features from the input data. 
 
-The operation is defined as:
+For a KxK input image, the kernal map applies operation 
+
+The general operation is defined as:
 
 .. math::
 
@@ -27,17 +29,32 @@ Pooling Layer
 
 Pooling layer is used to reduce the spatial size of input data.
 
+The operation is defined as follows:
+
+.. math::
+
+  (I \ast K)_{ij} &= \sum_{m = 0}^{k_1 - 1} \sum_{n = 0}^{k_2 - 1} I(i-m, j-n)K(m,n)
+
+
 Fully Connected Layer
 ----------------------
 
 Fully connected layer works just like normal neural network. 
+
+.. math::
+
+  (I \ast K)_{ij} &= \sum_{m = 0}^{k_1 - 1} \sum_{n = 0}^{k_2 - 1} I(i-m, j-n)K(m,n)
+
 
 Activation Function
 ----------------------
 
 Normally, the activation function is applied to the output of each layer. The reason is to introduce nonlinearity to the network, and make it possible to approximate any nonlinear function.
 
-The most commen activation functions include sigmoid, Relu and softmax. The details description is as follows.
+The most commen activation functions include sigmoid, Relu and softmax, which is shown below.
+
+
+
 
 ReLu (rectified linear unit)/leaky ReLu}
 
@@ -55,10 +72,12 @@ Loss function gives
 
 
 Backpropagation
-----------------------
+-----------------
 
 Backpropagation is the esense of neural network. It passes the gradient based on the loss function. The way it works is to try to achieve the minimum of loss function.
 
 Many minimum searching algorithms are proposed. 
 
-Many 
+
+Regularization
+-----------------
