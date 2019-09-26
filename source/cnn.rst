@@ -4,10 +4,13 @@ Convolutional Neural Network
 
 Convolutional Neural Network(CNN) is the most popular branch of Deep Learning. The most difference between normal neural network and CNN is the convolutional layer. 
 
+--------------------------
+General Structure of CNN
+--------------------------
+
 
 The explanation of each layer is presented as follows.
 
----------------------
 Convolutional Layer
 ---------------------
 
@@ -19,20 +22,19 @@ The operation is defined as:
 
   (I \ast K)_{ij} &= \sum_{m = 0}^{k_1 - 1} \sum_{n = 0}^{k_2 - 1} I(i-m, j-n)K(m,n)
 
--------------------
+
 Pooling Layer
 -------------------
 
 Sometimes, to reduce the spatial size of input data, pooling 
 
-----------------------
+
 Fully Connected Layer
 ----------------------
 
 Fully connected layer works just like other neural network. 
 
 
-----------------------
 Activation Function
 ----------------------
 
