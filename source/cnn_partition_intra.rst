@@ -55,7 +55,7 @@ Several CNN models are designed to evaluate the prediction performance.
 .. image:: img/model1.png
 
 
-code
+:ref:`code<.. _model1:>`.
 
 
 
