@@ -54,13 +54,16 @@ The power of deep learning model is it can learn more situations when given more
 
 .. [#] G. Correa, P. A. Assuncao, L. V. Agostini and L. A. da Silva Cruz, "Fast HEVC Encoding Decisions Using Data Mining," in IEEE Transactions on Circuits and Systems for Video Technology, vol. 25, no. 4, pp. 660-673, April 2015.
 
+.. [#] L. Zhu, Y. Zhang, Z. Pan, R. Wang, S. Kwong and Z. Peng, "Binary and Multi-Class Learning Based Low Complexity Optimization for HEVC Encoding," in IEEE Transactions on Broadcasting, vol. 63, no. 3, pp. 547-561, Sept. 2017.
+
+.. [#] M. Xu, T. Li, Z. Wang, X. Deng, R. Yang and Z. Guan, "Reducing Complexity of HEVC: A Deep Learning Approach," in IEEE Transactions on Image Processing, vol. 27, no. 10, pp. 5044-5059, Oct. 2018.
+
 .. [#] Nguyen Canh, Thuong & Xu, Motong & Jeon, Byeungwoo. (2018). Rate-Distortion Optimized Quantization: A Deep Learning Approach. 
 
 .. [#] Y. Zhang, G. Wang, R. Tian, M. Xu and C. C. J. Kuo, "Texture-Classification Accelerated CNN Scheme for Fast Intra CU Partition in HEVC," 2019 Data Compression Conference (DCC), Snowbird, UT, USA, 2019, pp. 241-249.
 
 .. [#] T. Li, M. Xu, R. Yang and X. Tao, "A DenseNet Based Approach for Multi-frame In-loop Filter in HEVC," 2019 Data Compression Conference (DCC), Snowbird, UT, USA, 2019, pp. 270-279.
 
-.. [#] L. Zhu, Y. Zhang, Z. Pan, R. Wang, S. Kwong and Z. Peng, "Binary and Multi-Class Learning Based Low Complexity Optimization for HEVC Encoding," in IEEE Transactions on Broadcasting, vol. 63, no. 3, pp. 547-561, Sept. 2017.
 
 .. [#] M. Xu, T. Li, Z. Wang, X. Deng, R. Yang and Z. Guan, "Reducing Complexity of HEVC: A Deep Learning Approach," in IEEE Transactions on Image Processing, vol. 27, no. 10, pp. 5044-5059, Oct. 2018.
 
