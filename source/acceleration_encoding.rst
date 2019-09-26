@@ -1,12 +1,12 @@
 Video Codec Acceleration
 ======================================
-For acceleration of video codec, there are two main solutions. One is hardware acceleration and normally uses ASIC or FPGA. It offers very low latency, low power consumption and can achieve real time encoding. AISC normally has higher performance, but is very expensive and thus requires economical scale to cover the developing cost. Mobile devices and PC normally can have dedicated hardware for video encoding. FPGA is more flexible but not suitable for high volume market. 
+For acceleration of video codec, there are two main solutions. One is hardware acceleration, which offers very low latency, low power consumption and can achieve real time encoding. The downside of the hardware acceleration is the cost and it is less flexible. 
 
-The other domain is software-based acceleration and is the focus of this work. These acceleration solution including parallelization, reduced algorithms, statistics based or machine learning based acceleration. Thanks to the improvement of general purpose CPU, multi-threading or SIMD, older encoder such as AVC can also have competitive encoding speed without dedicated hardware. Many researches also focus on the parallelization of the encoding algorithm to maximally use multi-core CPU or SIMD hardware for modern video codec. Reduced algorithms or other acceleration algorithms based on statistics or machine learning strategies are also the interest of many research groups. In the following paragraph, the related works of software-based acceleration are presented.
+The other solution is software-based acceleration and has more flexibilities. These acceleration solutions include parallelization, statistics based or machine learning based acceleration. Parallelization of encoding algorithms to maximally use multi-core processors or SIMD units is an effective solution for viedo encoding. Statistics or machine learning based acceleration are also becoming more poplular. In the following paragraph, the related works of software-based acceleration are presented.
 
 
 =======================================
-Common Acceleration Strategies
+Parallelism
 =======================================
 
 -------------
@@ -20,26 +20,19 @@ For data level parallelism, data can be processed on many units running the same
 In AV1, it supports tile level parallelism (multi-threading) and instruction level parallelism (SIMD). Since most operation are pixel-wise which can be accelerated by SIMD, most coding functions in AV1 have SIMD support. 
 
 
---------------------------
-Reduced Algorithm
---------------------------
-
-Besides maximizing parallelism among all data level (GOP, Frame, Tiles, Blocks), the other main strategy is to lower the complexity of encoder algorithm itself.
-Rate-Distortion cost calculation needs to go through transform/quantization and inverse quantization/inverse transform and these recursive steps account for most of encoding time. Some researches use simplified RD cost calculation such as absolute transformed differences (SATD) to reduce the complexity\cite{Yu-MingLee2010}. Normally These strategies are not related to the contents of input video.
-
-
---------------------------
+===============================
 Statistic Based Approaches
---------------------------
+===============================
+
 
 The idea of using statistics is to discover the some signs for early termination so unnecessary computation can be avoided. Normally these algorithms collect intermediate encoding data on-line or off-line and use them to prune impossible encoding modes or steps. 
 
 Many researchers try to use statistic analysis to eliminate the less possible splitting or prediction modes, thus can terminate the recursive process earlier \cite{Xiong2014}. This strategy is based more explicit equations designed by human beings.
 
-
-----------------------------------
+===================================
 Machine Learning Based Approaches
-----------------------------------
+===================================
+
 
 Using machine learning in video codecs already has a long history. Some solutions target the reductions of bit-rate, some focus on increasing the quality, and some aims at reducing encoding time.
 
