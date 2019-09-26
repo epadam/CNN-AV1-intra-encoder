@@ -49,3 +49,10 @@ In AV1, many pruning functions are driven by the machine learning. It is applied
      -
      -
      -
+     
+--------------------------
+Reduced Algorithm
+--------------------------
+
+Besides maximizing parallelism among all data level (GOP, Frame, Tiles, Blocks), the other main strategy is to lower the complexity of encoder algorithm itself.
+Rate-Distortion cost calculation needs to go through transform/quantization and inverse quantization/inverse transform and these recursive steps account for most of encoding time. Some researches use simplified RD cost calculation such as absolute transformed differences (SATD) to reduce the complexity\cite{Yu-MingLee2010}. Normally These strategies are not related to the contents of input video.
