@@ -19,8 +19,7 @@ In AV1, it supports tile level parallelism (multi-threading) and instruction lev
 ===============================
 Statistic Based Approaches
 ===============================
-
-
+  
 The idea of using statistics is to discover the some signs for early termination so unnecessary computation can be avoided. Normally these algorithms collect intermediate encoding data on-line or off-line and use them to prune impossible encoding modes or steps. 
 
 Many researchers try to use statistic analysis to eliminate the less possible splitting or prediction modes, thus can terminate the recursive process earlier \cite{Xiong2014}. This strategy is based more explicit equations designed by human beings.
@@ -29,10 +28,7 @@ Many researchers try to use statistic analysis to eliminate the less possible sp
 Machine Learning Based Approaches
 ===================================
 
-
-Using machine learning in video codecs already has a long history. Some solutions target the reductions of bit-rate, some focus on increasing the quality, and some aims at reducing encoding time.
-
-Like statistic based solutions, machine learning can use human selected features but also raw data as input. However, unlike statistic based methods, these models are less interpretable. The model's ability to make inferences comes from the result of training with large amount of data. These machine learning algorithms include data mining, decision tree, Beysian Decision, Neural Network, Support Vector Machine(SVM)and Reinforcement Learning. These algorithms can be applied to different steps in the encoder.
+Using machine learning in video codecs already has a long history. 
 
 \cite{Correa2014} 
 \cite{Zhu2017} used SVM for both CU and PU splitting decisions with some selected features including Sum of absolute differences (SAD) between blocks, depth of current block, quantization parameters. 
@@ -48,6 +44,8 @@ There are many researches trying to use CNN to classify CU splitting. :cite:`Xu2
 A DenseNet Based Approach for Multi-Frame In-Loop Filter in HEVC used DenseNet for Loop filter 
 
 
+
+.. [#]: G. Correa, P. Assuncao, L. A. da Silva Cruz and L. Agostini, "Classification-based early termination for coding tree structure decision in HEVC," 2014 21st IEEE International Conference on Electronics, Circuits and Systems (ICECS), Marseille, 2014, pp. 239-242.
 
 
 
