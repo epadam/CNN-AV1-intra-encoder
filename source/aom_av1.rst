@@ -61,7 +61,7 @@ The prediction formula is as follows:
 Chroma from Luma(Cfl)
 --------------------------------
 
-Chroma from Luma uses luma prediction block for chroma prediction. The predicted luma block is first subsampled to the size of chroma then is subtracted by their average and obtain the AC contribution. the AC contribution is multiplied by the scaling factors and added to the DC prediction of chroma. Detailed explanation can be referred to \cite{Trudeau2017}. 
+Chroma from Luma uses luma prediction block for chroma prediction. The predicted luma block is first subsampled to the size of chroma then is subtracted by their average and obtain the AC contribution. the AC contribution is multiplied by the scaling factors and added to the DC prediction of chroma. Detailed explanation can be referred to [#]_. 
 
 
 --------------------------------
@@ -93,6 +93,8 @@ Google also has showed the compression improvement when enabling the experimenta
 .. [#] Urvang Joshi, Debargha Mukherjee, Jingning Han, Yue Chen, Sarah Parker, Hui Su, Angie Chiang, Yaowu Xu, Zoe Liu, Yunqing Wang, Jim Bankoski, Chen Wang, Emil Keyder, "`Novel inter and intra prediction tools under consideration for the emerging AV1 video codec <https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10396/103960F/Novel-inter-and-intra-prediction-tools-under-consideration-for-the/10.1117/12.2274022.full>`_," Proc. SPIE 10396, Applications of Digital Image Processing XL, 103960F (19 September 2017);
 
 .. [#] Y. Chen et al., "`An Overview of Core Coding Tools in the AV1 Video Codec <https://ieeexplore.ieee.org/document/8456249>`_," 2018 Picture Coding Symposium (PCS), San Francisco, CA, 2018, pp. 41-45.
+
+.. [#] L. Trudeau, N. Egge and D. Barr, "Predicting Chroma from Luma in AV1," 2018 Data Compression Conference, Snowbird, UT, 2018, pp. 374-382.
 
 .. [#] Dan Grois, Tung Nguyen, and Detlev Marpe "`Performance comparison of AV1, JEM, VP9, and HEVC encoders <https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10396/103960L/Performance-comparison-of-AV1-JEM-VP9-and-HEVC-encoders-Conference/10.1117/12.2283428.full>`_," Proc. SPIE 10396, Applications of Digital Image Processing XL, 103960L (8 February 2018);
 
