@@ -8,13 +8,12 @@ Convolutional Neural Network(CNN) is the most popular branch of Deep Learning. T
 General Structure of CNN
 --------------------------
 
-
 The explanation of each layer is presented as follows.
 
 Convolutional Layer
 ---------------------
 
-Convolutional layer uses kernel map or filter to extract the features from raw data. 
+Convolutional layer uses kernel map or filter to extract the features from the input data. 
 
 The operation is defined as:
 
@@ -26,21 +25,19 @@ The operation is defined as:
 Pooling Layer
 -------------------
 
-Sometimes, to reduce the spatial size of input data, pooling 
-
+Pooling layer is used to reduce the spatial size of input data.
 
 Fully Connected Layer
 ----------------------
 
-Fully connected layer works just like other neural network. 
-
+Fully connected layer works just like normal neural network. 
 
 Activation Function
 ----------------------
 
-Normally, the activation function is applied to the output of each layer. The reason is introduce nonlinearity to the network, and make it possible to approximate any nonlinear function.
+Normally, the activation function is applied to the output of each layer. The reason is to introduce nonlinearity to the network, and make it possible to approximate any nonlinear function.
 
-The most commen used activation functions include sigmoid, Relu and softmax. The details description is as follows.
+The most commen activation functions include sigmoid, Relu and softmax. The details description is as follows.
 
 ReLu (rectified linear unit)/leaky ReLu}
 
@@ -48,13 +45,20 @@ ReLu (rectified linear unit)/leaky ReLu}
 Training CNN Model
 ---------------------
 
+Neural network learns from the gradient 
 
 
 Loss (Error) Function
 ---------------------
 
+Loss function gives
+
 
 Backpropagation
 ----------------------
 
-Many optimization algothrims for backpropagation are proposed 
+Backpropagation is the esense of neural network. It passes the gradient based on the loss function. The way it works is to try to achieve the minimum of loss function.
+
+Many minimum searching algorithms are proposed. 
+
+Many 
