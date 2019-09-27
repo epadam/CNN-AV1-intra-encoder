@@ -10,9 +10,7 @@ For example, CNN may be able to reconize that flat area can be coded without spl
 Partition Decision for Intra Frame in AV1
 ==========================================
 
-As mentioned earlier, RDO process is to find the best coding mode for the each encoding block, which includes steps of prediction, transform, quantization, inverse quantization, inverse transform and entropy coding. And a parition decision is made from repeating this loop. Figure below shows the hierarchy of partition modes of different block sizes in AV1. Notice that block Encoded in smaller block size is possible only when split mode is chosen. 
-
-.. image:: img/Partitionhierarchy.png
+As mentioned earlier, RDO process is to find the best coding mode for the each encoding block, which includes steps of prediction, transform, quantization, inverse quantization, inverse transform and entropy coding. And a parition decision is made from repeating this loop. 
 
 The actual order of the RDO process for each block is recurrsive and shown below:
 
