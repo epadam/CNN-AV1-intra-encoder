@@ -15,7 +15,7 @@ Convolutional Layer
 
 Convolutional layer uses kernel map or filter to extract the features from the input data. 
 
-For an input image I, the kernal map K with dimensions .. math::`k_1×k_2` applies operation 
+For an input image I, the kernal map K with dimensions `k_1×k_2` applies operation 
 
 The general operation is defined as:
 
