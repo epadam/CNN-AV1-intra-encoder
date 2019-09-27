@@ -45,7 +45,9 @@ It can be seen that some purposes of the functions are overlapped. Decision made
 Partition Mode Prediction with CNN for Intra Frame
 ==========================================================
 
-The whole partition decision is very time consuming. Thus, use CNN 
+As can be seen above, machine learning models predict sequentially to decide if certain mode should be skipped and all the models rely on handcraft features as input.
+
+In this research, the CNN model is used to assign partition mode for the encoding block directly based on the raw image as input. Three block sizes are predicted to save encoding time maximumly. 
 
 .. image:: img/CNN_for_partition.png
 
@@ -54,7 +56,7 @@ The whole partition decision is very time consuming. Thus, use CNN
 CNN Model in This Research
 ================================== 
 
-Several CNN models are designed to evaluate the prediction performance.
+Two main CNN models are designed to evaluate the prediction performance.
 
 
 .. image:: img/model1.png
@@ -72,9 +74,9 @@ A model that is similar to other paper
 
 A model inspired by Google inception is also tested
 
-The number of parameters of the two models are shown in table 1 and table 2.
+The number of trainable parameters of the two models are shown in table 1 and table 2.
 
-.. list-table:: tianyili
+.. list-table:: model 1
    :widths: 10 10 10 10 10 
    :header-rows: 1
 
@@ -122,7 +124,7 @@ The number of parameters of the two models are shown in table 1 and table 2.
 
 The number of parameters of the two models are shown in table 1 and table 2.
 
-.. list-table:: mnist_modify
+.. list-table:: model 2
    :widths: 10 10 10 10 10 
    :header-rows: 1
 
@@ -161,7 +163,11 @@ The number of parameters of the two models are shown in table 1 and table 2.
 Encoder Modification
 ============================
 
-Following files in the source files are modified for inetgrating CNN model into AV1. The version of AV1 encoder is "1.0.0-2231-g9666276"
+The version of AV1 encoder is "1.0.0-2231-g9666276"
 
+The structure of the modified encoder is shown below:
 
-
+.. Figure:: img/modified_encoder.png
+   :align: center
+   
+   Modified Encoder  
