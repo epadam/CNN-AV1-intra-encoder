@@ -34,6 +34,8 @@ All the machine learning functions share the same simple neural network structur
    :width: 60%
    :align: center
 
+
+
 ==========================================================
 Partition Mode Prediction with CNN for Intra Frame
 ==========================================================
