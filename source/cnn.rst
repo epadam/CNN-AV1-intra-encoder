@@ -15,13 +15,13 @@ Convolutional Layer
 
 Convolutional layer uses kernel map or filter to extract the features from the input data. 
 
-For a KxK input image, the kernal map applies operation 
+For an input image I, the kernal map K with dimensions .. math::`k_1×k_2` applies operation 
 
 The general operation is defined as:
 
 .. math::
 
-  (I \ast K)_{ij} &= \sum_{m = 0}^{k_1 - 1} \sum_{n = 0}^{k_2 - 1} I(i-m, j-n)K(m,n)
+  (I ∗ K)_{ij} &= \sum_{m = 0}^{k_1 - 1} \sum_{n = 0}^{k_2 - 1} I(i-m, j-n)K(m,n)
 
 
 Pooling Layer
