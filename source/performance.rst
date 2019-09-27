@@ -576,9 +576,9 @@ Split has 873 samples, the reast of classes also have 973 samples
 .. image:: img/m1_qp120_16_loss_SR.jpg
    :width: 49%
 
--------------------------------------------------------- 
+--------------------------------------------
 None and the Rest 8 classes (binary)
--------------------------------------------------------- 
+-------------------------------------------- 
 
 block size : 64x64
 
@@ -608,14 +608,18 @@ block size : 16x16
    :width: 49%
 
 
+--------------------------------------- 
+Training Results of Rest 7 Classes
+--------------------------------------- 
+
 
 ====================================
 Performance of CNN Intra Encoder
 ====================================
 
----------------------------------------------
+--------------------------- 
 Encoding Performance
----------------------------------------------
+--------------------------- 
 
 Comparison of Encoding Time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -642,7 +646,6 @@ Comparison of Video Quality
 models trained with different dataset is used to test the encoding efficiency
 
 Here we compare the same 
-
 
 **full dataset with weighted cross entropy**
 
