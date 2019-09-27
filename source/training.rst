@@ -48,7 +48,7 @@ code
 Training and Evaluation Setting
 =================================== 
 
-CNN models are built in keras with tensorbord as backend.
+CNN models are built in keras with tensorflow as backend.
 
 --------------
 Loss Function
