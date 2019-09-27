@@ -16,6 +16,9 @@ AV1 allows 10 different partiton modes as shown in the Figure below. More partit
    
    AV1 Partition Modes
 
+Figure below shows the hierarchy of partition modes of different block sizes in AV1. Notice that block Encoded in smaller block size is possible only when split mode is chosen. 
+
+.. image:: img/Partitionhierarchy.png
 
 ==========================
 Intra Prediction Tools
