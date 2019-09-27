@@ -1,24 +1,24 @@
 CNN AV1 Intra Encoder
 ======================
 
-As mentioned in :doc: acceleration_encoding, there are many ways of using CNN to replace some encoding steps in the encoder as shown in Fig \ref{fig:CNN for encoder}. However, applying CNN for partition may save the most encoding time compared to other steps, since prediction and transform functions are sub-functions of partition functions. Replacing partition function means skipping the whole RDO process, which includes prediction, transform, quantization, dequantization and inverse transform and entropy coding. classification on CU splitting decision making can maximally save the encoding time compared to classification for PU and TU. 
+As mentioned in :doc: acceleration_encoding, although there are many ways of replacing encoding steps with machine learning, applying machine learning for partition prediction may save the most encoding time compared to other steps. The reason is partition decision is at the upper position of RDO process. The time saved comes from skipping most encoding steps like prediction, transform and quantization. 
 
-And according to the results of previous researches, using CNN model to predict the partition decisions for intra frames shows better performance than other solutions. It may because that, unlike inter frames, intra frame doesn't need information from other frames. Although encoding intra frames requires pixel values from adjacent blocks, the contents of each image block also contain crucial information for selecting the partition mode. 
-And since CNN is very powerful in image recognition, it is very suitable to decide block splitting. For example, flat area can be coded in bigger block, so the better partition decision is not to split. CNN may connect these features with the final partition decisions through training large amount of data.
-
+For intra frame encoding, CNN has the potential to directly learn the relation between the raw pixels and its suitable partition mode. 
+For example, CNN may be able to reconize that flat area can be coded without splitting.
 
 ==========================================
 Partition Decision for Intra Frame in AV1
 ==========================================
 
-In this section, a simple demonstration of how partition decision is made in AV1 is presented. As mentioned previously, the partition decition is made based on RDO process.
-
-To decide the partition mode for each block, the encoder will go through the Rate-Distortion Optimization (RDO) Process to find the partition mode with lowest rate-distortion (RD) cost. 
-For intra frame, the encoder will only use intra prediction tools to calculate the residues of block. 
+As mentioned earlier, RDO process is to find the best coding mode for the each encoding block, which includes steps of prediction, transform, quantization, inverse quantization, inverse transform and entropy coding. And a parition decision is made from repeating this loop. Figure below shows the hierarchy of partition modes of different block sizes in AV1. Notice that block Encoded in smaller block size is possible only when split mode is chosen. 
 
 .. image:: img/Partitionhierarchy.png
 
+The actual order of the RDO process for each block is recurrsive and shown below:
+
 .. image:: img/OrderofRDcalculation.png
+
+The encoder will go down the smallest block 
 
 =========================================================================================
 Current Statistic and Machine Learning Strategies for Partition Mode Selection in AV1
