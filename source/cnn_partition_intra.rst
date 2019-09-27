@@ -161,7 +161,7 @@ The number of parameters of the two models are shown in table 1 and table 2.
 Encoder Modification
 ============================
 
-The version of AV1 encoder is "1.0.0-2231-g9666276"
+The version of AV1 encoder is "1.0.0-1761-gfb1ad5d"
 
 The structure of the modified encoder is shown below:
 
