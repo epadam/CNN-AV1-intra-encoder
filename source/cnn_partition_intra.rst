@@ -21,14 +21,16 @@ The actual order of the RDO process for each block is recurrsive and shown below
 The encoder will go down the smallest block 
 
 =========================================================================================
-Current Statistic and Machine Learning Strategies for Partition Mode Selection in AV1
+Current Fast Partition Mode Selection Strategies in AV1
 =========================================================================================
 
-In order to save encoding time, AV1 applies the most acceleration functions in partition mode selections, as shown in figure below.
+To experience all the partition modes is very time consuming. Both satistical and machine learning based strategies are used for fast partition mode selection in AV1, as shown in figure below.
 
 .. image:: img/ml_rd_pick.png
 
-All the machine learning functions share the same simple neural network structure as shown in the Figure below. Although it allows maximum 10 layers and 128 nodes per hidden layer. All the models used in AV1 only contain 1 or 2 hidden layers and 16 to 64 nodes per layer. All the functions' weights and bias are pre stored in the source file.
+Two satistical methods in fast partition mode selection. One uses information collected in first pass encoding to decide if None mode should be skipped for 16x16 blocks. The other one is based on motion vector search results to decide if it should directly go to Split mode and skip others.
+
+The machine learning model includes support vector machine (SVM) and neural network (NN). SVM takes the encoding results from None mode to decide if the encoding should be terminated. The neural network structure is shown in the Figure below. Although it allows maximum 10 layers and 128 nodes per hidden layer. All the models used in AV1 only contain 1 or 2 hidden layers and 16 to 64 nodes per layer. All the functions' weights and bias are pre-stored in the source file.
 
 .. image:: img/NNstructure.png
    :width: 60%
