@@ -1,6 +1,6 @@
 
 Training CNN Model
-======================================
+========================
 
 ========================================
 Labels Extraction from the Encoder
@@ -10,14 +10,12 @@ Labels Extraction from the Encoder
 Video Source
 -----------------------
 
-Videos with different resolution are downloaded from the following websites:
+Videos with different resolutions are downloaded from the following websites:
 
 http://medialab.sjtu.edu.cn/web4k/index.html
-
 https://media.xiph.org/video/derf/
 
-The list of video can be seen in the appendix. 
-
+The list of video can be seen in the reference. 
 
 ---------------
 Encoding Mode
@@ -28,45 +26,34 @@ The example encoding command is shown as follows::
 
   ./aomenc -o video.ivf --end-usage=q --cq-level=20 --limit=1  -w 3840 -h 2160 video.yuv
 
-Since a scene in a video is normally highly similar, only one frame in a scene is encoded to avoid biased dataset. 
+--------------------------
+Partition Mode Extraction
+--------------------------
 
------------------------
-Code change in Encoder
------------------------
-
-For each frame, when it goes to the function ''rd_pcik_partition'', the partition decisions of each 64x64, 32x32 and 16x16 blocks are recorded and stored in a txt file.  Partition decisions are used as labels and indexed from 0 to 9 for each block as shown in Table. The qp of the frame is also stored.
+In the function ''rd_pcik_partition'', the partition decisions of each 64x64, 32x32 and 16x16 blocks are recorded and saved in a txt file. Partition modes are treated as labels and indexed from 0 to 9.
 
 code
-
 
 -----------------------
 Data Processing
 -----------------------
 
-The txt file is further processed with Excel to remove the repeated decisions and store partition decisions of different block in different sheets. Based on the excel file, partition decisions (labels) and qp are stored in separate txt files. 
- 
-code
-
-The raw pixels of each frame are reordered in block-based and stored in a txt file. Some blocks don't have labels due to the early termination of the RDO process when the sum of RD cost of each subblock is larger than the mother block. These blocks are removed from the file.
+The txt file is further processed to remove the repeated partition modes from the re-encoding loop. Partition modes of different block sizes are saved seperately. Labels and QPs are then read from the processed file and saved in separate txt files. The raw pixels of each frame are reordered in a block-wise fashion. Blocks without labels are also removed from the file. 
+The data set includes three txt files (reordered raw images, labels, QPs). All three files are in the same order. 
 
 code
 
-
-Thus, the dataset includes three txt files (reordered raw images, labels, qps). All three files are in the same order. 
-
-
-
-========================================
+=================================== 
 Training and Evaluation Setting
-========================================
+=================================== 
+
+CNN models are built in keras with tensorbord as backend.
 
 --------------
 Loss Function
 --------------
 
-The built-in loss functions including in keras are used for the training. Categorical cross entropy and binary cross entropy are used as loss function in this research.
-
-The source code can be found in the link
+The built-in loss functions including in keras are used for the training. Both categorical cross entropy and binary cross entropy are used as loss function in this research.
 
 focal loss is also tested.
 
@@ -74,12 +61,11 @@ focal loss is also tested.
 Optimizer
 --------------
 
-Adam is used 
+Built-in Adam is used.
 
-The source code can also be found in the link.
 
 ----------------------------
 Evaluation and Test Setting
 ----------------------------
 
-For evaluation, 10% of the training data is split. 
+10% of the data set is split for evaluation. 
