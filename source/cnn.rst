@@ -24,12 +24,6 @@ The general operation is defined as:
   (I ∗ K)_{ij}= \sum_{m = 0}^{k_1 - 1} \sum_{n = 0}^{k_2 - 1} I(i-m, j-n)K(m,n)
 
 
-.. math::
-        
-        PSNR=10\cdot \log_{10} \frac{MaxErr^2}{MSE},
-
-Where :math:`MSE= \frac{1}{N\cdot M}\sum_{i=1}^{N}{}\sum_{j=1}^{M} {\left(f\left(i,j\right) - f'\left(i,j\right)\right)}^2`.
-
 Pooling Layer
 -------------------
 
