@@ -30,13 +30,16 @@ To experience all the partition modes is very time consuming. Both satistical an
 
 Two satistical methods in fast partition mode selection. One uses information collected in first pass encoding to decide if None mode should be skipped for 16x16 blocks. The other one is based on motion vector search results to decide if it should directly go to Split mode and skip others.
 
-The machine learning model includes support vector machine (SVM) and neural network (NN). SVM takes the encoding results from None mode to decide if the encoding should be terminated. The neural network structure is shown in the Figure below. Although it allows maximum 10 layers and 128 nodes per hidden layer. All the models used in AV1 only contain 1 or 2 hidden layers and 16 to 64 nodes per layer. All the functions' weights and bias are pre-stored in the source file.
+The machine learning model includes support vector machine (SVM) and neural network (NN). SVM takes the encoding results from None mode to decide if the encoding should be terminated. The neural network is used before every partition mode to decide if the partition mode can be skipped. The structure is shown in the Figure below. Although it allows maximum 10 layers and 128 nodes per hidden layer. All the models used in AV1 only contain 1 or 2 hidden layers and 16 to 64 nodes per layer. All the functions' weights and bias are pre-stored in the source file.
 
 .. image:: img/NNstructure.png
    :width: 60%
    :align: center
 
+For both SVM and NN model. the input features are very similar for each model as follows:
+RD cost, 
 
+It can be seen that some purposes of the functions are overlapped. Decision made based on multiple algorithms can ensure more accurate prediction.
 
 ==========================================================
 Partition Mode Prediction with CNN for Intra Frame
