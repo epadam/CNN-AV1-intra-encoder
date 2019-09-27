@@ -8,17 +8,14 @@ AV1 introduces many new tools, in the following paragraph, the partition modes a
 Partition Modes
 ==========================
 
-AV1 allows 10 different partiton modes as shown in the Figure below. More partition modes help encoder to achieve higher compression rate.
+AV1 allows 10 different partiton modes. Figure below shows the hierarchy of partition modes of different block sizes in AV1. Notice that block Encoded in smaller block size is possible only when split mode is chosen. 
 
-.. figure:: img/partition_modes.png
-   :width: 50%
+.. figure:: img/Partitionhierarchy.png
    :align: center
    
-   AV1 Partition Modes
-
-Figure below shows the hierarchy of partition modes of different block sizes in AV1. Notice that block Encoded in smaller block size is possible only when split mode is chosen. 
-
-.. image:: img/Partitionhierarchy.png
+   Partition Hierarchy of AV1
+   
+More partition modes help encoder adapt to different pattern and achieve better compression efficiency.
 
 ==========================
 Intra Prediction Tools
