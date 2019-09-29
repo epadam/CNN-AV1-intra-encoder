@@ -26,14 +26,14 @@ Statistical analysis is another common strategy to accelerate encoding speed. It
 Machine Learning Based Approaches
 ===================================
 
-Using machine learning in video codecs already has a long history. Similar to statistical analysis, machine learning can also use intermediate encoding data as input. The major difference is the relation between input information and the output decision is obtained by training with many data.
+Using machine learning in video codecs already has a long history. Similar to statistical analysis, machine learning can also use intermediate encoding data as input. The major difference is the relation between input information and the output decisions is obtained by training with many data. 
 
-[#]_ has used data mining to build decision trees to decides the best coding tree structure for HEVC. 
+[#]_ has used data mining to build decision trees to decides the best coding tree structure for HEVC. Their results show 
 In [#]_, SVM is used for both CU and PU splitting decisions with some selected features including Sum of absolute differences (SAD) between blocks, depth of current block, quantization parameters. 
 
-In recent years, deep learning obtains more attentions due to their impressive performance in many fields.
+In recent years, deep learning obtains more attentions due to their impressive performance in many fields. Thus many research groups start to apply deep learning to video coding. Some are targeting acceleration of encoding and is disgussed below.
 
-There are many researches trying to use CNN to classify CU splitting. [#]_ has achieved averagely 65\% reduction of HEVC encoding time under inter mode by using CNN and Long Term Short Term Memory (LSTM). 
+[#]_ has achieved averagely 65\% reduction of HEVC encoding time under inter mode by using CNN and Long Term Short Term Memory (LSTM). 
 
 [#]_ has used CNN for Quantization prediction.
 
