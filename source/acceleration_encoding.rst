@@ -40,7 +40,7 @@ In recent years, deep learning obtains more attentions due to their impressive p
 
 [#]_ used DenseNet for loop filter in HEVC and achieves −11.62% of BD-BR saving and 0.39dB of BD-PSNR increment on average.
 
-[#]_ made a review of video coding using deep learning.
+[#]_  and [#]_  made a review of video coding using deep learning.
 
 The power of deep learning model is it can learn more situations when given more data which is almost impossible for traditional algorithms to consider all the situations. 
 
@@ -69,6 +69,8 @@ The power of deep learning model is it can learn more situations when given more
 .. [#] M. Xu, T. Li, Z. Wang, X. Deng, R. Yang and Z. Guan, "Reducing Complexity of HEVC: A Deep Learning Approach," in IEEE Transactions on Image Processing, vol. 27, no. 10, pp. 5044-5059, Oct. 2018.
 
 .. [#] Liu, Dong & Li, Yue & Lin, Jianping & Li, Houqiang. (2019). Deep Learning-Based Video Coding: A Review and A Case Study.
+
+.. [#] Zhang, Yun & Kwong, Sam & Wang, Shiqi. (2019). Machine Learning based Video Coding Optimizations: A Survey. Information Sciences. 10.1016/j.ins.2019.07.096. 
 
 
 
