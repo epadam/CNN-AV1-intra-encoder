@@ -36,9 +36,9 @@ In recent years, deep learning obtains more attentions due to their impressive p
 
 [#]_ has used CNN for quantization prediction without computing rate and distortion, but the time cost is not revealed.
 
-[#]_ also use CNN for partition classification
+[#]_ also has tested three CNN models for partition classification with heterogeneous texture characteristics as input for intra-coding in HEVC. They reduce encoding time by 62.13% with negligible BD-rate loss of 2.01%.
 
-[#]_ used DenseNet for Loop filter 
+[#]_ used DenseNet for loop filter in HEVC and achieves −11.62% of BD-BR saving and 0.39dB of BD-PSNR increment on average.
 
 [#]_ made a review of video coding using deep learning.
 
