@@ -28,18 +28,19 @@ Machine Learning Based Approaches
 
 Using machine learning in video codecs already has a long history. Similar to statistical analysis, machine learning can also use intermediate encoding data as input. The major difference is the relation between input information and the output decisions is obtained by training with many data. 
 
-[#]_ has used data mining to build decision trees to decides the best coding tree structure for HEVC. Their results show 
-In [#]_, SVM is used for both CU and PU splitting decisions with some selected features including Sum of absolute differences (SAD) between blocks, depth of current block, quantization parameters. 
+[#]_ has used data mining to build decision trees to decides the best coding tree structure for HEVC. Their results show 65% compelexity reduction averagely and with only 1.36% BD-BR and minor BD-PSNR loss compared to HEVC HM. In [#]_, SVM is used for both CU and PU splitting decisions with selected features including sum of absolute differences (SAD) between blocks, depth of current block, quantization parameters. Their methods achieve up to 68.3% time saving with only 0.093 dB BD-PSNR loss and 4.191% BD-BR gain.  
 
 In recent years, deep learning obtains more attentions due to their impressive performance in many fields. Thus many research groups start to apply deep learning to video coding. Some are targeting acceleration of encoding and is disgussed below.
 
 [#]_ has achieved averagely 65\% reduction of HEVC encoding time under inter mode by using CNN and Long Term Short Term Memory (LSTM). 
 
-[#]_ has used CNN for Quantization prediction.
+[#]_ has used CNN for quantization prediction without computing rate and distortion, but the time cost is not revealed.
 
 [#]_ also use CNN for partition classification
 
 [#]_ used DenseNet for Loop filter 
+
+[#]_ made a review of video coding using deep learning.
 
 The power of deep learning model is it can learn more situations when given more data which is almost impossible for traditional algorithms to consider all the situations. 
 
@@ -67,6 +68,7 @@ The power of deep learning model is it can learn more situations when given more
 
 .. [#] M. Xu, T. Li, Z. Wang, X. Deng, R. Yang and Z. Guan, "Reducing Complexity of HEVC: A Deep Learning Approach," in IEEE Transactions on Image Processing, vol. 27, no. 10, pp. 5044-5059, Oct. 2018.
 
+.. [#] Liu, Dong & Li, Yue & Lin, Jianping & Li, Houqiang. (2019). Deep Learning-Based Video Coding: A Review and A Case Study.
 
 
 
