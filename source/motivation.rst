@@ -9,5 +9,4 @@ AV1 achieves higher efficiency by introducing more encoding tools which leads to
 
 Among all the new acceleration strategies, convolutional neural network (CNN) has been proved to have superior performance in many fields such as image recognition or natural language processing. Many researches have also shown CNN can improve the encoding speed with minor encoding efficiency loss. Inspired by these researches, incorporating CNN into AV1 to improve the encoding speed is the main goal in this work.
 
-.. image:: img/epoch_acc.svg
 
