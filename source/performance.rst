@@ -177,17 +177,11 @@ Here it can be seen that model2 start overfitting after 20 epochs, this is not b
 
 block size : 16x16
 
-.. image:: img/m1_qp120_16_acc_f.jpg
+.. image:: img/qp120_16_acc_f.jpg
    :width: 49%
-.. image:: img/m1_qp120_16_loss_f.jpg
+.. image:: img/qp120_16_loss_f.jpg
    :width: 49%
 
-This needs to be checked again, since the higher accuracy but higher loss 
-
-.. image:: img/mnist_qp120_16_acc_f.jpg
-   :width: 49%
-.. image:: img/mnist_qp120_16_loss_f.jpg
-   :width: 49%
    
 **(top) model 1, (bottom) model 2** 
 
