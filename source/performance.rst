@@ -141,34 +141,23 @@ The training result with full dataset for block size 16x16, 32x32, 64x64 is show
 
 block size : 64x64
 
-.. image:: img/m1_qp120_64_acc_f.jpg
+.. image:: img/qp120_64_acc_f.jpg
    :width: 49%
-.. image:: img/m1_qp120_64_loss_f.jpg
-   :width: 49%
-
-
-.. image:: img/mnist_qp120_64_acc_f.jpg
-   :width: 49%
-.. image:: img/mnist_qp120_64_loss_f.jpg
+.. image:: img/qp120_64_loss_f.jpg
    :width: 49%
 
-**(top) model 1, (bottom) model 2** 
 
 ----
 
 block size : 32x32
 
-.. image:: img/m1_qp120_32_acc_sh.jpg
+.. image:: img/qp120_32_acc_sh.jpg
    :width: 49%
-.. image:: img/m1_qp120_32_loss_sh.jpg
-   :width: 49%
-
-.. image:: img/mnist_qp120_32_acc_sh.jpg
-   :width: 49%
-.. image:: img/mnist_qp120_32_loss_sh.jpg
+.. image:: img/qp120_32_loss_sh.jpg
    :width: 49%
 
-**(top) model 1, (bottom) model 2** 
+
+
 
 Here it can be seen that model2 start overfitting after 20 epochs, this is not because insufficient data but the imbalanced data, that cause the model starts to fit the training dataset. Two possible reasons for the encoder to stay at 65% accuracy. One is the model only learn the distribution. The reason that is not because insufficient data but imbalanced data is the following training with less data doesn't show overfitting 
 
