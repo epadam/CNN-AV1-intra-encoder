@@ -151,9 +151,9 @@ block size : 64x64
 
 block size : 32x32
 
-.. image:: img/qp120_32_acc_sh.jpg
+.. image:: img/qp120_32_acc_f.jpg
    :width: 49%
-.. image:: img/qp120_32_loss_sh.jpg
+.. image:: img/qp120_32_loss_f.jpg
    :width: 49%
 
 
