@@ -658,6 +658,22 @@ Performance of CNN Intra Encoder
 Encoding Performance
 --------------------------- 
 
+
+Comparison of Encoding Efficiency
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. image:: img/BQ_ori.png
+
+.. image:: img/BQ_cnn1.png
+
+.. image:: img/BQ_cnn.png
+
+
+
+.. image:: img/PSNR.png
+
+
 Comparison of Encoding Time
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -674,22 +690,8 @@ Overhead
 
 complexity reduction
 
-.. image:: img/overhead_reduction.png
+.. image:: img/encoding_time_compare.png
 
-
-
-Comparison of Video Quality
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-models trained with different dataset is used to test the encoding efficiency
-
-Here we compare the same 
-
-**full dataset with weighted cross entropy**
-
-
-**merged classes with binary submodel (really learn the class)**
-
-.. image:: img/encoded_frame.png
 
 
 
