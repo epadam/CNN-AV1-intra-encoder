@@ -665,7 +665,7 @@ Comparison of Encoding Efficiency
 
 .. image:: img/BQ_ori.png
 
-.. image:: img/BQ_cnn1.png
+.. image:: img/BQ_aecf.png
 
 .. image:: img/BQ_cnn.png
 
@@ -690,7 +690,7 @@ Overhead
 
 complexity reduction
 
-.. image:: img/encoding_time_compare.png
+.. image:: img/encoding_time_cnn.png
 
 
 
