@@ -373,6 +373,21 @@ To clarify the first possible reason, we tear down the datas set to further insp
 
 
 
+.. image:: img/recall64.png
+
+.. image:: img/precision64.png
+
+
+
+.. image:: img/recall32.png
+
+.. image:: img/precision32.png
+
+
+.. image:: img/recall16.png
+
+.. image:: img/precision16.png
+
 -------------------------------------------------------- 
 Binary Split and the Rest 9 classes
 -------------------------------------------------------- 
