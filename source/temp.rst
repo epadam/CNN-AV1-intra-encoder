@@ -2,6 +2,215 @@
 TEMP
 ==========
 
+------------------------------------------------------------
+Training results of None and Split partition modes only
+------------------------------------------------------------
+
+First, the None and Split classses are tested. The number of samples for both classes is equal.
+
+Notice the output of the model is changed to only two classes, the loss function is also changed binary cross entropy.
+
+64
+
+each class has 2000 samples
+
+model1
+
+.. image:: img/m1_qp120_64_acc_NS.jpg
+    :width: 49%
+.. image:: img/m1_qp120_64_loss_NS.jpg
+    :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_64_acc_NS.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_64_loss_NS.jpg
+    :width: 49%
+
+32
+
+each class has 25000 samples
+
+model1
+
+.. image:: img/m1_qp120_32_acc_NS.jpg
+    :width: 49%
+.. image:: img/m1_qp120_32_loss_NS.jpg
+    :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_32_acc_NS.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_32_loss_NS.jpg
+    :width: 49%
+
+Model 2 offers more parameters. After it learns all the required features, it starts to memorize certain features only belongs to this data set, which cause overfitting. on the other side, model 1 has just enough parameters to memorize the correct features.
+
+16
+
+each class has 17500 samples
+
+model1
+
+.. image:: img/m1_qp120_16_acc_NS.jpg
+    :width: 49%
+.. image:: img/m1_qp120_16_loss_NS.jpg
+    :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_16_acc_NS.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_16_loss_NS.jpg
+    :width: 49%
+
+The result shows that both models can distinguish these two classes easily. For all three block sizes, the accuray can reach around 90%. This means the model can successfully tell the difference between these two classes.
+
+--------------------------------------------------------  
+Training results of Horz and Vert partition modes only
+-------------------------------------------------------- 
+
+Next, the Horz and Vert classses are tested. The number of samples for both classes are also the same. 
+
+64
+
+each class has 499 samples
+
+model1
+
+.. image:: img/m1_qp120_64_acc_HV.jpg
+    :width: 49%
+.. image:: img/m1_qp120_64_loss_HV.jpg
+    :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_64_acc_HV.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_64_loss_HV.jpg
+    :width: 49%
+
+32
+
+each class has 5200 samples
+
+model1
+
+.. image:: img/m1_qp120_32_acc_HV.jpg
+    :width: 49%
+.. image:: img/m1_qp120_32_loss_HV.jpg
+    :width: 49%
+  
+model2
+
+.. image:: img/mnist_qp120_32_acc_HV.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_32_loss_HV.jpg
+    :width: 49%
+    
+16
+
+each class has 32500 samples
+
+model1
+
+.. image:: img/m1_qp120_16_acc_HV.jpg
+    :width: 49%
+.. image:: img/m1_qp120_16_loss_HV.jpg
+    :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_16_acc_HV.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_16_loss_HV.jpg
+    :width: 49%
+
+However, the accuracy is much lower. it can only reach between 55% to 70% for the Horz and Vert datasets.
+
+Around 50% means may suggest the model only guess one class for evey sample.
+
+From the tests above, it can be seen that the model can not really learn the features of some classes.
+
+To clarify the root cause of this result, we train it with deeper and wider model to see if it is due to the model lack of sufficient parameters or it is because the horz and vert classes don't have clear features. 
+
+Thus, the possible reason for low accuracy may due to the pattern encoded with these two partition modes are not unique so the model can not learn very well. Figure shows some patterns of blocks encoded in Vert and Horz partition modes. It seems some patterns are very similar but encoded with different modes. The reason may be that Horz and Vert rely more on the context in the frame (neighbor's data).
+
+To clarify the real cause, a data set with more videos inluding 720p/1080p are used to train the model.
+
+64
+
+each class has 499 samples
+
+model1
+
+.. image:: img/m1_qp120_64_acc_HV_l.jpg
+    :width: 49%
+.. image:: img/m1_qp120_64_loss_HV_l.jpg
+    :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_64_acc_HV_l.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_64_loss_HV_l.jpg
+    :width: 49%
+
+32
+
+each class has 5200 samples
+
+model1
+
+.. image:: img/m1_qp120_32_acc_HV_l.jpg
+    :width: 49%
+.. image:: img/m1_qp120_32_loss_HV_l.jpg
+    :width: 49%
+  
+model2
+
+.. image:: img/mnist_qp120_32_acc_HV_l.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_32_loss_HV_l.jpg
+    :width: 49%
+    
+16
+
+each class has 32500 samples
+
+model1
+
+.. image:: img/m1_qp120_16_acc_HV_l.jpg
+    :width: 49%
+.. image:: img/m1_qp120_16_loss_HV_l.jpg
+    :width: 49%
+
+model2
+
+.. image:: img/mnist_qp120_16_acc_HV_l.jpg
+    :width: 49%
+.. image:: img/mnist_qp120_16_loss_HV_l.jpg
+    :width: 49%
+
+
+To visualize the relation between data, dimentional reduction method was applied. 
+
+.. image:: img/projector_NS.jpg
+
+.. image:: img/projector_HV.jpg
+
+It can be seen that data of NS can be seperated bette, but HV can't.
+
+Other training results of different combinaion of classes can be found in reference. 
+
+The full dataset can be found online (A jupyter notebook can be used to see the partition modes of the dataset)  
+
+Since None and split is the most important classes, we merge the rest of the classes into one class. The reason is to avoid noises affecting each other. This strategy is to insure none and split can get the most correct prediction. The rest of classes are trained with a sub model to obtain higher accuracy
+
+
+
 Binary None and the Rest
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
