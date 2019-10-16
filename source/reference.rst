@@ -76,6 +76,45 @@ Total number of samples:
 16x16: 978,745
 
 
+test set:
+
+1080p:
+
+BasketballDrive_1920x1080_50 frame 0
+
+BQTerrace_1920x1080_60 frame 0
+
+Kimono1_1920x1080_24 frame 1
+
+ParkScene_1920x1080_24 frame 1
+
+station2_1080p25 frame 1
+
+sunflower_1080p25 frame 1
+
+Tennis_1920x1080_24 frame 1
+
+720p:
+
+720p50_mobcal_ter frame 500
+
+720p50_parkrun_ter frame 2
+
+720p50_shields_ter frame 0
+
+720p5994_stockholm_ter frame 2
+
+KristenAndSara_1280x720_60 frame 0
+
+park_joy_420_720p50 frame 499
+
+vidyo3_720p_60fps frame 0
+
+vidyo4_720p_60fps frame 29
+
+
+
+
 small set:
 Bund_Nightscape frame 0, 
 
