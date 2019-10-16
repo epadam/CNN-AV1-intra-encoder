@@ -138,3 +138,66 @@ Traffic_Flow_frame 0
 Tree_Shade_frame 0
 
 Wood_frame 0
+
+
+
+.. image:: img/basketball_ori.png
+   :width: 49%  
+.. image:: img/basketball_cnn.png
+   :width: 49%
+   
+
+.. image:: img/kimono_ori.png
+   :width: 49%  
+.. image:: img/kimono_cnn.png
+   :width: 49%
+   
+
+.. image:: img/sunflower_ori.png
+   :width: 49%  
+.. image:: img/sunflower_cnn.png
+   :width: 49%
+   
+   
+.. image:: img/tennis_ori.png
+   :width: 49%  
+.. image:: img/tennis_cnn.png
+   :width: 49%
+
+.. image:: img/park_ori.png
+   :width: 49%  
+.. image:: img/park_cnn.png
+   :width: 49%
+   
+.. image:: img/kris_ori.png
+   :width: 49%  
+.. image:: img/kris_cnn.png
+   :width: 49%
+
+.. image:: img/mobcal_ori.png
+   :width: 49%  
+.. image:: img/mobcal_cnn.png
+   :width: 49%
+
+
+.. image:: img/parkrun_ori.png
+   :width: 49%  
+.. image:: img/parkrun_cnn.png
+   :width: 49%
+   
+
+.. image:: img/shield_ori.png
+   :width: 49%  
+.. image:: img/shield_cnn.png
+   :width: 49%
+   
+.. image:: img/stockholm_ori.png
+   :width: 49%  
+.. image:: img/stockholm_cnn.png
+   :width: 49%
+   
+  
+.. image:: img/vidyo_ori.png
+   :width: 49%  
+.. image:: img/vidyo_cnn.png
+   :width: 49%
