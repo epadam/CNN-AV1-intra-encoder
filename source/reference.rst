@@ -197,7 +197,7 @@ Wood_frame 0
    :width: 49%
    
   
-.. image:: img/vidyo_ori.png
+.. image:: img/vidyo3_ori.png
    :width: 49%  
-.. image:: img/vidyo_cnn.png
+.. image:: img/vidyo3_cnn.png
    :width: 49%
