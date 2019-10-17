@@ -1,9 +1,12 @@
-Reference
+Appendix
 ----------
 
 Video frames for model training
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-4K videos:
+
+**10% of the training set is used as evaluation set**
+
+**4K:**
 
 Bund_Nightscape frame 0, 
 
@@ -41,7 +44,7 @@ Tree_Shade frame 0
 
 Wood frame 0, 81
 
-1080p videos:
+**1080p:**
 
 crowd_run_1080p50 frame 0, 40
 
@@ -57,7 +60,7 @@ rush_hour_1080p25 frame 69
 
 tractor_1080p25 frame 480, 662
 
-720p videos:
+**720p:**
 
 FourPeople_1280x720_60 frame 0
 
@@ -76,9 +79,10 @@ Total number of samples:
 16x16: 978,745
 
 
-test set:
+Video frames for test
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1080p:
+**1080p:**
 
 BasketballDrive_1920x1080_50 frame 0
 
@@ -94,7 +98,7 @@ sunflower_1080p25 frame 1
 
 Tennis_1920x1080_24 frame 1
 
-720p:
+**720p:**
 
 720p50_mobcal_ter frame 500
 
@@ -115,7 +119,7 @@ vidyo4_720p_60fps frame 29
 
 
 
-small set:
+**small training set:**
 
 Bund_Nightscape frame 0, 
 
@@ -140,6 +144,11 @@ Tree_Shade_frame 0
 Wood_frame 0
 
 
+
+Partitions Comparison Between Two Encoders
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**left is original encoder, right is cnn encoder.**
 
 .. image:: img/basketball_ori.png
    :width: 49%  
