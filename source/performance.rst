@@ -51,12 +51,9 @@ The BD-BR and BD-PSNR of AV1 compared to HEVC HM in the table below
 +-------------+------------+-----------+
 
 
-
-
-=================================================
-Evaluation of CNN models with different dataset
-=================================================
-
+=====================
+Analysis of Dataset
+=====================
 
 In the following sections, the dataset with 11 frames with single qp is used for evaluating the performance of different models. All 11 frames are from different videos. For 64 and 32 blocks, the image will be down-scaled to 16x16 first. The rest structure of the model remains the same for each model.
 
@@ -73,6 +70,8 @@ The distribution of partition modes of different block sizes is shown below.
 
 .. image:: img/4K_11f_mix_distribution_16.jpg
    :width: 50%
+
+
 
 Some raw 64x64 images of each partition mode is shown below:
 
@@ -128,8 +127,24 @@ These two classes don't have more clearer differences.
 
 Overall, it can be seen that some classes show very similar patterns, which may be difficult for the model to classify them.
 
+----------------------------------
+Visualization Through t-SNE
+----------------------------------
 
-More examples can be found here.
+
+-----------------
+What if Tool
+-----------------
+
+
+-------------------------
+Kernal Map Visualization
+-------------------------
+
+
+=================================================
+Evaluation of CNN models with different dataset
+=================================================
 
 ------------------------------------------------------
 Training Results with 4K full dataset with 11 frames
