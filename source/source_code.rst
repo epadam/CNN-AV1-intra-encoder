@@ -126,25 +126,12 @@ Pass filename to the member enocder of the stream.
       stream->encoder.filename=input.filename;
       initialize_encoder(stream, &global); }
 
-
-
------------------------------------
-aom/internal/aom_codec_internal.h
------------------------------------
-
-Add new member **filename** to the structure **aom_codec_priv**. It is a member of **aom_codec_ctx**.
-
-.. code-block:: c
-
-  struct aom_codec_priv {
-    const char *filename;
-    ...
-  };
   
 
 -----------------------------------
 av1/encoder/encoder.h
 ------------------------------------
+
 Add member **filename** to the structure **AV1_COMP**. Also, add an array member that stores the partition index from CNN model.
   
 .. code-block:: c
