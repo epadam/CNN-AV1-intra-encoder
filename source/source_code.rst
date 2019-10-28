@@ -128,9 +128,9 @@ Pass filename to the member enocder of the stream.
 
   
 
------------------------------------
+----------------------------
 av1/encoder/encoder.h
-------------------------------------
+----------------------------
 
 Add member **filename** to the structure **AV1_COMP**. Also, add an array member that stores the partition index from CNN model.
   
