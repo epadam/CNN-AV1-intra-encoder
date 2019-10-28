@@ -210,3 +210,8 @@ Partitions Comparison Between Two Encoders
    :width: 49%  
 .. image:: img/vidyo3_cnn.png
    :width: 49%
+
+.. image:: img/vidyo4_ori.png
+   :width: 49%  
+.. image:: img/vidyo4_cnn.png
+   :width: 49%
