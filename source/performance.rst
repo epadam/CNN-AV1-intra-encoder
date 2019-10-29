@@ -131,15 +131,22 @@ Overall, it can be seen that some classes show very similar patterns, which may 
 Visualization Through t-SNE
 ----------------------------------
 
+t-SNE can project high dimentional vector into 3D or 2D dimention.
 
 -----------------
 What if Tool
 -----------------
 
 
--------------------------
-Kernal Map Visualization
--------------------------
+------------------------------------
+Kernal Map/Feature map Visualization
+------------------------------------
+
+After training, weights in kernal map have been changed, checking the pattern of the kernal map may gives us the clue of what the model actually learns.
+
+Feature maps are obtained after applying kernal maps on the image, so it can revreal the pattern the model sees.
+
+One way to achieve this is to through autoencoder.
 
 
 =================================================
