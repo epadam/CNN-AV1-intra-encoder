@@ -127,16 +127,18 @@ These two classes don't have more clearer differences.
 
 Overall, it can be seen that some classes show very similar patterns, which may be difficult for the model to classify them.
 
-----------------------------------
+------------------------------- 
 Visualization Through t-SNE
-----------------------------------
+-------------------------------
 
-t-SNE can project high dimentional vector into 3D or 2D dimention.
+t-SNE can project high dimentional vector into 3D or 2D dimention. The tool is available in Tensorboard.
 
 -----------------
 What if Tool
 -----------------
 
+WIT can be used in two ways. One is using Jypter notebook and trained model using Tensorflow Estimator.
+The other way is to use Tensorboard. In this way we need to use Tensorflow Serving and TFRecord.
 
 ------------------------------------
 Kernal Map/Feature map Visualization
