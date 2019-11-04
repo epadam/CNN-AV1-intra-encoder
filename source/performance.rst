@@ -653,9 +653,9 @@ If predictions for 16x16 blocks are disabled, all the videos can be encoded succ
 |           Average           |          - |  - |       - |        - |       - |   0.0499465196 |         - |  61.039412855 |
 +-----------------------------+------------+----+---------+----------+---------+----------------+-----------+---------------+
 
-.. image:: img/EncodingTimeComparison.png
+.. image:: img/Time4K.png
 
    
    
-.. image:: img/PSNR(dB)andBits(4K).png
+.. image:: img/PSNR4K.png
 
